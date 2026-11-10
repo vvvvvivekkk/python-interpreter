@@ -10,6 +10,7 @@ import VariableBoxes from '@/components/VariableBoxes';
 import InputModal from '@/components/InputModal';
 import ChipButton from '@/components/ChipButton';
 import WeekPicker from '@/components/WeekPicker';
+import TopicsBanner from '@/components/TopicsBanner';
 import { runPython, PyValue } from '@/lib/python';
 import { useAppStore } from '@/lib/store';
 import { Sfx } from '@/lib/sounds';
@@ -78,6 +79,9 @@ export default function LessonPage() {
   return (
     <div className="space-y-4 pb-20">
       <WeekPicker currentWeek={week} />
+      {stepIdx === 0 && lesson.topics && lesson.topics.length > 0 ? (
+        <TopicsBanner topics={lesson.topics} intro={lesson.intro} />
+      ) : null}
       <LessonPane
         lesson={lesson}
         stepIdx={stepIdx}

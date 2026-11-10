@@ -3,12 +3,39 @@
     "week": 1,
     "title": "Hello World",
     "concept": "print()",
-    "intro": "Welcome to your very first lesson! Today we teach the computer to talk.",
+    "intro": "Today you teach the computer to TALK — your very first magic word!",
+    "topics": ["The print() magic word", "Quotes around words", "Many things at once", "Draw with letters"],
     "steps": [
-      { "kind": "teach", "text": "The print() magic word makes the computer say things! Type: print(\"Hello!\") and press Run.", "pre": "print(\"Hello!\")", "chips": ["print(\"Hi!\")", "print(\"I love Python!\")", "print(\"I love anime!\")"] },
-      { "kind": "try",   "text": "Great! Now change the words inside the quotes and press Run again.", "chips": ["print(\"My name is Ava\")", "print(\"I am a superstar!\")"] },
-      { "kind": "teach", "text": "You can print lots of things at once! Try: print(\"Hi\", \"World\")", "pre": "print(\"Hi\", \"World\")" },
-      { "kind": "try",   "text": "You even draw with print! Try this cat face.", "pre": "print(\"/\\\\_/\\\\\")\nprint(\"( o.o )\")\nprint(\" > ^ <\")" }
+      {
+        "kind": "teach",
+        "title": "Meet print — the computer's voice",
+        "text": "print is a magic word that makes the computer say things on the screen. You type print, then ( ), and inside the ( ) you put words in quotes.",
+        "visual": "print(\"Hello!\")  →  Hello!",
+        "pre": "print(\"Hello!\")",
+        "chips": ["print(\"Hi!\")", "print(\"I love Python!\")", "print(\"I love anime!\")"]
+      },
+      {
+        "kind": "try",
+        "title": "Your turn! Make it say YOUR words",
+        "text": "Change the words inside the quotes and press Run. The computer will say whatever you put between the \" \" marks.",
+        "funFact": "The \" \" marks are called quotes — they tell the computer 'these are words, not magic commands!'",
+        "chips": ["print(\"My name is Ava\")", "print(\"I am a superstar!\")", "print(\"I love ice cream\")"]
+      },
+      {
+        "kind": "teach",
+        "title": "Two things at once",
+        "text": "You can put lots of things inside print, separated by commas. The computer puts a space between them!",
+        "visual": "print(\"Hi\", \"World\")  →  Hi World",
+        "pre": "print(\"Hi\", \"World\")"
+      },
+      {
+        "kind": "try",
+        "title": "Make art with print",
+        "text": "You can even draw pictures with print! Every line becomes a line on the screen.",
+        "visual": " /\\_/\\ \n( o.o )\n > ^ <",
+        "pre": "print(\"/\\\\_/\\\\\")\nprint(\"( o.o )\")\nprint(\" > ^ <\")",
+        "funFact": "This is called ASCII art — pictures made only of keyboard letters!"
+      }
     ],
     "mission": { "brief": "Make the robot say Hello!", "starter": "print(\"___\")" }
   },
@@ -16,13 +43,55 @@
     "week": 2,
     "title": "Name Boxes",
     "concept": "variables",
-    "intro": "A box with a name — put a word or number inside, open it later!",
+    "intro": "Today you teach the computer to REMEMBER things in little boxes!",
+    "topics": ["What a variable is", "Word boxes", "Number boxes", "Using boxes together", "Changing a box"],
     "steps": [
-      { "kind": "recap", "text": "Last week you taught the computer to TALK with print! Remember? Press Run and hear it say hello again.", "pre": "print(\"Hello again!\")" },
-      { "kind": "recap", "text": "Super! Now today we learn something NEW — how to make the computer REMEMBER things in little boxes!" },
-      { "kind": "teach", "text": "Watch the magic: name = \"Ava\" puts the word Ava in a box called name. Then print(name) opens the box!", "pre": "name = \"Ava\"\nprint(name)" },
-      { "kind": "teach", "text": "Numbers don't need quotes. Try: age = 5, then print(age)", "pre": "age = 5\nprint(age)" },
-      { "kind": "try",   "text": "Make TWO boxes and print them together!", "pre": "hero = \"Dragon\"\npower = \"flying\"\nprint(hero, \"can go\", power)" }
+      {
+        "kind": "recap",
+        "title": "First — remember print?",
+        "text": "Last week you taught the computer to TALK with print! Press Run and hear it say hello again.",
+        "pre": "print(\"Hello again!\")"
+      },
+      {
+        "kind": "recap",
+        "title": "Ready for something new?",
+        "text": "Super! Now today we learn how to make the computer REMEMBER things — in magic boxes with names on them!",
+        "visual": "📦 ← a box with a name"
+      },
+      {
+        "kind": "teach",
+        "title": "What is a variable?",
+        "text": "A variable is a box with a name on it. You put something inside — a word or a number — and the computer remembers it for later.",
+        "visual": "name = \"Ava\"    →    📦[name] holds Ava"
+      },
+      {
+        "kind": "teach",
+        "title": "Making a word box",
+        "text": "Type name = \"Ava\" to make a box called name with the word Ava inside. Then print(name) OPENS the box!",
+        "pre": "name = \"Ava\"\nprint(name)",
+        "funFact": "No quotes around 'name' when you print it — that would print the word 'name', not what's inside!"
+      },
+      {
+        "kind": "teach",
+        "title": "Number boxes (no quotes!)",
+        "text": "Numbers don't need quotes. Try age = 5 — no \" \" marks. The computer knows 5 is a number.",
+        "pre": "age = 5\nprint(age)",
+        "visual": "age = 5       ← no quotes for numbers\nname = \"Ava\"  ← quotes for words"
+      },
+      {
+        "kind": "try",
+        "title": "Two boxes together",
+        "text": "Make a hero and a power box, then print them in the same sentence. You can use as many boxes as you like!",
+        "pre": "hero = \"Dragon\"\npower = \"flying\"\nprint(hero, \"can go\", power)",
+        "chips": ["hero = \"Unicorn\"", "power = \"sparkles\"", "print(hero, \"is cool!\")"]
+      },
+      {
+        "kind": "try",
+        "title": "Change a box!",
+        "text": "You can put something NEW in the box any time. The old thing gets replaced.",
+        "pre": "name = \"Ava\"\nprint(name)\nname = \"Super Ava\"\nprint(name)",
+        "funFact": "When you put something new in the box, the old one is gone forever — like clearing a toy chest!"
+      }
     ],
     "mission": { "brief": "Make a box called hero AND a box called power, then print them.", "starter": "hero = \"___\"\npower = \"___\"\nprint(hero, power)" }
   },
@@ -30,13 +99,54 @@
     "week": 3,
     "title": "Joining Words",
     "concept": "strings",
-    "intro": "Glue words together to make funny sentences!",
+    "intro": "Today you stick words together to make funny sentences and birthday cards!",
+    "topics": ["The + glue", "Comma gives a space", "Repeat with *", "Build a card"],
     "steps": [
-      { "kind": "recap", "text": "Last week you made BOXES! Remember putting your name inside? Press Run!", "pre": "name = \"Pixi\"\nprint(name)" },
-      { "kind": "recap", "text": "Wonderful! Today we learn how to STICK words together to make funny sentences!" },
-      { "kind": "teach", "text": "The + sign glues words: \"Hi \" + name. Try it!", "pre": "name = \"Ava\"\nprint(\"Hi \" + name)" },
-      { "kind": "teach", "text": "The comma puts a space in between: print(\"I love\", \"cats\")", "pre": "print(\"I love\", \"cats\")" },
-      { "kind": "try",   "text": "Build a birthday card!", "pre": "name = \"Ava\"\nprint(\"Happy Birthday \" + name + \"!\")" }
+      {
+        "kind": "recap",
+        "title": "Remember boxes?",
+        "text": "Last week you made BOXES! Remember putting your name inside? Press Run and watch!",
+        "pre": "name = \"Pixi\"\nprint(name)"
+      },
+      {
+        "kind": "recap",
+        "title": "Now — stick words together!",
+        "text": "Wonderful! Today we learn two magic signs that STICK words together to make bigger sentences."
+      },
+      {
+        "kind": "teach",
+        "title": "The + sign glues words",
+        "text": "The + sign sticks two words into one. It does NOT add a space — you have to put the space yourself inside the quotes.",
+        "visual": "\"Hi \" + \"Ava\"   →   Hi Ava\n\"Hi\" + \"Ava\"    →   HiAva  (no space!)",
+        "pre": "print(\"Hi \" + \"Ava\")"
+      },
+      {
+        "kind": "teach",
+        "title": "Glue a word AND a box",
+        "text": "You can glue a word to the stuff inside a box. Super handy for greeting people!",
+        "pre": "name = \"Ava\"\nprint(\"Hi \" + name)"
+      },
+      {
+        "kind": "teach",
+        "title": "Comma adds a space for you",
+        "text": "If you use a COMMA instead of +, the computer puts a space between them for you. Easier!",
+        "visual": "print(\"I love\", \"cats\")  →  I love cats",
+        "pre": "print(\"I love\", \"cats\")"
+      },
+      {
+        "kind": "try",
+        "title": "Repeat with *",
+        "text": "The * sign REPEATS a word that many times! Great for silly stuff.",
+        "visual": "\"ha\" * 3   →   hahaha",
+        "pre": "print(\"ha\" * 5)",
+        "funFact": "This works with emojis too! Try print(\"⭐\" * 10)"
+      },
+      {
+        "kind": "try",
+        "title": "Make a birthday card",
+        "text": "Put it all together — a birthday card for someone you love!",
+        "pre": "name = \"Ava\"\nprint(\"🎉 Happy Birthday \" + name + \"! 🎂\")"
+      }
     ],
     "mission": { "brief": "Join your name with Hello using +", "starter": "name = \"___\"\nprint(\"Hello \" + name)" }
   },
@@ -44,13 +154,53 @@
     "week": 4,
     "title": "Making Choices",
     "concept": "if / else",
-    "intro": "Teach the computer to decide what to do!",
+    "intro": "Today the computer learns to make CHOICES — like a little brain of its own!",
+    "topics": ["What is a choice?", "if checks something", "else is the backup", "Comparing numbers", "The treasure game"],
     "steps": [
-      { "kind": "recap", "text": "Last week you joined words with +! Remember? Try it again!", "pre": "a = \"Hi \"\nb = \"Pixi\"\nprint(a + b)" },
-      { "kind": "recap", "text": "Perfect! Today we teach the computer to make CHOICES — like a little brain!" },
-      { "kind": "teach", "text": "if checks something. Try: if score > 5: print(\"You win!\")", "pre": "score = 10\nif score > 5:\n    print(\"You win!\")" },
-      { "kind": "teach", "text": "Add an else for the other case!", "pre": "score = 3\nif score > 5:\n    print(\"You win!\")\nelse:\n    print(\"Try again!\")" },
-      { "kind": "try",   "text": "Change the score and see what happens!", "pre": "score = 7\nif score > 5:\n    print(\"🏆 You win!\")\nelse:\n    print(\"💪 Try again!\")" }
+      {
+        "kind": "recap",
+        "title": "Remember + and comma?",
+        "text": "Last week you joined words with + and commas! Remember? Press Run.",
+        "pre": "a = \"Hi \"\nb = \"Pixi\"\nprint(a + b)"
+      },
+      {
+        "kind": "recap",
+        "title": "Now — teach the computer to CHOOSE",
+        "text": "Perfect! Today the computer learns to make choices by itself. Like a little brain!",
+        "visual": "🤔  if ... then ... else ..."
+      },
+      {
+        "kind": "teach",
+        "title": "What is if?",
+        "text": "if is a magic word that CHECKS something. If the check is true, the computer does what's inside. If not — it skips it!",
+        "visual": "if it's raining: take an umbrella\nif you're hungry: eat a snack"
+      },
+      {
+        "kind": "teach",
+        "title": "if in Python",
+        "text": "Watch this! Change score to 2 and run again — see what happens?",
+        "pre": "score = 10\nif score > 5:\n    print(\"You win!\")",
+        "funFact": "The > sign means \"bigger than\". So 10 > 5 is TRUE. But 2 > 5 is FALSE."
+      },
+      {
+        "kind": "teach",
+        "title": "The 4-space secret",
+        "text": "Did you spot the 4 spaces before print? That tells the computer this line is INSIDE the if. It's like a secret room!",
+        "visual": "if score > 5:\n    print(\"inside!\")    ← 4 spaces\nprint(\"outside!\")       ← no spaces"
+      },
+      {
+        "kind": "teach",
+        "title": "else — the backup plan",
+        "text": "else means 'if the check is NOT true, do THIS instead'. Now the computer always says something!",
+        "pre": "score = 3\nif score > 5:\n    print(\"You win!\")\nelse:\n    print(\"Try again!\")"
+      },
+      {
+        "kind": "try",
+        "title": "The treasure game",
+        "text": "Change score to different numbers and press Run — see when you win and when you don't!",
+        "pre": "score = 7\nif score > 5:\n    print(\"🏆 You win the treasure!\")\nelse:\n    print(\"💪 Almost! Try again!\")",
+        "chips": ["score = 10", "score = 3", "score = 100"]
+      }
     ],
     "mission": { "brief": "Make an if that prints 'win' when score is 10.", "starter": "score = 10\nif score > 5:\n    print(\"___\")" }
   },
@@ -58,13 +208,53 @@
     "week": 5,
     "title": "Loops",
     "concept": "for ... in range",
-    "intro": "Make the computer do things again and again!",
+    "intro": "Today the computer learns to do things AGAIN AND AGAIN — like magic!",
+    "topics": ["What is a loop?", "for and range", "A unicorn parade", "Counting down", "Loops with numbers"],
     "steps": [
-      { "kind": "recap", "text": "Last week you taught the computer to CHOOSE with if and else! Press Run and remember!", "pre": "score = 10\nif score > 5:\n    print(\"You win!\")\nelse:\n    print(\"Try again!\")" },
-      { "kind": "recap", "text": "Amazing! Today we learn LOOPS — making the computer repeat things like magic!" },
-      { "kind": "teach", "text": "for star in range(5) means do it 5 times! Try it.", "pre": "for star in range(5):\n    print(\"⭐\")" },
-      { "kind": "try",   "text": "Make a unicorn parade!", "pre": "for i in range(6):\n    print(\"🦄 Unicorn!\")" },
-      { "kind": "try",   "text": "Count down from 5!", "pre": "for n in range(5, 0, -1):\n    print(n)\nprint(\"Blast off! 🚀\")" }
+      {
+        "kind": "recap",
+        "title": "Remember if and else?",
+        "text": "Last week you taught the computer to CHOOSE! Press Run and remember!",
+        "pre": "score = 10\nif score > 5:\n    print(\"You win!\")\nelse:\n    print(\"Try again!\")"
+      },
+      {
+        "kind": "recap",
+        "title": "Now — LOOPS!",
+        "text": "Amazing! Today you teach the computer to REPEAT things. This is called a LOOP!"
+      },
+      {
+        "kind": "teach",
+        "title": "What is a loop?",
+        "text": "A loop does the same thing many times. Like walking in circles, or clapping your hands 5 times!",
+        "visual": "👏 👏 👏 👏 👏  (clap 5 times)"
+      },
+      {
+        "kind": "teach",
+        "title": "for ... in range(5)",
+        "text": "This magic line says: 'do the stuff inside 5 times!' The inside must be indented (4 spaces) like with if.",
+        "pre": "for star in range(5):\n    print(\"⭐\")",
+        "funFact": "range(5) makes the numbers 0, 1, 2, 3, 4 — that's 5 numbers total!"
+      },
+      {
+        "kind": "try",
+        "title": "A unicorn parade!",
+        "text": "Change the number in range to any amount you like!",
+        "pre": "for i in range(6):\n    print(\"🦄 Unicorn!\")",
+        "chips": ["range(3)", "range(10)", "range(2)"]
+      },
+      {
+        "kind": "teach",
+        "title": "Use the counter",
+        "text": "The letter i (or whatever you call it) is the counter — it changes each time through the loop!",
+        "pre": "for n in range(5):\n    print(\"Number:\", n)",
+        "visual": "Number: 0\nNumber: 1\nNumber: 2\nNumber: 3\nNumber: 4"
+      },
+      {
+        "kind": "try",
+        "title": "Count down and blast off!",
+        "text": "range(5, 0, -1) means count from 5 down to 1!",
+        "pre": "for n in range(5, 0, -1):\n    print(n)\nprint(\"🚀 Blast off!\")"
+      }
     ],
     "mission": { "brief": "Print the word 'yay' three times with a loop.", "starter": "for i in range(3):\n    print(\"___\")" }
   },
@@ -72,13 +262,53 @@
     "week": 6,
     "title": "Lists",
     "concept": "lists",
-    "intro": "A list is a box that holds MANY things in order!",
+    "intro": "Today you learn LISTS — a magic box that holds LOTS of things in a line!",
+    "topics": ["What is a list?", "Making a list", "Getting one thing", "Counting lists", "Looping through a list"],
     "steps": [
-      { "kind": "recap", "text": "Last week you made LOOPS! Remember? Press Run and watch the stars appear!", "pre": "for star in range(5):\n    print(\"⭐\")" },
-      { "kind": "recap", "text": "Wow! Today we learn LISTS — a big box that holds LOTS of things in a line!" },
-      { "kind": "teach", "text": "Make a pet shop!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])" },
-      { "kind": "teach", "text": "The first thing is pets[0]. Try pets[1] and pets[2]!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[2])" },
-      { "kind": "try",   "text": "Loop through the list!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nfor p in pets:\n    print(\"I see a\", p)" }
+      {
+        "kind": "recap",
+        "title": "Remember loops?",
+        "text": "Last week you made LOOPS! Press Run and watch the stars appear!",
+        "pre": "for star in range(5):\n    print(\"⭐\")"
+      },
+      {
+        "kind": "recap",
+        "title": "Now — LISTS!",
+        "text": "Wow! Today you learn LISTS — a BIG box that holds many things in order!"
+      },
+      {
+        "kind": "teach",
+        "title": "What is a list?",
+        "text": "A list is one box with lots of things inside, in a line. Like a line of toys on a shelf!",
+        "visual": "🐱  🐶  🦄\npets = [\"cat\", \"dog\", \"unicorn\"]"
+      },
+      {
+        "kind": "teach",
+        "title": "Making a list",
+        "text": "Use SQUARE brackets [ ] and put things inside, separated by commas.",
+        "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets)"
+      },
+      {
+        "kind": "teach",
+        "title": "Get ONE thing with its spot number",
+        "text": "pets[0] gets the FIRST one. Why 0? Because computers count starting from 0!",
+        "visual": "pets[0] → cat\npets[1] → dog\npets[2] → unicorn",
+        "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])",
+        "funFact": "In the computer world, FIRST is 0! It feels strange at first but you'll get used to it. 🙂"
+      },
+      {
+        "kind": "try",
+        "title": "Try spot 1 and 2!",
+        "text": "Change the number in the brackets to 1 or 2 and press Run!",
+        "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[2])",
+        "chips": ["print(pets[0])", "print(pets[1])", "print(pets[2])"]
+      },
+      {
+        "kind": "try",
+        "title": "Loop through the whole list",
+        "text": "Combine lists with loops — go through each thing in order!",
+        "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nfor p in pets:\n    print(\"I see a\", p)"
+      }
     ],
     "mission": { "brief": "Make a list of 3 animals and print the first one.", "starter": "animals = [\"___\", \"___\", \"___\"]\nprint(animals[0])" }
   },
@@ -86,12 +316,45 @@
     "week": 7,
     "title": "Chat with Pixi",
     "concept": "input()",
-    "intro": "The computer can ASK you questions!",
+    "intro": "Today the computer ASKS YOU questions — real chat with Pixi!",
+    "topics": ["What is input?", "Asking a question", "Saving the answer", "A chat program"],
     "steps": [
-      { "kind": "recap", "text": "Last week you made LISTS! Remember your pet shop? Press Run!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])" },
-      { "kind": "recap", "text": "Fantastic! Today Pixi ASKS YOU questions — and waits for your answer!" },
-      { "kind": "teach", "text": "input() asks a question and waits for your answer.", "pre": "name = input(\"What's your name? \")\nprint(\"Hello,\", name)" },
-      { "kind": "try",   "text": "Make Pixi say hi back!", "pre": "color = input(\"Favourite colour? \")\nprint(\"I love\", color, \"too!\")" }
+      {
+        "kind": "recap",
+        "title": "Remember lists?",
+        "text": "Last week you made LISTS! Remember your pet shop? Press Run!",
+        "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])"
+      },
+      {
+        "kind": "recap",
+        "title": "Now — the computer asks YOU!",
+        "text": "Fantastic! Today the computer asks YOU questions — and waits for your answer!"
+      },
+      {
+        "kind": "teach",
+        "title": "What is input()?",
+        "text": "input() shows a question and waits for you to type an answer. Then it remembers what you typed!",
+        "visual": "You: name? 🤔\nYou type: Ava\nComputer: remembers \"Ava\""
+      },
+      {
+        "kind": "teach",
+        "title": "Ask and remember",
+        "text": "Save the answer in a box, then use it! A little pop-up will appear for you to type in.",
+        "pre": "name = input(\"What's your name? \")\nprint(\"Hello,\", name)"
+      },
+      {
+        "kind": "try",
+        "title": "Make Pixi react to your answer",
+        "text": "Ask about a favourite thing — Pixi will reply!",
+        "pre": "color = input(\"Favourite colour? \")\nprint(\"I love\", color, \"too!\")",
+        "chips": ["food = input(\"Favourite food? \")", "age = input(\"How old? \")"]
+      },
+      {
+        "kind": "try",
+        "title": "A mini chat program",
+        "text": "Ask two questions and put the answers together!",
+        "pre": "name = input(\"Name? \")\nfood = input(\"Favourite food? \")\nprint(name, \"loves\", food, \"! 🍕\")"
+      }
     ],
     "mission": { "brief": "Use input() to ask a name, then print a greeting.", "starter": "name = input(\"Name? \")\nprint(\"Hi \" + name)" }
   },
@@ -99,12 +362,45 @@
     "week": 8,
     "title": "Magic Words",
     "concept": "def functions",
-    "intro": "Teach the computer a NEW magic word with def!",
+    "intro": "Today YOU teach the computer a brand new magic word — made by you!",
+    "topics": ["What is a function?", "Making a magic word", "Calling it again and again", "Magic words with inputs"],
     "steps": [
-      { "kind": "recap", "text": "Last week Pixi ASKED you questions with input! Remember?", "pre": "name = input(\"Name? \")\nprint(\"Hi \" + name)" },
-      { "kind": "recap", "text": "Perfect! Today we teach the computer a brand new MAGIC WORD — made by you!" },
-      { "kind": "teach", "text": "def teaches the computer a new word!", "pre": "def say_hi():\n    print(\"Hi there! 👋\")\n\nsay_hi()" },
-      { "kind": "try",   "text": "Give your word an argument!", "pre": "def greet(who):\n    print(\"Hello \" + who + \"!\")\n\ngreet(\"Ava\")\ngreet(\"Pixi\")" }
+      {
+        "kind": "recap",
+        "title": "Remember input()?",
+        "text": "Last week Pixi ASKED you questions with input! Remember?",
+        "pre": "name = input(\"Name? \")\nprint(\"Hi \" + name)"
+      },
+      {
+        "kind": "recap",
+        "title": "Now — invent YOUR OWN magic word!",
+        "text": "Perfect! Today you teach the computer a BRAND NEW magic word — one that YOU invent!"
+      },
+      {
+        "kind": "teach",
+        "title": "What is a function?",
+        "text": "A function is YOUR OWN magic word. You teach the computer what it does ONCE, then use it as many times as you like!",
+        "visual": "def say_hi():         ← teach the word\n    print(\"Hi there!\")\n\nsay_hi()              ← use it!\nsay_hi()              ← use it again!"
+      },
+      {
+        "kind": "teach",
+        "title": "Teach your first magic word",
+        "text": "def means 'DEFINE this new word'. Everything inside (4 spaces!) is what the word does.",
+        "pre": "def say_hi():\n    print(\"Hi there! 👋\")\n\nsay_hi()\nsay_hi()",
+        "funFact": "You just wrote your first REAL program — the kind big kid programmers write!"
+      },
+      {
+        "kind": "try",
+        "title": "Give your magic word an input",
+        "text": "Put a word inside the ( ) when you teach it — then use that word inside!",
+        "pre": "def greet(who):\n    print(\"Hello \" + who + \"!\")\n\ngreet(\"Ava\")\ngreet(\"Pixi\")\ngreet(\"Mom\")"
+      },
+      {
+        "kind": "try",
+        "title": "Your own superpower!",
+        "text": "Make a magic word that gives someone a superpower!",
+        "pre": "def superpower(hero, power):\n    print(hero, \"can\", power, \"✨\")\n\nsuperpower(\"Dragon\", \"fly\")\nsuperpower(\"Pixi\", \"code\")"
+      }
     ],
     "mission": { "brief": "Write a def and call it twice!", "starter": "def say_hi():\n    print(\"___\")\n\nsay_hi()\nsay_hi()" }
   }

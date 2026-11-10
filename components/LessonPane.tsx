@@ -6,8 +6,11 @@ import { speak } from '@/lib/speak';
 import { Sfx } from '@/lib/sounds';
 
 export interface LessonStep {
-  text: string;
-  pre?: string;    // pre-loaded code to put in the editor
+  title?: string;   // short topic heading, shown as a big sub-heading
+  text: string;     // explanation (may be longer now)
+  visual?: string;  // optional emoji/ASCII picture to show the concept
+  funFact?: string; // optional extra "did you know?" tidbit
+  pre?: string;     // pre-loaded code to put in the editor
   chips?: string[]; // chip inserts (one line each)
   kind?: 'recap' | 'teach' | 'try'; // visual marker on the step
 }
@@ -17,6 +20,7 @@ export interface Lesson {
   title: string;
   concept: string;
   intro: string;
+  topics?: string[]; // 3-5 short topic names, shown as chips at the top
   steps: LessonStep[];
   mission?: { brief: string; starter?: string };
 }
@@ -56,12 +60,26 @@ export default function LessonPane({ lesson, stepIdx, onNext, onBack }: Props) {
         ) : null}
       </div>
       <h2 className="font-display text-2xl font-bold text-navy">{lesson.title}</h2>
+      {step.title ? (
+        <h3 className="mt-2 font-display text-xl font-bold text-pink-dark">{step.title}</h3>
+      ) : null}
       <div className="mt-3 flex items-start gap-3">
         <Pixi state={pixiState} size={64} onClick={() => speak(step.text)} />
         <p className="flex-1 font-display text-lg font-semibold leading-snug text-navy">
           {step.text}
         </p>
       </div>
+      {step.visual ? (
+        <div className="mt-3 rounded-2xl border-2 border-purple-light bg-gradient-to-br from-cream to-[#FFF1D0] p-4 text-center font-code text-xl font-bold text-navy whitespace-pre-wrap">
+          {step.visual}
+        </div>
+      ) : null}
+      {step.funFact ? (
+        <div className="mt-3 rounded-2xl border-2 border-sun bg-[#FFF8D5] p-3">
+          <span className="mr-1 font-display text-sm font-bold text-navy">✨ Fun fact:</span>
+          <span className="font-display text-sm font-semibold text-navy">{step.funFact}</span>
+        </div>
+      ) : null}
       <div className="mt-4 flex items-center gap-2">
         {onBack && stepIdx > 0 ? (
           <button
