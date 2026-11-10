@@ -1,0 +1,251 @@
+[
+  {
+    "week": 1,
+    "fillBlanks": {
+      "template": "print({0})",
+      "expectedOutput": "Hello!\n",
+      "blanks": [
+        { "answer": "\"Hello!\"", "options": ["\"Hello!\"", "Hello", "5"] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "print(\"cat\")",   "output": "cat" },
+      { "code": "print(\"🐶\")",     "output": "🐶" },
+      { "code": "print(2 + 2)",     "output": "4" }
+    ],
+    "colourBoxes": {
+      "template": "print(\"{0}\")",
+      "slots": [
+        { "icon": "💬", "options": ["Hi", "Ava", "Yay"] }
+      ]
+    },
+    "drawIt": {
+      "code": "print(\"🐱\")",
+      "correctOutput": "🐱",
+      "options": ["🐱", "🐶", "🐻", "🦄"]
+    },
+    "challenge": {
+      "prompt": "Write one line of code that makes the computer say your name.",
+      "hint": "Use print and put your name inside the quotes."
+    }
+  },
+  {
+    "week": 2,
+    "fillBlanks": {
+      "template": "{0} = \"Ava\"\nprint({0})",
+      "expectedOutput": "Ava\n",
+      "blanks": [
+        { "answer": "name", "options": ["name", "5", "\"hello\""] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "name = \"Ava\"\nprint(name)",      "output": "Ava" },
+      { "code": "age = 5\nprint(age)",             "output": "5" },
+      { "code": "hero = \"Dragon\"\nprint(hero)",  "output": "Dragon" }
+    ],
+    "colourBoxes": {
+      "template": "name = \"{0}\"\nage = {1}\nprint(name, age)",
+      "slots": [
+        { "icon": "📦", "options": ["Ava", "Sam", "Pixi"] },
+        { "icon": "🔢", "options": ["5", "7", "100"] }
+      ]
+    },
+    "drawIt": {
+      "code": "hero = \"🐉\"\nprint(hero)",
+      "correctOutput": "🐉",
+      "options": ["🐉", "🦄", "⭐", "🎁"]
+    },
+    "challenge": {
+      "prompt": "Write one line that makes a box called pet that holds your favourite animal.",
+      "hint": "pet = \"...\"  (put the animal inside the quotes!)"
+    }
+  },
+  {
+    "week": 3,
+    "fillBlanks": {
+      "template": "name = \"Ava\"\nprint(\"Hi \" {0} name)",
+      "expectedOutput": "Hi Ava\n",
+      "blanks": [
+        { "answer": "+", "options": ["+", "-", "*"] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "print(\"Hi \" + \"Ava\")",      "output": "Hi Ava" },
+      { "code": "print(\"A\" + \"B\")",          "output": "AB" },
+      { "code": "print(\"ha\" * 3)",            "output": "hahaha" }
+    ],
+    "colourBoxes": {
+      "template": "print(\"{0}\" + \" loves \" + \"{1}\")",
+      "slots": [
+        { "icon": "💬", "options": ["Ava", "Sam", "Pixi"] },
+        { "icon": "💬", "options": ["cats", "anime", "pizza"] }
+      ]
+    },
+    "drawIt": {
+      "code": "print(\"🎂 \" * 3)",
+      "correctOutput": "🎂 🎂 🎂 ",
+      "options": ["🎂 🎂 🎂 ", "🎂", "🎂🎂🎂", "3🎂"]
+    },
+    "challenge": {
+      "prompt": "Write one line that prints your name with Hi stuck in front using +.",
+      "hint": "print(\"Hi \" + \"...\")  (your name in the quotes!)"
+    }
+  },
+  {
+    "week": 4,
+    "fillBlanks": {
+      "template": "score = 10\nif score > 5:\n    print({0})",
+      "expectedOutput": "You win!\n",
+      "blanks": [
+        { "answer": "\"You win!\"", "options": ["\"You win!\"", "score", "True"] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "score = 10\nif score > 5:\n    print(\"Win\")",                              "output": "Win" },
+      { "code": "age = 3\nif age > 5:\n    print(\"Big\")\nelse:\n    print(\"Small\")",      "output": "Small" },
+      { "code": "if True:\n    print(\"yes\")",                                                 "output": "yes" }
+    ],
+    "colourBoxes": {
+      "template": "score = {0}\nif score > 5:\n    print(\"{1}\")\nelse:\n    print(\"try again\")",
+      "slots": [
+        { "icon": "🔢", "options": ["10", "3", "100"] },
+        { "icon": "💬", "options": ["win", "yay", "super"] }
+      ]
+    },
+    "drawIt": {
+      "code": "if 2 > 1:\n    print(\"✨\")",
+      "correctOutput": "✨",
+      "options": ["✨", "nothing", "True", "2>1"]
+    },
+    "challenge": {
+      "prompt": "Write an if that prints yay when age is bigger than 3.",
+      "hint": "age = 5\nif age > 3:\n    print(\"yay\")"
+    }
+  },
+  {
+    "week": 5,
+    "fillBlanks": {
+      "template": "for star in range({0}):\n    print(\"⭐\")",
+      "expectedOutput": "⭐\n⭐\n⭐\n",
+      "blanks": [
+        { "answer": "3", "options": ["3", "\"3\"", "star"] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "for i in range(3):\n    print(\"🌟\")",     "output": "🌟\n🌟\n🌟" },
+      { "code": "for n in range(2):\n    print(n)",           "output": "0\n1" },
+      { "code": "for i in range(4):\n    print(\"🦄\")",     "output": "🦄\n🦄\n🦄\n🦄" }
+    ],
+    "colourBoxes": {
+      "template": "for i in range({0}):\n    print(\"{1}\")",
+      "slots": [
+        { "icon": "🔢", "options": ["3", "5", "10"] },
+        { "icon": "💬", "options": ["🦄", "⭐", "yay"] }
+      ]
+    },
+    "drawIt": {
+      "code": "for i in range(3):\n    print(\"🎈\")",
+      "correctOutput": "🎈 🎈 🎈 (on 3 lines)",
+      "options": ["🎈 🎈 🎈 (on 3 lines)", "🎈 once", "range(3)", "3🎈"]
+    },
+    "challenge": {
+      "prompt": "Write a loop that prints the word hi 5 times.",
+      "hint": "for i in range(5):\n    print(\"hi\")"
+    }
+  },
+  {
+    "week": 6,
+    "fillBlanks": {
+      "template": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[{0}])",
+      "expectedOutput": "cat\n",
+      "blanks": [
+        { "answer": "0", "options": ["0", "1", "3"] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])", "output": "cat" },
+      { "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[1])", "output": "dog" },
+      { "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[2])", "output": "unicorn" }
+    ],
+    "colourBoxes": {
+      "template": "pets = [\"{0}\", \"{1}\", \"{2}\"]\nprint(pets[0])",
+      "slots": [
+        { "icon": "💬", "options": ["cat", "fox", "owl"] },
+        { "icon": "💬", "options": ["dog", "bear", "deer"] },
+        { "icon": "💬", "options": ["unicorn", "dragon", "phoenix"] }
+      ]
+    },
+    "drawIt": {
+      "code": "pets = [\"🐱\", \"🐶\", \"🦄\"]\nprint(pets[2])",
+      "correctOutput": "🦄",
+      "options": ["🐱", "🐶", "🦄", "all 3"]
+    },
+    "challenge": {
+      "prompt": "Make a list of 3 fruits and print the second one.",
+      "hint": "fruits = [\"apple\", \"banana\", \"mango\"]\nprint(fruits[1])"
+    }
+  },
+  {
+    "week": 7,
+    "fillBlanks": {
+      "template": "name = input(\"Name? \")\nprint(\"Hello,\", {0})",
+      "expectedOutput": "Hello, Ava\n",
+      "inputs": ["Ava"],
+      "blanks": [
+        { "answer": "name", "options": ["name", "\"name\"", "input"] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "You type Ava\n→ name = input(...)\nprint(\"Hi\", name)",       "output": "Hi Ava" },
+      { "code": "You type cat\n→ pet = input(...)\nprint(\"I love\", pet)",     "output": "I love cat" },
+      { "code": "You type blue\n→ c = input(...)\nprint(c, \"is pretty\")",     "output": "blue is pretty" }
+    ],
+    "colourBoxes": {
+      "template": "name = input(\"{0}\")\nprint(\"{1}\", name)",
+      "slots": [
+        { "icon": "💬", "options": ["Name? ", "Who? ", "Hey? "] },
+        { "icon": "💬", "options": ["Hello,", "Hi,", "Yo,"] }
+      ]
+    },
+    "drawIt": {
+      "code": "Pixi asks: 'Favourite colour?'\nYou type: pink\nprint(\"I love\", colour)",
+      "correctOutput": "I love pink",
+      "options": ["I love pink", "pink", "colour", "nothing"]
+    },
+    "challenge": {
+      "prompt": "Ask what your student's favourite food is, then print I love ___.",
+      "hint": "food = input(\"Favourite food? \")\nprint(\"I love\", food)"
+    }
+  },
+  {
+    "week": 8,
+    "fillBlanks": {
+      "template": "def say_hi():\n    print(\"Hi there!\")\n\n{0}",
+      "expectedOutput": "Hi there!\n",
+      "blanks": [
+        { "answer": "say_hi()", "options": ["say_hi()", "say_hi", "print(say_hi)"] }
+      ]
+    },
+    "matchPairs": [
+      { "code": "def hi():\n    print(\"hi\")\nhi()",                                   "output": "hi" },
+      { "code": "def greet(n):\n    print(\"Hi \" + n)\ngreet(\"Ava\")",               "output": "Hi Ava" },
+      { "code": "def shout():\n    print(\"YAY!\")\nshout()\nshout()",                 "output": "YAY!\nYAY!" }
+    ],
+    "colourBoxes": {
+      "template": "def greet(who):\n    print(\"{0} \" + who)\n\ngreet(\"{1}\")",
+      "slots": [
+        { "icon": "💬", "options": ["Hi", "Hello", "Yo"] },
+        { "icon": "💬", "options": ["Ava", "Pixi", "Sam"] }
+      ]
+    },
+    "drawIt": {
+      "code": "def wave():\n    print(\"👋\")\nwave()\nwave()",
+      "correctOutput": "👋 👋 (on 2 lines)",
+      "options": ["👋 👋 (on 2 lines)", "👋", "wave wave", "nothing"]
+    },
+    "challenge": {
+      "prompt": "Make a magic word called say_hello that prints hello, then call it 3 times.",
+      "hint": "def say_hello():\n    print(\"hello\")\nsay_hello()\nsay_hello()\nsay_hello()"
+    }
+  }
+]

@@ -11,6 +11,7 @@ import InputModal from '@/components/InputModal';
 import ChipButton from '@/components/ChipButton';
 import WeekPicker from '@/components/WeekPicker';
 import TopicsBanner from '@/components/TopicsBanner';
+import PracticeSection from '@/components/practice/PracticeSection';
 import { runPython, PyValue } from '@/lib/python';
 import { useAppStore } from '@/lib/store';
 import { Sfx } from '@/lib/sounds';
@@ -103,6 +104,7 @@ export default function LessonPage() {
         </div>
       </div>
       <InputModal open={inputPrompt !== null} prompt={inputPrompt ?? ''} onSubmit={onInputSubmit} />
+      <PracticeSection week={week} />
     </div>
   );
 }

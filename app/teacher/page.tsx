@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useAppStore } from '@/lib/store';
 import StickerWall from '@/components/StickerWall';
+import WorksheetsTab from '@/components/WorksheetsTab';
 import { Sfx } from '@/lib/sounds';
 
 const WEEK_NOTES: Record<number, string[]> = {
@@ -165,6 +166,8 @@ export default function TeacherPage() {
           </button>
         </div>
       </section>
+
+      <WorksheetsTab />
 
       <section className="rounded-3xl border-4 border-purple-light bg-white p-5 shadow-chunk">
         <h2 className="font-display text-xl font-bold">🏅 Sticker book</h2>
