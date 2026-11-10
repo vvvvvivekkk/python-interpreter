@@ -9,6 +9,7 @@ export interface LessonStep {
   text: string;
   pre?: string;    // pre-loaded code to put in the editor
   chips?: string[]; // chip inserts (one line each)
+  kind?: 'recap' | 'teach' | 'try'; // visual marker on the step
 }
 
 export interface Lesson {
@@ -39,10 +40,20 @@ export default function LessonPane({ lesson, stepIdx, onNext, onBack }: Props) {
 
   if (!step) return null;
 
+  const isRecap = step.kind === 'recap';
   return (
-    <div className="rounded-3xl border-4 border-purple-light bg-white/90 p-5 shadow-chunk">
-      <div className="mb-2 font-display text-sm font-bold uppercase tracking-wider text-purple-dark">
-        Week {lesson.week} · {lesson.concept}
+    <div className={`rounded-3xl border-4 bg-white/90 p-5 shadow-chunk ${
+      isRecap ? 'border-sun' : 'border-purple-light'
+    }`}>
+      <div className="mb-2 flex items-center gap-2">
+        <span className="font-display text-sm font-bold uppercase tracking-wider text-purple-dark">
+          Week {lesson.week} · {lesson.concept}
+        </span>
+        {isRecap ? (
+          <span className="rounded-full bg-sun px-2 py-0.5 font-display text-xs font-bold text-navy">
+            🔙 Recap
+          </span>
+        ) : null}
       </div>
       <h2 className="font-display text-2xl font-bold text-navy">{lesson.title}</h2>
       <div className="mt-3 flex items-start gap-3">
