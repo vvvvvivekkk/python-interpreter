@@ -23,7 +23,7 @@ function render(template: string, values: string[]): string {
 
 export default function FillBlanks({ data }: Props) {
   const [picks, setPicks] = useState<(string | null)[]>(() => data.blanks.map(() => null));
-  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const [openPos, setOpenPos] = useState<number | null>(null); // position in split, not blank idx
   const [output, setOutput] = useState('');
   const [verdict, setVerdict] = useState<'none' | 'right' | 'wrong'>('none');
   const addStars = useAppStore((s) => s.addStars);
@@ -41,7 +41,7 @@ export default function FillBlanks({ data }: Props) {
   const pick = (blankIdx: number, opt: string) => {
     Sfx.click();
     setPicks((prev) => prev.map((p, i) => (i === blankIdx ? opt : p)));
-    setOpenIdx(null);
+    setOpenPos(null);
     setVerdict('none');
   };
 
@@ -82,10 +82,11 @@ export default function FillBlanks({ data }: Props) {
           if (typeof part === 'string') return <span key={i}>{part}</span>;
           const blankIdx = part.index;
           const value = picks[blankIdx];
+          const isOpen = openPos === i;
           return (
             <span key={i} className="relative inline-block">
               <button
-                onClick={() => setOpenIdx(openIdx === blankIdx ? null : blankIdx)}
+                onClick={() => setOpenPos(isOpen ? null : i)}
                 className={`inline-block rounded-full border-2 px-3 py-0.5 font-bold ${
                   value
                     ? verdict === 'wrong'
@@ -96,8 +97,8 @@ export default function FillBlanks({ data }: Props) {
               >
                 {value ?? '▭'}
               </button>
-              {openIdx === blankIdx ? (
-                <div className="absolute left-0 top-full z-10 mt-1 flex min-w-[160px] flex-col gap-1 rounded-2xl border-2 border-purple-light bg-white p-2 shadow-chunk">
+              {isOpen ? (
+                <div className="absolute left-0 top-full z-20 mt-1 flex min-w-[160px] flex-col gap-1 rounded-2xl border-2 border-purple-light bg-white p-2 shadow-chunk">
                   {data.blanks[blankIdx].options.map((o) => (
                     <button
                       key={o}
