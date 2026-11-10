@@ -1,0 +1,97 @@
+[
+  {
+    "week": 1,
+    "title": "Hello World",
+    "concept": "print()",
+    "intro": "Welcome to your very first lesson! Today we teach the computer to talk.",
+    "steps": [
+      { "text": "The print() magic word makes the computer say things! Type: print(\"Hello!\") and press Run.", "pre": "print(\"Hello!\")", "chips": ["print(\"Hi!\")", "print(\"I love Python!\")", "print(\"I love anime!\")"] },
+      { "text": "Great! Now change the words inside the quotes and press Run again.", "chips": ["print(\"My name is Ava\")", "print(\"I am a superstar!\")"] },
+      { "text": "You can print lots of things at once! Try: print(\"Hi\", \"World\")", "pre": "print(\"Hi\", \"World\")" },
+      { "text": "You even draw with print! Try this cat face.", "pre": "print(\"/\\\\_/\\\\\")\nprint(\"( o.o )\")\nprint(\" > ^ <\")" }
+    ],
+    "mission": { "brief": "Make the robot say Hello!", "starter": "print(\"___\")" }
+  },
+  {
+    "week": 2,
+    "title": "Name Boxes",
+    "concept": "variables",
+    "intro": "A box with a name — put a word or number inside, open it later!",
+    "steps": [
+      { "text": "Watch the magic: name = \"Ava\" puts the word Ava in a box called name. Then print(name) opens the box!", "pre": "name = \"Ava\"\nprint(name)" },
+      { "text": "Numbers don't need quotes. Try: age = 5, then print(age)", "pre": "age = 5\nprint(age)" },
+      { "text": "Make TWO boxes and print them together!", "pre": "hero = \"Dragon\"\npower = \"flying\"\nprint(hero, \"can go\", power)" }
+    ],
+    "mission": { "brief": "Make a box called hero AND a box called power, then print them.", "starter": "hero = \"___\"\npower = \"___\"\nprint(hero, power)" }
+  },
+  {
+    "week": 3,
+    "title": "Joining Words",
+    "concept": "strings",
+    "intro": "Glue words together to make funny sentences!",
+    "steps": [
+      { "text": "The + sign glues words: \"Hi \" + name. Try it!", "pre": "name = \"Ava\"\nprint(\"Hi \" + name)" },
+      { "text": "The comma puts a space in between: print(\"I love\", \"cats\")", "pre": "print(\"I love\", \"cats\")" },
+      { "text": "Build a birthday card!", "pre": "name = \"Ava\"\nprint(\"Happy Birthday \" + name + \"!\")" }
+    ],
+    "mission": { "brief": "Join your name with Hello using +", "starter": "name = \"___\"\nprint(\"Hello \" + name)" }
+  },
+  {
+    "week": 4,
+    "title": "Making Choices",
+    "concept": "if / else",
+    "intro": "Teach the computer to decide what to do!",
+    "steps": [
+      { "text": "if checks something. Try: if score > 5: print(\"You win!\")", "pre": "score = 10\nif score > 5:\n    print(\"You win!\")" },
+      { "text": "Add an else for the other case!", "pre": "score = 3\nif score > 5:\n    print(\"You win!\")\nelse:\n    print(\"Try again!\")" },
+      { "text": "Change the score and see what happens!", "pre": "score = 7\nif score > 5:\n    print(\"🏆 You win!\")\nelse:\n    print(\"💪 Try again!\")" }
+    ],
+    "mission": { "brief": "Make an if that prints 'win' when score is 10.", "starter": "score = 10\nif score > 5:\n    print(\"___\")" }
+  },
+  {
+    "week": 5,
+    "title": "Loops",
+    "concept": "for ... in range",
+    "intro": "Make the computer do things again and again!",
+    "steps": [
+      { "text": "for star in range(5) means do it 5 times! Try it.", "pre": "for star in range(5):\n    print(\"⭐\")" },
+      { "text": "Make a unicorn parade!", "pre": "for i in range(6):\n    print(\"🦄 Unicorn!\")" },
+      { "text": "Count down from 5!", "pre": "for n in range(5, 0, -1):\n    print(n)\nprint(\"Blast off! 🚀\")" }
+    ],
+    "mission": { "brief": "Print the word 'yay' three times with a loop.", "starter": "for i in range(3):\n    print(\"___\")" }
+  },
+  {
+    "week": 6,
+    "title": "Lists",
+    "concept": "lists",
+    "intro": "A list is a box that holds MANY things in order!",
+    "steps": [
+      { "text": "Make a pet shop!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])" },
+      { "text": "The first thing is pets[0]. Try pets[1] and pets[2]!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[2])" },
+      { "text": "Loop through the list!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nfor p in pets:\n    print(\"I see a\", p)" }
+    ],
+    "mission": { "brief": "Make a list of 3 animals and print the first one.", "starter": "animals = [\"___\", \"___\", \"___\"]\nprint(animals[0])" }
+  },
+  {
+    "week": 7,
+    "title": "Chat with Pixi",
+    "concept": "input()",
+    "intro": "The computer can ASK you questions!",
+    "steps": [
+      { "text": "input() asks a question and waits for your answer.", "pre": "name = input(\"What's your name? \")\nprint(\"Hello,\", name)" },
+      { "text": "Make Pixi say hi back!", "pre": "color = input(\"Favourite colour? \")\nprint(\"I love\", color, \"too!\")" }
+    ],
+    "mission": { "brief": "Use input() to ask a name, then print a greeting.", "starter": "name = input(\"Name? \")\nprint(\"Hi \" + name)" }
+  },
+  {
+    "week": 8,
+    "title": "Magic Words",
+    "concept": "def functions",
+    "intro": "Teach the computer a NEW magic word with def!",
+    "steps": [
+      { "text": "def teaches the computer a new word!", "pre": "def say_hi():\n    print(\"Hi there! 👋\")\n\nsay_hi()" },
+      { "text": "Give your word an argument!", "pre": "def greet(who):\n    print(\"Hello \" + who + \"!\")\n\ngreet(\"Ava\")\ngreet(\"Pixi\")" }
+    ],
+    "mission": { "brief": "Write a def and call it twice!", "starter": "def say_hi():\n    print(\"___\")\n\nsay_hi()\nsay_hi()" }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  { "id": "p1",  "code": "print(\"Hi!\")",                 "options": ["Hi!", "\"Hi!\"", "print"],       "correct": 0, "hint": "The computer shows what's inside the quotes." },
+  { "id": "p2",  "code": "print(2 + 3)",                   "options": ["23", "5", "2+3"],               "correct": 1, "hint": "2 plus 3 is... count on your fingers!" },
+  { "id": "p3",  "code": "print(\"Cat\")",                 "options": ["Dog", "Cat", "Fish"],           "correct": 1, "hint": "It says exactly what's in the quotes!" },
+  { "id": "p4",  "code": "print(10 - 4)",                  "options": ["6", "14", "4"],                 "correct": 0, "hint": "If you have 10 toys and give 4 away..." },
+  { "id": "p5",  "code": "print(\"I love\", \"Python\")",  "options": ["I love Python", "I lovePython", "\"I love\" \"Python\""], "correct": 0, "hint": "Comma puts a space between!" },
+  { "id": "p6",  "code": "print(5 * 2)",                   "options": ["52", "7", "10"],                "correct": 2, "hint": "* means multiply." },
+  { "id": "p7",  "code": "print(\"🐍\")",                  "options": ["snake", "🐍", "nothing"],       "correct": 1, "hint": "Prints exactly what's in the quotes." },
+  { "id": "p8",  "code": "name = \"Cat\"\nprint(name)",    "options": ["name", "Cat", "\"Cat\""],       "correct": 1, "hint": "The box 'name' holds Cat — print opens it!" },
+  { "id": "p9",  "code": "age = 5\nprint(age)",            "options": ["age", "5", "\"5\""],            "correct": 1, "hint": "Numbers don't need quotes." },
+  { "id": "p10", "code": "x = 2\ny = 3\nprint(x + y)",     "options": ["5", "xy", "23"],                "correct": 0, "hint": "x is 2, y is 3. 2 + 3 is ?" },
+  { "id": "p11", "code": "print(\"ha\" * 3)",              "options": ["hahaha", "ha 3", "ha+ha+ha"],   "correct": 0, "hint": "String times a number repeats it!" },
+  { "id": "p12", "code": "for i in range(3):\n    print(\"🌟\")", "options": ["🌟", "🌟🌟🌟", "🌟\n🌟\n🌟"], "correct": 2, "hint": "range(3) runs 3 times, prints on 3 lines." },
+  { "id": "p13", "code": "pets = [\"cat\", \"dog\"]\nprint(pets[0])", "options": ["cat", "dog", "pets"], "correct": 0, "hint": "The first spot is 0." },
+  { "id": "p14", "code": "if True:\n    print(\"yes\")", "options": ["yes", "True", "nothing"],       "correct": 0, "hint": "True is... true!" },
+  { "id": "p15", "code": "if 5 > 10:\n    print(\"yes\")\nelse:\n    print(\"no\")", "options": ["yes", "no", "nothing"], "correct": 1, "hint": "Is 5 bigger than 10? Nope!" },
+  { "id": "p16", "code": "print(len(\"hi\"))",             "options": ["2", "hi", "0"],                 "correct": 0, "hint": "len counts how many letters." },
+  { "id": "p17", "code": "x = 10\nx = x + 1\nprint(x)",   "options": ["10", "11", "1"],                "correct": 1, "hint": "10 + 1 is 11." },
+  { "id": "p18", "code": "print(\"A\" + \"B\" + \"C\")",   "options": ["ABC", "A B C", "A+B+C"],        "correct": 0, "hint": "+ glues strings together with no space." },
+  { "id": "p19", "code": "def hi():\n    print(\"hi\")\n\nhi()\nhi()", "options": ["hi", "hi\nhi", "nothing"], "correct": 1, "hint": "Called hi() twice — 2 lines!" },
+  { "id": "p20", "code": "print(10 // 3)",                 "options": ["3", "3.3", "4"],                "correct": 0, "hint": "// rounds down to a whole number." }
+]

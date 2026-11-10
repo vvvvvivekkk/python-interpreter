@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  font-family: 'Fredoka', system-ui, sans-serif;
+  color: #3B1E63;
+  background:
+    radial-gradient(1200px 700px at 10% -10%, #FFC9E7 0%, transparent 60%),
+    radial-gradient(1200px 700px at 110% 10%, #B5E9FF 0%, transparent 55%),
+    linear-gradient(180deg, #FFE7A0 0%, #FFF4C9 60%, #FFC9E7 100%);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Chunky focus */
+*:focus-visible {
+  outline: 3px solid #9D4EDD;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* Typewriter cursor */
+.pfw-cursor {
+  display: inline-block;
+  width: 10px; height: 22px;
+  background: #FF6B9D;
+  vertical-align: text-bottom;
+  margin-left: 3px;
+  border-radius: 2px;
+  animation: pfw-blink 1.1s steps(2, end) infinite;
+}
+@keyframes pfw-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Chunky button pressed-shadow */
+.chunk-btn {
+  transition: transform 160ms cubic-bezier(.3,1.4,.4,1),
+              box-shadow 160ms cubic-bezier(.3,1.4,.4,1);
+}
+.chunk-btn:hover  { transform: translateY(-2px); }
+.chunk-btn:active { transform: translateY(4px); box-shadow: none !important; }

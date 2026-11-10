@@ -1,0 +1,13 @@
+{
+  "name": "Python Fun World",
+  "short_name": "Python Fun",
+  "description": "A magical Python playground for a 5-year-old!",
+  "start_url": "/home",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FFF8E7",
+  "theme_color": "#FF6B9D",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
