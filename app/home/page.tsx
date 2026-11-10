@@ -7,7 +7,7 @@ import Pixi from '@/components/Pixi';
 
 const TILES = [
   { href: '/play', ico: '⚡', title: 'Free Play', blurb: 'Type any Python and see what happens.', bg: 'from-[#7FD1EC] to-sky' },
-  { href: '/lesson/1', ico: '🗺️', title: 'Lessons', blurb: '8 weeks, one superpower each.',   bg: 'from-[#FFB088] to-coral' },
+  { href: '/lessons', ico: '🗺️', title: 'Lessons', blurb: '8 weeks — pick any one!',         bg: 'from-[#FFB088] to-coral' },
   { href: '/missions', ico: '🏆', title: 'Missions', blurb: 'Earn stars for solving them!',     bg: 'from-[#B07CFF] to-purple' },
   { href: '/puzzles', ico: '🎯', title: 'Puzzles',   blurb: 'Guess what the code will say.',    bg: 'from-[#FFE066] to-sun' },
   { href: '/teacher', ico: '🎓', title: 'Teacher',   blurb: 'Parent & teacher mode.',           bg: 'from-[#7FE2C8] to-mint' },

@@ -9,6 +9,7 @@ import Terminal from '@/components/Terminal';
 import VariableBoxes from '@/components/VariableBoxes';
 import InputModal from '@/components/InputModal';
 import ChipButton from '@/components/ChipButton';
+import WeekPicker from '@/components/WeekPicker';
 import { runPython, PyValue } from '@/lib/python';
 import { useAppStore } from '@/lib/store';
 import { Sfx } from '@/lib/sounds';
@@ -71,8 +72,12 @@ export default function LessonPage() {
 
   const chips = useMemo(() => step?.chips ?? [], [step]);
 
+  // Reset to step 0 when the week changes via the picker
+  useEffect(() => { setStepIdx(0); }, [week]);
+
   return (
     <div className="space-y-4 pb-20">
+      <WeekPicker currentWeek={week} />
       <LessonPane
         lesson={lesson}
         stepIdx={stepIdx}
