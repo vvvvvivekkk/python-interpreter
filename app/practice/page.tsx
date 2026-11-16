@@ -71,6 +71,40 @@ export default function PracticeHubPage() {
         </div>
       </Link>
 
+      {/* Featured: Periodic Table — connects chemistry + Python */}
+      <Link
+        href="/practice/periodic-table"
+        onClick={() => Sfx.click()}
+        onMouseEnter={() => Sfx.hover()}
+        className="chunk-btn block rounded-3xl border-[4px] border-sky bg-gradient-to-br from-[#E3F6FF] via-[#F4ECFF] to-[#E8FBF3] p-5 shadow-chunk"
+      >
+        <div className="flex items-start gap-4">
+          <div className="grid h-16 w-16 flex-shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-sky to-mint text-3xl text-white shadow-md">
+            🧪
+          </div>
+          <div className="flex-1">
+            <div className="font-display text-xs font-bold uppercase tracking-wider text-sky-dark" style={{ color: '#0E86AF' }}>
+              New · science meets code
+            </div>
+            <h2 className="mt-1 font-display text-2xl font-bold text-navy">
+              Python meets the Periodic Table
+            </h2>
+            <p className="mt-1 font-display font-semibold text-purple-dark">
+              Every element is 4 Python variables — an int, a float, and two strings. Tap any
+              element and see its real Python code. Covers first 18 + famous friends like gold!
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {['⚛️ 18+ elements', '🔢 Pick the type', '📋 Element lists', '✨ Fun facts'].map((t) => (
+                <span key={t} className="rounded-full border-2 border-sky bg-white px-3 py-1 font-display text-xs font-bold text-sky-dark" style={{ color: '#0E86AF' }}>
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="self-center font-display text-2xl font-bold text-sky">→</div>
+        </div>
+      </Link>
+
       {/* By-week practice cards */}
       <div>
         <h2 className="mt-4 mb-2 font-display text-xl font-bold text-navy">📚 By week</h2>
