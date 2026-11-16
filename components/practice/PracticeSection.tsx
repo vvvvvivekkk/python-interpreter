@@ -43,7 +43,7 @@ export default function PracticeSection({ week }: Props) {
   };
 
   return (
-    <section className="rounded-3xl border-4 border-pink bg-gradient-to-br from-pink-light/20 to-white p-5 shadow-chunk">
+    <section id="practice" className="rounded-3xl border-4 border-pink bg-gradient-to-br from-pink-light/20 to-white p-5 shadow-chunk scroll-mt-24">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h2 className="font-display text-2xl font-bold text-pink-dark">🎯 Practice Time!</h2>
