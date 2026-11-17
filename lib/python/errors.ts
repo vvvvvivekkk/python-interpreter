@@ -31,6 +31,7 @@ export function levenshtein(a: string, b: string): number {
 export const KNOWN_NAMES = [
   'print', 'input', 'str', 'int', 'float', 'len', 'abs',
   'range', 'True', 'False', 'None', 'random',
+  'round', 'max', 'min', 'sum',
 ];
 
 export function makeNameError(name: string): PyError {

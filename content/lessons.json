@@ -403,5 +403,132 @@
       }
     ],
     "mission": { "brief": "Write a def and call it twice!", "starter": "def say_hi():\n    print(\"___\")\n\nsay_hi()\nsay_hi()" }
+  },
+  {
+    "week": 9,
+    "title": "Bigger Maths",
+    "concept": "round · abs · max · min",
+    "intro": "Today Pixi learns some new MATH TRICKS to make numbers behave!",
+    "topics": ["round() tidies decimals", "abs() is always positive", "max() picks the biggest", "min() picks the smallest", "Score games"],
+    "steps": [
+      { "kind": "recap", "title": "Remember functions?", "text": "Last week you made your OWN magic words with def! Press Run and see one again.", "pre": "def hi():\n    print(\"Hi!\")\n\nhi()" },
+      { "kind": "recap", "title": "Now — maths superpowers!", "text": "Today you learn four magic words that do maths tricks for you!" },
+      { "kind": "teach", "title": "round() tidies up decimals", "text": "round() rounds a messy decimal to a tidy whole number!", "pre": "print(round(2.7))\nprint(round(2.3))\nprint(round(3.5))", "visual": "2.7 → 3   (up)\n2.3 → 2   (down)\n3.5 → 4   (half-up)" },
+      { "kind": "teach", "title": "abs() — always a positive hug", "text": "abs() makes any number positive. -5 becomes 5. 5 stays 5.", "pre": "print(abs(-5))\nprint(abs(5))\nprint(abs(-100))", "funFact": "abs means ABSOLUTE value — the DISTANCE from zero!" },
+      { "kind": "teach", "title": "max() and min() — biggest and smallest", "text": "Give max() some numbers, it picks the biggest. min() picks the smallest!", "pre": "print(max(3, 7, 1))\nprint(min(3, 7, 1))" },
+      { "kind": "try", "title": "The high-score game", "text": "Pick the WINNER of three scores!", "pre": "ava = 85\nsam = 92\npixi = 78\nprint(\"Winner scored:\", max(ava, sam, pixi))" }
+    ],
+    "mission": { "brief": "Print the biggest of your three favourite numbers!", "starter": "a = ___\nb = ___\nc = ___\nprint(max(a, b, c))" }
+  },
+  {
+    "week": 10,
+    "title": "Super Lists",
+    "concept": "len · [-1] · in",
+    "intro": "You know lists. Today you learn COOL LIST TRICKS!",
+    "topics": ["len() counts a list", "[-1] gets the LAST one", "random.choice picks any", "Is it IN the list?", "Loop with numbers"],
+    "steps": [
+      { "kind": "recap", "title": "Remember lists?", "text": "Last time you made a pet list! Here it is again.", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])" },
+      { "kind": "recap", "title": "Now — list superpowers!", "text": "Today you unlock three NEW tricks lists can do!" },
+      { "kind": "teach", "title": "len() counts your list", "text": "len() tells you HOW MANY things are in the list.", "pre": "pets = [\"cat\", \"dog\", \"unicorn\", \"fox\"]\nprint(\"I have\", len(pets), \"pets!\")" },
+      { "kind": "teach", "title": "[-1] gets the LAST one!", "text": "Negative numbers count from the END. -1 is the last, -2 is second-last!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[-1])\nprint(pets[-2])", "visual": "pets[0]  → cat   (first)\npets[-1] → unicorn (last!)" },
+      { "kind": "teach", "title": "random.choice picks a surprise!", "text": "random.choice picks ONE from the list — surprise each time!", "pre": "pets = [\"cat\", \"dog\", \"unicorn\", \"fox\"]\nprint(random.choice(pets))" },
+      { "kind": "try", "title": "Random dinner picker", "text": "Pixi can't decide what to eat. Help!", "pre": "foods = [\"pizza\", \"pasta\", \"sushi\", \"tacos\", \"curry\"]\nprint(\"Tonight:\", random.choice(foods))" }
+    ],
+    "mission": { "brief": "Make a list of 4 games. Print how many AND a random one.", "starter": "games = [\"___\", \"___\", \"___\", \"___\"]\nprint(len(games), \"games!\")\nprint(\"Play:\", random.choice(games))" }
+  },
+  {
+    "week": 11,
+    "title": "Magic Dice & Random",
+    "concept": "random.choice",
+    "intro": "Make the computer SURPRISE you! Dice, magic 8-balls, silly stories!",
+    "topics": ["The random magic word", "Make a dice", "Magic 8-ball", "Random name picker", "Silly story maker"],
+    "steps": [
+      { "kind": "recap", "title": "Remember random.choice?", "text": "Last week you picked random things from a list!", "pre": "colours = [\"red\", \"blue\", \"green\"]\nprint(random.choice(colours))" },
+      { "kind": "recap", "title": "Now — build magic surprises!", "text": "Today you make dice, magic 8-balls, and silly story generators!" },
+      { "kind": "teach", "title": "A 6-sided dice", "text": "Dice numbers are 1 to 6 — just make a list!", "pre": "sides = [1, 2, 3, 4, 5, 6]\nprint(\"🎲\", random.choice(sides))", "funFact": "Real dice have DOTS, but numbers work the same!" },
+      { "kind": "teach", "title": "Magic 8-ball", "text": "Ask a yes-or-no question, Pixi picks an answer!", "pre": "answers = [\"Yes!\", \"No way!\", \"Maybe...\", \"Try again\", \"Definitely!\"]\nprint(\"🎱\", random.choice(answers))" },
+      { "kind": "try", "title": "Random animal story", "text": "Pick a random animal AND a random action!", "pre": "animals = [\"cat\", \"dragon\", \"unicorn\"]\nactions = [\"dances\", \"sings\", \"flies\"]\nprint(\"The\", random.choice(animals), random.choice(actions))" },
+      { "kind": "try", "title": "A friend picker", "text": "Who should Pixi hang out with today?", "pre": "friends = [\"Ava\", \"Sam\", \"Max\", \"Lily\"]\nprint(\"Friend of the day:\", random.choice(friends))" }
+    ],
+    "mission": { "brief": "Make a magic 8-ball with 3 answers. Print the answer!", "starter": "answers = [\"___\", \"___\", \"___\"]\nprint(random.choice(answers))" }
+  },
+  {
+    "week": 12,
+    "title": "While Loops",
+    "concept": "while",
+    "intro": "A new kind of loop that keeps going UNTIL something happens!",
+    "topics": ["What's while?", "Count up to 10", "Count down", "Keep going", "for vs while"],
+    "steps": [
+      { "kind": "recap", "title": "Remember for loops?", "text": "for repeats a known number of times. Press Run!", "pre": "for i in range(3):\n    print(\"⭐\")" },
+      { "kind": "recap", "title": "Now — while loops!", "text": "while loops keep going as long as something is TRUE. Different from for!" },
+      { "kind": "teach", "title": "The while shape", "text": "while [check]: — do the inside WHILE the check is TRUE. Watch!", "pre": "x = 0\nwhile x < 3:\n    print(\"going!\", x)\n    x = x + 1", "visual": "x starts 0 → print, x=1\nx=1 → print, x=2\nx=2 → print, x=3\nx=3 → STOP (not < 3)" },
+      { "kind": "teach", "title": "Count up to 5", "text": "Start at 1, count up, stop when past 5.", "pre": "n = 1\nwhile n <= 5:\n    print(n)\n    n = n + 1" },
+      { "kind": "teach", "title": "Count down to blast off", "text": "Start high, count down, stop at 0.", "pre": "n = 5\nwhile n > 0:\n    print(n)\n    n = n - 1\nprint(\"🚀 BLAST OFF!\")" },
+      { "kind": "try", "title": "Keep adding coins", "text": "Keep adding coins while we have less than 20!", "pre": "coins = 0\nwhile coins < 20:\n    coins = coins + 5\n    print(\"Coins:\", coins)", "funFact": "If you FORGET to change the variable inside, while loops forever! Pixi will stop you at 10000 times 😅" }
+    ],
+    "mission": { "brief": "Use while to count from 1 to 3.", "starter": "n = 1\nwhile n <= 3:\n    print(n)\n    n = n + 1" }
+  },
+  {
+    "week": 13,
+    "title": "If + Loops Together",
+    "concept": "nested",
+    "intro": "Combine your powers — put an IF inside a LOOP!",
+    "topics": ["Loop and check", "Count only the evens", "Find the big ones", "Skip the bad ones", "Filter a list"],
+    "steps": [
+      { "kind": "recap", "title": "Remember if and for?", "text": "You know both! Today you COMBINE them.", "pre": "for i in range(3):\n    print(i)" },
+      { "kind": "recap", "title": "Now — put them TOGETHER", "text": "Loops that make DECISIONS on each thing. That's real power!" },
+      { "kind": "teach", "title": "if inside for", "text": "Loop through numbers. Print only the BIG ones!", "pre": "scores = [3, 10, 7, 2, 8]\nfor s in scores:\n    if s > 5:\n        print(s, \"is big!\")", "visual": "3 → skip (too small)\n10 → BIG!\n7 → BIG!\n2 → skip\n8 → BIG!" },
+      { "kind": "teach", "title": "Count the matches", "text": "Count how MANY scores are over 5!", "pre": "scores = [3, 10, 7, 2, 8]\nbig_count = 0\nfor s in scores:\n    if s > 5:\n        big_count = big_count + 1\nprint(\"Big ones:\", big_count)" },
+      { "kind": "try", "title": "Only the cats!", "text": "Loop through pets, print only the cats!", "pre": "pets = [\"cat\", \"dog\", \"cat\", \"bird\", \"cat\"]\nfor p in pets:\n    if p == \"cat\":\n        print(\"🐱\", p)" },
+      { "kind": "try", "title": "Find the biggest", "text": "Use max on a list!", "pre": "nums = [12, 45, 3, 99, 7]\nprint(\"Biggest:\", max(nums))" }
+    ],
+    "mission": { "brief": "Loop 1 to 10. Print only the even ones. (Hint: n % 2 == 0)", "starter": "for n in range(1, 11):\n    if n % 2 == 0:\n        print(n)" }
+  },
+  {
+    "week": 14,
+    "title": "Make a Mini-Game",
+    "concept": "projects",
+    "intro": "Today you build a real game using EVERYTHING you know!",
+    "topics": ["Dice roll game", "Guess the number", "High score keeper", "Pet shop game", "Random story"],
+    "steps": [
+      { "kind": "recap", "title": "You know SO MUCH now!", "text": "print, variables, if, loops, lists, functions, random. Let's build!" },
+      { "kind": "teach", "title": "Game 1 — Lucky dice", "text": "Roll a dice. Win if you get more than 3!", "pre": "import random\nroll = random.choice([1,2,3,4,5,6])\nprint(\"🎲 You rolled:\", roll)\nif roll > 3:\n    print(\"🏆 You win!\")\nelse:\n    print(\"😔 Try again!\")" },
+      { "kind": "teach", "title": "Game 2 — Pixi picks a treasure", "text": "Pixi picks a random treasure for you!", "pre": "treasures = [\"🏆 trophy\", \"💎 gem\", \"🎁 gift\", \"⭐ star\", \"🪙 coin\"]\nprint(\"Pixi found:\", random.choice(treasures))" },
+      { "kind": "teach", "title": "Game 3 — Three-strike counter", "text": "Three tries. Count strikes!", "pre": "strikes = 0\nwhile strikes < 3:\n    strikes = strikes + 1\n    print(\"Strike\", strikes, \"!\")\nprint(\"⚾ You're out!\")" },
+      { "kind": "try", "title": "Make it YOURS", "text": "Change the emojis, words, numbers to your own!", "pre": "game_name = \"My Game\"\nprizes = [\"candy\", \"sticker\", \"nothing\"]\nprint(\"🎮\", game_name)\nprint(\"You won:\", random.choice(prizes))" }
+    ],
+    "mission": { "brief": "Make a dice game that says WIN if the roll is 6, else TRY AGAIN.", "starter": "roll = random.choice([1,2,3,4,5,6])\nprint(roll)\nif roll == 6:\n    print(\"___\")\nelse:\n    print(\"___\")" }
+  },
+  {
+    "week": 15,
+    "title": "Draw with Code",
+    "concept": "patterns",
+    "intro": "Loops can draw PICTURES made of letters and emojis!",
+    "topics": ["A row of stars", "A square of stars", "A triangle", "A rainbow row", "ASCII art"],
+    "steps": [
+      { "kind": "recap", "title": "Remember loops with print?", "text": "Loops can print things in a pattern!", "pre": "for i in range(5):\n    print(\"⭐\")" },
+      { "kind": "recap", "title": "Now — DRAW with code!", "text": "Today you use loops to draw SHAPES and PICTURES!" },
+      { "kind": "teach", "title": "A row of 10 stars", "text": "Use * to repeat a string!", "pre": "print(\"⭐\" * 10)" },
+      { "kind": "teach", "title": "A 5x5 square", "text": "Loop 5 times, print 5 stars each time!", "pre": "for row in range(5):\n    print(\"⭐\" * 5)" },
+      { "kind": "teach", "title": "A growing triangle!", "text": "Each row has MORE stars than the last!", "pre": "for row in range(1, 6):\n    print(\"⭐\" * row)", "visual": "⭐\n⭐⭐\n⭐⭐⭐\n⭐⭐⭐⭐\n⭐⭐⭐⭐⭐" },
+      { "kind": "try", "title": "A rainbow row", "text": "Mix different emojis in one row!", "pre": "for colour in [\"❤️\", \"🧡\", \"💛\", \"💚\", \"💙\", \"💜\"]:\n    print(colour * 5)" }
+    ],
+    "mission": { "brief": "Draw a 4-row heart triangle: 1, 2, 3, 4 hearts per row.", "starter": "for row in range(1, 5):\n    print(\"❤️\" * row)" }
+  },
+  {
+    "week": 16,
+    "title": "Your First AI!",
+    "concept": "rule-based AI",
+    "intro": "TODAY YOU MAKE A REAL AI! It thinks with rules and surprises!",
+    "topics": ["What IS AI?", "Rule-based bot", "A mood helper", "A chatbot", "Your AI hall of fame"],
+    "steps": [
+      { "kind": "recap", "title": "Look how far you've come!", "text": "You know: print, variables, if, loops, lists, def, random. That's EVERYTHING you need for a tiny AI!" },
+      { "kind": "teach", "title": "AI = rules + guesses", "text": "AI is a computer that looks at things and DECIDES. Simple ones use if/else!", "visual": "You: \"What should I wear?\"\nAI thinks: if hot → shorts\n           if cold → coat" },
+      { "kind": "teach", "title": "The weather bot", "text": "An AI weather helper!", "pre": "temp = 25\nif temp > 30:\n    print(\"🥵 Hot! Wear shorts!\")\nelif temp > 20:\n    print(\"😎 Nice! T-shirt!\")\nelif temp > 10:\n    print(\"🧥 Cool! Jacket!\")\nelse:\n    print(\"❄️ Cold! Big coat!\")" },
+      { "kind": "teach", "title": "A random compliment bot", "text": "AI that picks a NICE thing to say!", "pre": "compliments = [\"You're smart! 🤓\", \"You're kind! 💖\", \"You're funny! 😄\", \"You're cool! 😎\"]\nprint(\"Pixi says:\", random.choice(compliments))" },
+      { "kind": "try", "title": "Your own mood bot", "text": "An AI that cheers you up!", "pre": "mood = \"sad\"\nif mood == \"sad\":\n    print(\"🤗 Here's a hug!\")\nelif mood == \"happy\":\n    print(\"🎉 YAY!\")\nelse:\n    print(\"🤔 Tell me more!\")" },
+      { "kind": "try", "title": "A magic fortune teller", "text": "Pixi predicts your future!", "pre": "futures = [\"🏆 You will win today!\", \"🍀 Luck comes your way!\", \"⭐ A star day!\", \"🎁 A surprise!\"]\nprint(\"🔮\", random.choice(futures))", "funFact": "🤖 YOU JUST MADE AN AI! A REAL ONE! Big kids call this a 'chatbot' and companies pay $$$ for them!" }
+    ],
+    "mission": { "brief": "Make a feeling bot: if mood is happy print YAY, if sad print HUG, else print OK.", "starter": "mood = \"happy\"\nif mood == \"happy\":\n    print(\"___\")\nelif mood == \"sad\":\n    print(\"___\")\nelse:\n    print(\"___\")" }
   }
 ]

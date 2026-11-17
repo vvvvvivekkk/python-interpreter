@@ -70,6 +70,19 @@ export function callBuiltin(
       throw new PyError('len() needs a word or a list', '📏');
     }
     case 'abs': return Math.abs(args[0] as number);
+    case 'round': {
+      const n = Number(args[0]);
+      const digits = args[1] !== undefined ? Number(args[1]) : 0;
+      const p = Math.pow(10, digits);
+      return Math.round(n * p) / p;
+    }
+    case 'max': return Math.max(...(args as number[]));
+    case 'min': return Math.min(...(args as number[]));
+    case 'sum': {
+      const a = args[0];
+      if (!Array.isArray(a)) throw new PyError('sum() needs a list of numbers', '🧮');
+      return a.reduce((t, v) => (t as number) + (v as number), 0);
+    }
     case 'range': {
       const arr: number[] = [];
       if (args.length === 1) {

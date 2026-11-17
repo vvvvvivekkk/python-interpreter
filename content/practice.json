@@ -247,5 +247,244 @@
       "prompt": "Make a magic word called say_hello that prints hello, then call it 3 times.",
       "hint": "def say_hello():\n    print(\"hello\")\nsay_hello()\nsay_hello()\nsay_hello()"
     }
+  },
+  {
+    "week": 9,
+    "fillBlanks": {
+      "template": "print({0}(-7))",
+      "expectedOutput": "7\n",
+      "blanks": [{ "answer": "abs", "options": ["abs", "round", "max"] }]
+    },
+    "matchPairs": [
+      { "code": "print(abs(-5))",           "output": "5" },
+      { "code": "print(round(2.7))",        "output": "3" },
+      { "code": "print(max(3, 7, 1))",      "output": "7" },
+      { "code": "print(min(3, 7, 1))",      "output": "1" }
+    ],
+    "colourBoxes": {
+      "template": "a = {0}\nb = {1}\nprint(max(a, b))",
+      "slots": [
+        { "icon": "🔢", "options": ["10", "25", "100"] },
+        { "icon": "🔢", "options": ["5", "50", "99"] }
+      ]
+    },
+    "drawIt": {
+      "code": "print(round(3.7))",
+      "correctOutput": "4",
+      "options": ["4", "3", "3.7", "3.5"]
+    },
+    "challenge": {
+      "prompt": "Print the BIGGEST of 5, 12, and 3 using max().",
+      "hint": "print(max(5, 12, 3))"
+    }
+  },
+  {
+    "week": 10,
+    "fillBlanks": {
+      "template": "pets = [\"cat\", \"dog\", \"fox\"]\nprint(len({0}))",
+      "expectedOutput": "3\n",
+      "blanks": [{ "answer": "pets", "options": ["pets", "\"pets\"", "3"] }]
+    },
+    "matchPairs": [
+      { "code": "x = [1,2,3,4]\nprint(len(x))",   "output": "4" },
+      { "code": "x = [10,20,30]\nprint(x[-1])",  "output": "30" },
+      { "code": "x = [\"a\",\"b\"]\nprint(x[-2])","output": "a" },
+      { "code": "x = []\nprint(len(x))",         "output": "0" }
+    ],
+    "colourBoxes": {
+      "template": "foods = [\"{0}\", \"{1}\", \"{2}\"]\nprint(random.choice(foods))",
+      "slots": [
+        { "icon": "💬", "options": ["pizza", "pasta", "sushi"] },
+        { "icon": "💬", "options": ["taco", "curry", "rice"] },
+        { "icon": "💬", "options": ["cake", "candy", "fruit"] }
+      ]
+    },
+    "drawIt": {
+      "code": "animals = [\"🐱\", \"🐶\", \"🦄\"]\nprint(animals[-1])",
+      "correctOutput": "🦄",
+      "options": ["🐱", "🐶", "🦄", "all 3"]
+    },
+    "challenge": {
+      "prompt": "Make a list of 4 games. Print how MANY are in it using len().",
+      "hint": "games = [\"___\", \"___\", \"___\", \"___\"]\nprint(len(games))"
+    }
+  },
+  {
+    "week": 11,
+    "fillBlanks": {
+      "template": "sides = [1, 2, 3, 4, 5, 6]\nprint({0}.choice(sides))",
+      "expectedOutput": "4\n",
+      "blanks": [{ "answer": "random", "options": ["random", "pick", "max"] }]
+    },
+    "matchPairs": [
+      { "code": "random.choice([1,2,3])",             "output": "a number 1-3" },
+      { "code": "random.choice([\"yes\",\"no\"])",    "output": "yes OR no" },
+      { "code": "random.choice([\"🐱\"])",             "output": "🐱" }
+    ],
+    "colourBoxes": {
+      "template": "answers = [\"{0}\", \"{1}\", \"{2}\"]\nprint(\"🎱\", random.choice(answers))",
+      "slots": [
+        { "icon": "💬", "options": ["Yes!", "Sure!", "OK!"] },
+        { "icon": "💬", "options": ["No!", "Nope!", "Never!"] },
+        { "icon": "💬", "options": ["Maybe", "Hmm", "Try again"] }
+      ]
+    },
+    "drawIt": {
+      "code": "print(random.choice([\"🎁\"]))",
+      "correctOutput": "🎁",
+      "options": ["🎁", "random", "nothing", "a list"]
+    },
+    "challenge": {
+      "prompt": "Make a magic 8-ball: pick randomly from 3 answers.",
+      "hint": "answers = [\"Yes\", \"No\", \"Maybe\"]\nprint(random.choice(answers))"
+    }
+  },
+  {
+    "week": 12,
+    "fillBlanks": {
+      "template": "n = 1\n{0} n <= 3:\n    print(n)\n    n = n + 1",
+      "expectedOutput": "1\n2\n3\n",
+      "blanks": [{ "answer": "while", "options": ["while", "if", "for"] }]
+    },
+    "matchPairs": [
+      { "code": "x = 0\nwhile x < 3:\n    print(x)\n    x = x + 1",          "output": "0\n1\n2" },
+      { "code": "n = 5\nwhile n > 3:\n    print(n)\n    n = n - 1",         "output": "5\n4" },
+      { "code": "c = 0\nwhile c < 10:\n    c = c + 5\nprint(c)",            "output": "10" }
+    ],
+    "colourBoxes": {
+      "template": "coins = 0\nwhile coins < {0}:\n    coins = coins + {1}\nprint(coins)",
+      "slots": [
+        { "icon": "🔢", "options": ["10", "20", "50"] },
+        { "icon": "🔢", "options": ["1", "5", "10"] }
+      ]
+    },
+    "drawIt": {
+      "code": "n = 3\nwhile n > 0:\n    print(n)\n    n = n - 1",
+      "correctOutput": "3 2 1 (on 3 lines)",
+      "options": ["3 2 1 (on 3 lines)", "3", "1 2 3", "0 1 2"]
+    },
+    "challenge": {
+      "prompt": "Use while to count from 1 to 5.",
+      "hint": "n = 1\nwhile n <= 5:\n    print(n)\n    n = n + 1"
+    }
+  },
+  {
+    "week": 13,
+    "fillBlanks": {
+      "template": "scores = [3, 10, 7]\nfor s in scores:\n    {0} s > 5:\n        print(s)",
+      "expectedOutput": "10\n7\n",
+      "blanks": [{ "answer": "if", "options": ["if", "while", "def"] }]
+    },
+    "matchPairs": [
+      { "code": "for n in [1,2,3,4]:\n    if n > 2:\n        print(n)",             "output": "3\n4" },
+      { "code": "for p in [\"cat\",\"dog\",\"cat\"]:\n    if p == \"cat\":\n        print(p)", "output": "cat\ncat" },
+      { "code": "c = 0\nfor n in [1,2,3,4,5]:\n    if n > 2:\n        c = c + 1\nprint(c)", "output": "3" }
+    ],
+    "colourBoxes": {
+      "template": "nums = [1, 5, 10, 20]\nfor n in nums:\n    if n > {0}:\n        print(\"{1}\")",
+      "slots": [
+        { "icon": "🔢", "options": ["3", "7", "15"] },
+        { "icon": "💬", "options": ["big!", "yay", "wow"] }
+      ]
+    },
+    "drawIt": {
+      "code": "for n in [1,2,3,4]:\n    if n > 2:\n        print(\"⭐\")",
+      "correctOutput": "⭐ ⭐ (on 2 lines)",
+      "options": ["⭐ ⭐ (on 2 lines)", "⭐", "4 stars", "nothing"]
+    },
+    "challenge": {
+      "prompt": "Loop through [2, 8, 1, 9] and print only the ones > 5.",
+      "hint": "nums = [2, 8, 1, 9]\nfor n in nums:\n    if n > 5:\n        print(n)"
+    }
+  },
+  {
+    "week": 14,
+    "fillBlanks": {
+      "template": "roll = {0}.choice([1,2,3,4,5,6])\nif roll > 3:\n    print(\"win\")\nelse:\n    print(\"try again\")",
+      "expectedOutput": "win\n",
+      "blanks": [{ "answer": "random", "options": ["random", "max", "len"] }]
+    },
+    "matchPairs": [
+      { "code": "random.choice([1,2,3,4,5,6])",     "output": "a dice roll 1-6" },
+      { "code": "random.choice([\"win\",\"lose\"])", "output": "win OR lose" },
+      { "code": "random.choice([\"🏆\",\"⭐\"])",     "output": "🏆 OR ⭐" }
+    ],
+    "colourBoxes": {
+      "template": "prizes = [\"{0}\", \"{1}\", \"{2}\"]\nprint(\"You won:\", random.choice(prizes))",
+      "slots": [
+        { "icon": "💬", "options": ["candy", "sticker", "toy"] },
+        { "icon": "💬", "options": ["gold", "silver", "star"] },
+        { "icon": "💬", "options": ["gift", "coin", "gem"] }
+      ]
+    },
+    "drawIt": {
+      "code": "if 5 > 3:\n    print(\"🏆\")\nelse:\n    print(\"😔\")",
+      "correctOutput": "🏆",
+      "options": ["🏆", "😔", "both", "nothing"]
+    },
+    "challenge": {
+      "prompt": "Dice game: roll a dice. If > 3, print 'WIN!'. Else print 'TRY AGAIN!'.",
+      "hint": "roll = random.choice([1,2,3,4,5,6])\nif roll > 3:\n    print(\"WIN!\")\nelse:\n    print(\"TRY AGAIN!\")"
+    }
+  },
+  {
+    "week": 15,
+    "fillBlanks": {
+      "template": "print(\"⭐\" {0} 5)",
+      "expectedOutput": "⭐⭐⭐⭐⭐\n",
+      "blanks": [{ "answer": "*", "options": ["*", "+", "-"] }]
+    },
+    "matchPairs": [
+      { "code": "print(\"⭐\" * 3)",                                "output": "⭐⭐⭐" },
+      { "code": "for r in range(3):\n    print(\"⭐⭐\")",          "output": "⭐⭐\n⭐⭐\n⭐⭐" },
+      { "code": "for r in range(1, 4):\n    print(\"❤️\" * r)",    "output": "❤️\n❤️❤️\n❤️❤️❤️" }
+    ],
+    "colourBoxes": {
+      "template": "for r in range({0}):\n    print(\"{1}\" * {2})",
+      "slots": [
+        { "icon": "🔢", "options": ["3", "4", "5"] },
+        { "icon": "💬", "options": ["⭐", "❤️", "🦄"] },
+        { "icon": "🔢", "options": ["3", "5", "10"] }
+      ]
+    },
+    "drawIt": {
+      "code": "print(\"🌈\" * 5)",
+      "correctOutput": "🌈🌈🌈🌈🌈",
+      "options": ["🌈🌈🌈🌈🌈", "🌈", "5", "rainbow"]
+    },
+    "challenge": {
+      "prompt": "Draw a 4-row triangle of hearts (1, 2, 3, 4 hearts per row).",
+      "hint": "for r in range(1, 5):\n    print(\"❤️\" * r)"
+    }
+  },
+  {
+    "week": 16,
+    "fillBlanks": {
+      "template": "mood = \"happy\"\n{0} mood == \"happy\":\n    print(\"🎉 YAY!\")",
+      "expectedOutput": "🎉 YAY!\n",
+      "blanks": [{ "answer": "if", "options": ["if", "for", "def"] }]
+    },
+    "matchPairs": [
+      { "code": "random.choice([\"🤗\",\"💖\",\"🌟\"])",    "output": "a random emoji" },
+      { "code": "if 25 > 20:\n    print(\"😎\")",          "output": "😎" },
+      { "code": "mood = \"sad\"\nif mood == \"sad\":\n    print(\"🤗\")", "output": "🤗" }
+    ],
+    "colourBoxes": {
+      "template": "temp = {0}\nif temp > 25:\n    print(\"{1}\")\nelse:\n    print(\"{2}\")",
+      "slots": [
+        { "icon": "🔢", "options": ["30", "20", "15"] },
+        { "icon": "💬", "options": ["🥵 hot", "☀️ sunny", "🏖️ beach"] },
+        { "icon": "💬", "options": ["🧥 cool", "❄️ cold", "☕ cozy"] }
+      ]
+    },
+    "drawIt": {
+      "code": "compliments = [\"smart\", \"kind\", \"cool\"]\nprint(\"You are\", random.choice(compliments))",
+      "correctOutput": "You are smart (OR kind OR cool)",
+      "options": ["You are smart (OR kind OR cool)", "smart", "random", "all 3"]
+    },
+    "challenge": {
+      "prompt": "Make a mood bot: if mood is 'happy' print '🎉', if 'sad' print '🤗', else print '🤔'.",
+      "hint": "mood = \"happy\"\nif mood == \"happy\":\n    print(\"🎉\")\nelif mood == \"sad\":\n    print(\"🤗\")\nelse:\n    print(\"🤔\")"
+    }
   }
 ]
