@@ -4,6 +4,9 @@ import Link from 'next/link';
 import Pixi from '@/components/Pixi';
 import TypeSort from '@/components/practice/TypeSort';
 import SpotTheClue from '@/components/practice/SpotTheClue';
+import InteractiveConvert from '@/components/practice/InteractiveConvert';
+import CircleType from '@/components/practice/CircleType';
+import MatchPairs from '@/components/practice/MatchPairs';
 
 /**
  * Dedicated Data Types workout — int / float / string.
@@ -155,39 +158,72 @@ export default function DataTypesPracticePage() {
         </div>
       </section>
 
-      {/* 5. Conversion demo */}
-      <section className="rounded-3xl border-4 border-sun bg-white p-5 shadow-chunk">
-        <h2 className="font-display text-xl font-bold text-pink-dark">🔄 Convert between types</h2>
-        <p className="mt-1 text-sm font-semibold text-purple-dark">
-          Python has three magic words to CHANGE type: <span className="font-code">int()</span>,{' '}
-          <span className="font-code">float()</span> and{' '}
-          <span className="font-code">str()</span>.
-        </p>
-        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
-          {[
-            { fn: 'int("5")',   out: '5',    note: 'string → integer' },
-            { fn: 'int(2.7)',   out: '2',    note: 'float → integer (chops the dot part!)' },
-            { fn: 'float(5)',   out: '5.0',  note: 'integer → float (adds .0)' },
-            { fn: 'float("3.14")', out: '3.14', note: 'string → float' },
-            { fn: 'str(5)',     out: '"5"',  note: 'integer → string (now has quotes)' },
-            { fn: 'str(2.5)',   out: '"2.5"', note: 'float → string' },
-          ].map((e) => (
-            <div key={e.fn} className="rounded-2xl border-2 border-sun bg-cream p-3">
-              <div className="rounded-md bg-navy p-2 font-code text-sm text-[#FFEEC2]">
-                print({e.fn})
-              </div>
-              <div className="mt-2 font-display text-xs font-semibold text-purple-dark">
-                Pixi shows → <span className="font-code text-base font-bold text-mint-dark">{e.out}</span>
-              </div>
-              <div className="mt-1 text-xs italic text-purple-dark/70">{e.note}</div>
-            </div>
-          ))}
-        </div>
-        <div className="mt-3 rounded-2xl border-2 border-sun bg-sun/10 p-3 font-display text-sm font-semibold">
-          💡 <b>Why?</b> input() always gives a string. If you want to add it as a number, you
-          have to <span className="font-code">int(...)</span> it first!
-        </div>
-      </section>
+      {/* 5. Convert — now INTERACTIVE */}
+      <InteractiveConvert />
+
+      {/* 6. Circle exercises (worksheet-style, interactive) */}
+      <CircleType
+        hunt="int"
+        items={[
+          { label: '5', type: 'int' },
+          { label: '"5"', type: 'str' },
+          { label: '3.14', type: 'float' },
+          { label: '7', type: 'int' },
+          { label: '"hello"', type: 'str' },
+          { label: '-2', type: 'int' },
+          { label: '0', type: 'int' },
+          { label: '"0"', type: 'str' },
+          { label: '8.5', type: 'float' },
+          { label: '100', type: 'int' },
+          { label: '"five"', type: 'str' },
+          { label: '1.0', type: 'float' },
+        ]}
+      />
+      <CircleType
+        hunt="str"
+        items={[
+          { label: '"cat"', type: 'str' },
+          { label: '42', type: 'int' },
+          { label: '"42"', type: 'str' },
+          { label: '3.0', type: 'float' },
+          { label: '"3.0"', type: 'str' },
+          { label: '"True"', type: 'str' },
+          { label: 'pixi', type: 'int' },
+          { label: '"pixi"', type: 'str' },
+          { label: '-1', type: 'int' },
+          { label: '"-1"', type: 'str' },
+          { label: '"🐱"', type: 'str' },
+          { label: '0.5', type: 'float' },
+        ]}
+      />
+      <CircleType
+        hunt="float"
+        items={[
+          { label: '2.5', type: 'float' },
+          { label: '"2.5"', type: 'str' },
+          { label: '100', type: 'int' },
+          { label: '3.14', type: 'float' },
+          { label: '0.0', type: 'float' },
+          { label: '8', type: 'int' },
+          { label: '-1.5', type: 'float' },
+          { label: '"0.1"', type: 'str' },
+          { label: '7.0', type: 'float' },
+          { label: '0', type: 'int' },
+          { label: '12.75', type: 'float' },
+          { label: '"7.0"', type: 'str' },
+        ]}
+      />
+
+      {/* 7. Match value → type (drag-line!) */}
+      <MatchPairs
+        pairs={[
+          { code: '5',       output: 'INTEGER' },
+          { code: '"hello"', output: 'STRING' },
+          { code: '3.14',    output: 'FLOAT' },
+          { code: '"5"',     output: 'STRING (looks like a number!)' },
+          { code: '0.0',     output: 'FLOAT (yes, even 0.0!)' },
+        ]}
+      />
 
       {/* Final tip */}
       <section className="rounded-3xl border-4 border-purple bg-gradient-to-br from-purple-light/20 to-white p-5 shadow-chunk">
