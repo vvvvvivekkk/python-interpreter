@@ -9,6 +9,11 @@ import { Sfx } from '@/lib/sounds';
 import { burst } from '@/components/ConfettiBurst';
 import { useAppStore } from '@/lib/store';
 import { speak } from '@/lib/speak';
+import MatchPairs from '@/components/practice/MatchPairs';
+import ChooseAnswer from '@/components/practice/ChooseAnswer';
+import FillBlanks from '@/components/practice/FillBlanks';
+import GuessElementGame from '@/components/practice/GuessElementGame';
+import FillElementVariables from '@/components/practice/FillElementVariables';
 
 interface Element {
   n: number;
@@ -276,34 +281,136 @@ export default function PeriodicTablePage() {
         </motion.section>
       </AnimatePresence>
 
-      {/* Lists of elements */}
-      <section className="rounded-3xl border-4 border-purple bg-white p-5 shadow-chunk">
-        <h2 className="font-display text-xl font-bold text-pink-dark">📋 Element lists</h2>
-        <p className="mt-1 text-sm font-semibold text-purple-dark">
-          Group related elements into a Python <b>list</b>. The purple ones are all{' '}
-          <b>noble gases</b>!
+      {/* GAME 1: Guess the element from its fun fact */}
+      <GuessElementGame />
+
+      {/* GAME 2: Fill the element variables */}
+      <FillElementVariables />
+
+      {/* GAME 3: Match symbol to name (drag-line) */}
+      <section>
+        <h2 className="mb-2 font-display text-lg font-bold text-pink-dark">
+          🔗 Match the symbol to the name
+        </h2>
+        <p className="mb-2 text-sm font-semibold text-purple-dark">
+          Drag a line from each symbol to its element name!
         </p>
-        <div className="mt-3 rounded-2xl bg-navy p-4 font-code text-base leading-7 text-[#FFEEC2]">
-          <div><span className="text-[#E8A9FF]">noble_gases</span> = [<span className="text-[#FFB3D1]">&quot;He&quot;</span>, <span className="text-[#FFB3D1]">&quot;Ne&quot;</span>, <span className="text-[#FFB3D1]">&quot;Ar&quot;</span>]</div>
-          <div><span className="text-[#E8A9FF]">atomic_numbers</span> = [<span className="text-[#8BF0C7]">2</span>, <span className="text-[#8BF0C7]">10</span>, <span className="text-[#8BF0C7]">18</span>]</div>
-          <div className="mt-1"><span className="text-[#FFD15B]">print</span>(<span className="text-[#E8A9FF]">noble_gases</span>[<span className="text-[#8BF0C7]">0</span>])  <span className="text-[#8B7FB8]"># Pixi shows "He"</span></div>
+        <div className="space-y-3">
+          <MatchPairs
+            pairs={[
+              { code: 'H',  output: 'Hydrogen' },
+              { code: 'He', output: 'Helium' },
+              { code: 'O',  output: 'Oxygen' },
+              { code: 'C',  output: 'Carbon' },
+            ]}
+          />
+          <MatchPairs
+            pairs={[
+              { code: 'Au', output: 'Gold' },
+              { code: 'Ag', output: 'Silver' },
+              { code: 'Fe', output: 'Iron' },
+              { code: 'Cu', output: 'Copper' },
+            ]}
+          />
+          <MatchPairs
+            pairs={[
+              { code: 'Na', output: 'Sodium (salt!)' },
+              { code: 'Cl', output: 'Chlorine (pool!)' },
+              { code: 'Si', output: 'Silicon (chips!)' },
+              { code: 'Al', output: 'Aluminum (cans!)' },
+            ]}
+          />
         </div>
-        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
-          {[
-            { name: 'Noble gases', items: ['He', 'Ne', 'Ar'], colour: 'purple' },
-            { name: 'Nonmetals in air', items: ['N', 'O'], colour: 'mint' },
-            { name: 'Famous metals', items: ['Fe', 'Cu', 'Ag', 'Au'], colour: 'pink' },
-          ].map((grp) => (
-            <div key={grp.name} className="rounded-2xl border-2 border-purple-light bg-cream p-3">
-              <div className="font-display text-sm font-bold text-navy">{grp.name}</div>
-              <div className="mt-1 font-code text-sm text-purple-dark">
-                [{grp.items.map((i) => `"${i}"`).join(', ')}]
-              </div>
-              <div className="mt-1 text-xs italic text-purple-dark/70">
-                {grp.items.length} items in the list
-              </div>
-            </div>
-          ))}
+      </section>
+
+      {/* GAME 4: Multiple-choice quiz */}
+      <section>
+        <h2 className="mb-2 font-display text-lg font-bold text-pink-dark">
+          ❓ Element quiz
+        </h2>
+        <div className="space-y-3">
+          <ChooseAnswer
+            q={{
+              question: 'Which element lifts balloons and makes your voice squeaky?',
+              options: ['Helium (He)', 'Iron (Fe)', 'Carbon (C)'],
+              correct: 0,
+              hint: 'It&apos;s a noble gas — very light!',
+              explain: 'Helium! That&apos;s why you float balloons with it.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Which element do you BREATHE in?',
+              options: ['Gold (Au)', 'Oxygen (O)', 'Sulfur (S)'],
+              correct: 1,
+              hint: 'You breathe it every single second!',
+              explain: 'Oxygen (O) — 21% of the air we breathe.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Which element is TREASURE — shiny and never rusts?',
+              options: ['Iron (Fe)', 'Sodium (Na)', 'Gold (Au)'],
+              correct: 2,
+              hint: 'Pirates love this one!',
+              explain: 'Gold! It&apos;s so stable it never turns rusty.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What is the SYMBOL for Hydrogen?',
+              options: ['Hy', 'H', 'He'],
+              correct: 1,
+              hint: 'Just one letter — the FIRST letter!',
+              explain: 'H — the very first element in the whole table.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE is the atomic number 8 (Oxygen)?',
+              code: 'atomic_number = 8',
+              options: ['INTEGER', 'FLOAT', 'STRING'],
+              correct: 0,
+              hint: 'No dot, no quotes...',
+              explain: 'Atomic numbers are always INTEGERS (whole numbers).',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE is the atomic mass 1.008?',
+              code: 'mass = 1.008',
+              options: ['INTEGER', 'FLOAT', 'STRING'],
+              correct: 1,
+              hint: 'It has a dot!',
+              explain: 'Atomic masses are always FLOATS — numbers with a decimal point.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE is the element symbol "H"?',
+              code: 'symbol = "H"',
+              options: ['INTEGER', 'FLOAT', 'STRING'],
+              correct: 2,
+              hint: 'Those quotes " " give it away!',
+              explain: 'Symbols are STRINGS — one letter in quotes.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Carbon makes DIAMONDS — what&apos;s its symbol?',
+              options: ['Ca', 'Ca', 'C'],
+              correct: 2,
+              hint: 'Just ONE letter — the first one!',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Silicon is inside every computer chip. What&apos;s its symbol?',
+              options: ['Si', 'Sn', 'S'],
+              correct: 0,
+              hint: 'TWO letters — big S, little i.',
+            }}
+          />
         </div>
       </section>
 

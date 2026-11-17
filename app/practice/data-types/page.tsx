@@ -3,20 +3,21 @@
 import Link from 'next/link';
 import Pixi from '@/components/Pixi';
 import TypeSort from '@/components/practice/TypeSort';
-import SpotTheClue from '@/components/practice/SpotTheClue';
 import InteractiveConvert from '@/components/practice/InteractiveConvert';
 import CircleType from '@/components/practice/CircleType';
 import MatchPairs from '@/components/practice/MatchPairs';
+import FillBlanks from '@/components/practice/FillBlanks';
+import ChooseAnswer from '@/components/practice/ChooseAnswer';
 
 /**
  * Dedicated Data Types workout — int / float / string.
- * Built because the student's dad said he needs more practice here
- * after the paper worksheet on integers/floats/strings.
+ * Built because the student's dad asked for extra practice here.
  */
 
 export default function DataTypesPracticePage() {
   return (
     <div className="space-y-5 pb-20">
+      {/* Hero */}
       <div className="rounded-3xl border-4 border-pink bg-white/90 p-5 shadow-chunk">
         <div className="flex items-start gap-3">
           <Pixi size={72} />
@@ -35,12 +36,12 @@ export default function DataTypesPracticePage() {
             href="/practice"
             className="chunk-btn rounded-full border-2 border-purple-light bg-white px-3 py-2 font-display text-sm font-bold text-purple-dark"
           >
-            ⬅ Practice Hub
+            ⬅ Hub
           </Link>
         </div>
       </div>
 
-      {/* 1. Rulebook */}
+      {/* 1. The rulebook */}
       <section className="rounded-3xl border-4 border-purple-light bg-white p-5 shadow-chunk">
         <h2 className="font-display text-xl font-bold text-pink-dark">📖 The three clues</h2>
         <p className="mt-1 text-sm font-semibold text-purple-dark">
@@ -88,144 +89,271 @@ export default function DataTypesPracticePage() {
         </div>
       </section>
 
-      {/* 2. The sort game */}
+      {/* 2. Sort into houses */}
       <TypeSort />
 
-      {/* 3. Spot the clue */}
-      <section className="rounded-3xl border-4 border-sky bg-white p-5 shadow-chunk">
-        <h2 className="font-display text-xl font-bold text-pink-dark">🔍 Spot the clue</h2>
-        <p className="mt-1 text-sm font-semibold text-purple-dark">
-          Every type leaves a <i>clue</i>. Tap every quote or dot you can find!
-        </p>
-        <div className="mt-3 space-y-3">
-          <SpotTheClue line={'print("Hello Pixi")'} hunt='"' label='Tap every QUOTE (") — this makes it a STRING' />
-          <SpotTheClue line={'name = "Ava"'} hunt='"' label='Tap every QUOTE (")' />
-          <SpotTheClue line={'price = 2.5'} hunt='.' label='Tap every DOT (.) — this makes it a FLOAT' />
-          <SpotTheClue line={'a = 3.14  b = 8.0  c = 0.5'} hunt='.' label='Tap every DOT (.) in all three floats' />
-        </div>
-      </section>
-
-      {/* 4. Number line */}
-      <section className="rounded-3xl border-4 border-mint bg-white p-5 shadow-chunk">
-        <h2 className="font-display text-xl font-bold text-pink-dark">🔢 The number line</h2>
-        <p className="mt-1 text-sm font-semibold text-purple-dark">
-          Integers live on the big numbers. Floats live between them!
-        </p>
-        <div className="mt-4 rounded-2xl border-2 border-mint bg-[#E8FBF3] p-4">
-          {/* SVG number line */}
-          <svg viewBox="0 0 400 100" className="w-full" preserveAspectRatio="xMidYMid meet">
-            {/* axis */}
-            <line x1="20" y1="60" x2="380" y2="60" stroke="#059873" strokeWidth="2" />
-            {/* integer ticks */}
-            {[0, 1, 2, 3, 4, 5].map((n) => {
-              const x = 20 + n * 72;
-              return (
-                <g key={n}>
-                  <line x1={x} y1="55" x2={x} y2="75" stroke="#E22E73" strokeWidth="3" />
-                  <circle cx={x} cy="60" r="5" fill="#E22E73" />
-                  <text x={x} y="92" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="14" fontWeight="700" fill="#1a1a2e">
-                    {n}
-                  </text>
-                </g>
-              );
-            })}
-            {/* some floats between */}
-            {[
-              { v: 0.5, x: 56 },
-              { v: 1.5, x: 128 },
-              { v: 2.5, x: 200 },
-              { v: 3.14, x: 246 },
-              { v: 4.0, x: 308 },
-            ].map((f, i) => (
-              <g key={i}>
-                <circle cx={f.x} cy="60" r="4" fill="#9D4EDD" />
-                <text x={f.x} y="35" textAnchor="middle" fontFamily="JetBrains Mono" fontSize="11" fontWeight="700" fill="#7A1AC9">
-                  {f.v}
-                </text>
-                <line x1={f.x} y1="40" x2={f.x} y2="56" stroke="#9D4EDD" strokeWidth="1" strokeDasharray="2,2" />
-              </g>
-            ))}
-            <text x="20" y="18" fontFamily="Fredoka" fontSize="12" fontWeight="700" fill="#7A1AC9">
-              ← floats (purple) sit between integers →
-            </text>
-            <text x="20" y="105" fontFamily="Fredoka" fontSize="12" fontWeight="700" fill="#E22E73">
-              ← integers (pink) are the big tick marks →
-            </text>
-          </svg>
-        </div>
-        <div className="mt-3 rounded-2xl border-2 border-mint bg-mint/10 p-3 font-display text-sm font-semibold">
-          💡 Between 2 and 3 there are <b>infinite</b> floats — 2.1, 2.5, 2.999, 2.00001…!
-        </div>
-      </section>
-
-      {/* 5. Convert — now INTERACTIVE */}
+      {/* 3. Convert (interactive) */}
       <InteractiveConvert />
 
-      {/* 6. Circle exercises (worksheet-style, interactive) */}
-      <CircleType
-        hunt="int"
-        items={[
-          { label: '5', type: 'int' },
-          { label: '"5"', type: 'str' },
-          { label: '3.14', type: 'float' },
-          { label: '7', type: 'int' },
-          { label: '"hello"', type: 'str' },
-          { label: '-2', type: 'int' },
-          { label: '0', type: 'int' },
-          { label: '"0"', type: 'str' },
-          { label: '8.5', type: 'float' },
-          { label: '100', type: 'int' },
-          { label: '"five"', type: 'str' },
-          { label: '1.0', type: 'float' },
-        ]}
-      />
-      <CircleType
-        hunt="str"
-        items={[
-          { label: '"cat"', type: 'str' },
-          { label: '42', type: 'int' },
-          { label: '"42"', type: 'str' },
-          { label: '3.0', type: 'float' },
-          { label: '"3.0"', type: 'str' },
-          { label: '"True"', type: 'str' },
-          { label: 'pixi', type: 'int' },
-          { label: '"pixi"', type: 'str' },
-          { label: '-1', type: 'int' },
-          { label: '"-1"', type: 'str' },
-          { label: '"🐱"', type: 'str' },
-          { label: '0.5', type: 'float' },
-        ]}
-      />
-      <CircleType
-        hunt="float"
-        items={[
-          { label: '2.5', type: 'float' },
-          { label: '"2.5"', type: 'str' },
-          { label: '100', type: 'int' },
-          { label: '3.14', type: 'float' },
-          { label: '0.0', type: 'float' },
-          { label: '8', type: 'int' },
-          { label: '-1.5', type: 'float' },
-          { label: '"0.1"', type: 'str' },
-          { label: '7.0', type: 'float' },
-          { label: '0', type: 'int' },
-          { label: '12.75', type: 'float' },
-          { label: '"7.0"', type: 'str' },
-        ]}
-      />
+      {/* 4. Circle-only hunts (worksheet-style) */}
+      <section>
+        <h2 className="mb-2 font-display text-lg font-bold text-pink-dark">
+          🎯 Hunt rounds
+        </h2>
+        <div className="space-y-3">
+          <CircleType
+            hunt="int"
+            items={[
+              { label: '5', type: 'int' },
+              { label: '"5"', type: 'str' },
+              { label: '3.14', type: 'float' },
+              { label: '7', type: 'int' },
+              { label: '"hello"', type: 'str' },
+              { label: '-2', type: 'int' },
+              { label: '0', type: 'int' },
+              { label: '"0"', type: 'str' },
+              { label: '8.5', type: 'float' },
+              { label: '100', type: 'int' },
+              { label: '"five"', type: 'str' },
+              { label: '1.0', type: 'float' },
+            ]}
+          />
+          <CircleType
+            hunt="str"
+            items={[
+              { label: '"cat"', type: 'str' },
+              { label: '42', type: 'int' },
+              { label: '"42"', type: 'str' },
+              { label: '3.0', type: 'float' },
+              { label: '"3.0"', type: 'str' },
+              { label: '"True"', type: 'str' },
+              { label: 'pixi', type: 'int' },
+              { label: '"pixi"', type: 'str' },
+              { label: '-1', type: 'int' },
+              { label: '"-1"', type: 'str' },
+              { label: '"🐱"', type: 'str' },
+              { label: '0.5', type: 'float' },
+            ]}
+          />
+          <CircleType
+            hunt="float"
+            items={[
+              { label: '2.5', type: 'float' },
+              { label: '"2.5"', type: 'str' },
+              { label: '100', type: 'int' },
+              { label: '3.14', type: 'float' },
+              { label: '0.0', type: 'float' },
+              { label: '8', type: 'int' },
+              { label: '-1.5', type: 'float' },
+              { label: '"0.1"', type: 'str' },
+              { label: '7.0', type: 'float' },
+              { label: '0', type: 'int' },
+              { label: '12.75', type: 'float' },
+              { label: '"7.0"', type: 'str' },
+            ]}
+          />
+        </div>
+      </section>
 
-      {/* 7. Match value → type (drag-line!) */}
-      <MatchPairs
-        pairs={[
-          { code: '5',       output: 'INTEGER' },
-          { code: '"hello"', output: 'STRING' },
-          { code: '3.14',    output: 'FLOAT' },
-          { code: '"5"',     output: 'STRING (looks like a number!)' },
-          { code: '0.0',     output: 'FLOAT (yes, even 0.0!)' },
-        ]}
-      />
+      {/* 5. Fill in the blanks — themed */}
+      <section>
+        <h2 className="mb-2 font-display text-lg font-bold text-pink-dark">
+          🧩 Fill in the blanks — about YOU and the world
+        </h2>
+        <div className="space-y-3">
+          <FillBlanks
+            data={{
+              template: 'age = {0}\nprint("I am", age)',
+              expectedOutput: 'I am 5\n',
+              blanks: [{ answer: '5', options: ['5', '"5"', 'True'] }],
+            }}
+          />
+          <FillBlanks
+            data={{
+              template: 'best_friend = {0}\nprint("Hi,", best_friend)',
+              expectedOutput: 'Hi, Ava\n',
+              blanks: [{ answer: '"Ava"', options: ['"Ava"', 'Ava', '5'] }],
+            }}
+          />
+          <FillBlanks
+            data={{
+              template: 'grade = {0}\nprint("Class:", grade)',
+              expectedOutput: 'Class: 3\n',
+              blanks: [{ answer: '3', options: ['3', '"3"', '3.0'] }],
+            }}
+          />
+          <FillBlanks
+            data={{
+              template: 'price = {0}\nprint("Candy costs", price)',
+              expectedOutput: 'Candy costs 2.5\n',
+              blanks: [{ answer: '2.5', options: ['2.5', '"2.5"', '2']}],
+            }}
+          />
+          <FillBlanks
+            data={{
+              template: 'element = {0}\nprint("Element:", element)',
+              expectedOutput: 'Element: H\n',
+              blanks: [{ answer: '"H"', options: ['"H"', 'H', '1'] }],
+            }}
+          />
+          <FillBlanks
+            data={{
+              template: 'atomic_number = {0}\nmass = {1}\nprint(atomic_number, mass)',
+              expectedOutput: '1 1.008\n',
+              blanks: [
+                { answer: '1', options: ['1', '"1"', '1.0'] },
+                { answer: '1.008', options: ['1.008', '"1.008"', '1'] },
+              ],
+            }}
+          />
+          <FillBlanks
+            data={{
+              template: 'pet = {0}\nis_fluffy = {1}\nprint(pet, is_fluffy)',
+              expectedOutput: 'cat True\n',
+              blanks: [
+                { answer: '"cat"', options: ['"cat"', 'cat', '5'] },
+                { answer: 'True', options: ['True', '"True"', '1'] },
+              ],
+            }}
+          />
+        </div>
+      </section>
 
-      {/* Final tip */}
+      {/* 6. Choose the correct answer — quiz */}
+      <section>
+        <h2 className="mb-2 font-display text-lg font-bold text-pink-dark">
+          ❓ Choose the correct answer
+        </h2>
+        <div className="space-y-3">
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE is this value?',
+              code: '5',
+              options: ['INTEGER', 'FLOAT', 'STRING'],
+              correct: 0,
+              hint: 'No dot, no quotes — just a whole number!',
+              explain: 'No quotes + no dot = integer.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE is this value?',
+              code: '"5"',
+              options: ['INTEGER', 'STRING', 'FLOAT'],
+              correct: 1,
+              hint: 'Look carefully — those are QUOTES around the 5!',
+              explain: 'Quotes always make it a string, even if the inside looks like a number.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE is this value?',
+              code: '2.5',
+              options: ['INTEGER', 'FLOAT', 'STRING'],
+              correct: 1,
+              hint: 'There is a tiny DOT in there!',
+              explain: 'A dot (.) between numbers means float.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Which one is a STRING?',
+              options: ['3.14', '"hi"', '42'],
+              correct: 1,
+              hint: 'Look for the quotes " "!',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Which one is a FLOAT?',
+              options: ['"7"', '7', '7.0'],
+              correct: 2,
+              hint: 'Floats have a DOT and no quotes.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Which one is NOT a string?',
+              options: ['"cat"', '5', '"5"'],
+              correct: 1,
+              hint: 'The one WITHOUT quotes is not a string.',
+              explain: '5 (no quotes) is an integer, not a string.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What will Pixi show for this code?',
+              code: 'print(2 + 3)',
+              options: ['5', '"5"', '2+3'],
+              correct: 0,
+              hint: '2 plus 3 is a number — no quotes around it!',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE do you get from int("7")?',
+              options: ['INTEGER', 'STRING', 'FLOAT'],
+              correct: 0,
+              hint: 'int() TURNS something into an integer!',
+              explain: 'int() is the magic word that makes an integer.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'What TYPE do you get from float(5)?',
+              options: ['INTEGER', 'STRING', 'FLOAT'],
+              correct: 2,
+              hint: 'float() TURNS something into a float!',
+              explain: 'float() always gives you a float with a dot.',
+            }}
+          />
+          <ChooseAnswer
+            q={{
+              question: 'Chemistry time! What TYPE is 1.008 (hydrogen&apos;s mass)?',
+              options: ['INTEGER', 'FLOAT', 'STRING'],
+              correct: 1,
+              hint: 'It has a dot — that makes it a what?',
+              explain: 'All atomic masses are floats because they are never whole numbers.',
+            }}
+          />
+        </div>
+      </section>
+
+      {/* 7. More matches (drag-line) */}
+      <section>
+        <h2 className="mb-2 font-display text-lg font-bold text-pink-dark">
+          🎯 Drag-and-match rounds
+        </h2>
+        <div className="space-y-3">
+          <MatchPairs
+            pairs={[
+              { code: '5',       output: 'INTEGER' },
+              { code: '"hello"', output: 'STRING' },
+              { code: '3.14',    output: 'FLOAT' },
+              { code: '"5"',     output: 'STRING (looks like a number!)' },
+              { code: '0.0',     output: 'FLOAT (yes, even 0.0!)' },
+            ]}
+          />
+          <MatchPairs
+            pairs={[
+              { code: 'age = 5',          output: 'INTEGER box' },
+              { code: 'name = "Ava"',     output: 'STRING box' },
+              { code: 'price = 2.5',      output: 'FLOAT box' },
+              { code: 'pet = "unicorn"',  output: 'STRING box' },
+            ]}
+          />
+          <MatchPairs
+            pairs={[
+              { code: 'int("5")',    output: '5' },
+              { code: 'float(5)',    output: '5.0' },
+              { code: 'str(5)',      output: '"5"' },
+              { code: 'int(2.7)',    output: '2' },
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* 8. Closer */}
       <section className="rounded-3xl border-4 border-purple bg-gradient-to-br from-purple-light/20 to-white p-5 shadow-chunk">
         <div className="flex items-start gap-3">
           <div className="text-4xl">🏆</div>
