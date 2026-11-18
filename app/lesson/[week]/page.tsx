@@ -10,6 +10,7 @@ import VariableBoxes from '@/components/VariableBoxes';
 import InputModal from '@/components/InputModal';
 import ChipButton from '@/components/ChipButton';
 import WeekPicker from '@/components/WeekPicker';
+import StepPicker from '@/components/StepPicker';
 import TopicsBanner from '@/components/TopicsBanner';
 import PracticeSection from '@/components/practice/PracticeSection';
 import { runPython, PyValue } from '@/lib/python';
@@ -99,6 +100,14 @@ export default function LessonPage() {
       {stepIdx === 0 && lesson.topics && lesson.topics.length > 0 ? (
         <TopicsBanner topics={lesson.topics} intro={lesson.intro} />
       ) : null}
+
+      {/* Sub-topic picker: step-by-step learning map for this week */}
+      <StepPicker
+        steps={lesson.steps}
+        currentStep={stepIdx}
+        onPick={(i) => setStepIdx(i)}
+      />
+
       <LessonPane
         lesson={lesson}
         stepIdx={stepIdx}
