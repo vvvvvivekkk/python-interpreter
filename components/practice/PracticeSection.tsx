@@ -10,9 +10,14 @@ import DrawIt, { DrawItData } from './DrawIt';
 import Challenge, { ChallengeData } from './Challenge';
 import Pixi from '@/components/Pixi';
 import { Sfx } from '@/lib/sounds';
-import { Printer } from 'lucide-react';
+import { useAppStore } from '@/lib/store';
+import { Printer, Lock } from 'lucide-react';
 
-interface Props { week: number }
+interface Props {
+  week: number;
+  /** true when the student has reached the last lesson step */
+  unlocked?: boolean;
+}
 
 interface PracticeEntry {
   week: number;
@@ -23,12 +28,39 @@ interface PracticeEntry {
   challenge: ChallengeData;
 }
 
-export default function PracticeSection({ week }: Props) {
+export default function PracticeSection({ week, unlocked = true }: Props) {
   const entry = (practiceData as PracticeEntry[]).find((p) => p.week === week);
   const lesson = (lessonsData as Array<{ week: number; title: string; concept: string }>).find((l) => l.week === week);
+  const weeksDone = useAppStore((s) => s.weeksDone);
   const [printing, setPrinting] = useState(false);
 
   if (!entry || !lesson) return null;
+
+  // Practice opens either when the lesson page tells us to, or if the week was done before.
+  const isOpen = unlocked || !!weeksDone[week];
+
+  if (!isOpen) {
+    return (
+      <section
+        id="practice"
+        className="rounded-3xl border-4 border-dashed border-pink-light bg-white/70 p-5 text-center shadow-chunk scroll-mt-24"
+      >
+        <div className="mx-auto flex max-w-md flex-col items-center gap-2">
+          <Pixi size={64} />
+          <div className="inline-flex items-center gap-2 rounded-full bg-pink-light/30 px-4 py-2 font-display text-base font-bold text-pink-dark">
+            <Lock size={18} /> Practice is locked
+          </div>
+          <p className="font-display text-base font-semibold text-purple-dark">
+            🎓 Finish today&apos;s class first — tap <span className="rounded-md bg-sky px-2 py-0.5 text-white">Next</span> through all the steps.
+          </p>
+          <p className="text-sm font-semibold text-navy/70">
+            Then 🎯 Practice Time will open with 5 fun games!
+          </p>
+        </div>
+      </section>
+    );
+  }
+
 
   const printWorksheet = async () => {
     Sfx.click();

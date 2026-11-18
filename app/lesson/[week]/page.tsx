@@ -21,8 +21,10 @@ import { speak } from '@/lib/speak';
 export default function LessonPage() {
   const params = useParams<{ week: string }>();
   const router = useRouter();
-  const week = Math.max(1, Math.min(8, parseInt(params.week, 10) || 1));
-  const lesson = (lessonsData as Lesson[]).find((l) => l.week === week)!;
+  const allLessons = lessonsData as Lesson[];
+  const maxWeek = allLessons.length; // dynamic — grows with the curriculum
+  const week = Math.max(1, Math.min(maxWeek, parseInt(params.week, 10) || 1));
+  const lesson = allLessons.find((l) => l.week === week) ?? allLessons[0];
 
   const [stepIdx, setStepIdx] = useState(0);
   const step = lesson.steps[stepIdx];
@@ -77,9 +79,23 @@ export default function LessonPage() {
   // Reset to step 0 when the week changes via the picker
   useEffect(() => { setStepIdx(0); }, [week]);
 
+  const totalSteps = lesson.steps.length;
+  const classDone = stepIdx >= totalSteps - 1;
+
   return (
     <div className="space-y-4 pb-20">
       <WeekPicker currentWeek={week} />
+
+      {/* ───── CLASS BANNER ───── */}
+      <div className="flex items-center justify-between rounded-2xl border-4 border-sky bg-gradient-to-r from-sky/30 to-white px-4 py-2 shadow-chunk">
+        <div className="font-display text-lg font-bold text-navy">
+          📚 Class · Week {week} — {lesson.title}
+        </div>
+        <div className="font-display text-sm font-bold text-sky-dark">
+          Step {Math.min(stepIdx + 1, totalSteps)} of {totalSteps}
+        </div>
+      </div>
+
       {stepIdx === 0 && lesson.topics && lesson.topics.length > 0 ? (
         <TopicsBanner topics={lesson.topics} intro={lesson.intro} />
       ) : null}
@@ -104,7 +120,16 @@ export default function LessonPage() {
         </div>
       </div>
       <InputModal open={inputPrompt !== null} prompt={inputPrompt ?? ''} onSubmit={onInputSubmit} />
-      <PracticeSection week={week} />
+
+      {/* ───── PRACTICE DIVIDER ───── */}
+      <div className="relative py-3">
+        <div className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 bg-gradient-to-r from-transparent via-pink to-transparent" />
+        <div className="relative mx-auto w-fit rounded-full border-4 border-pink bg-white px-5 py-2 font-display text-lg font-bold text-pink-dark shadow-chunk-pink">
+          🎉 Class done? Now let&apos;s practice! 🎯
+        </div>
+      </div>
+
+      <PracticeSection week={week} unlocked={classDone} />
     </div>
   );
 }
