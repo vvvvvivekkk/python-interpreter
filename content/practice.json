@@ -5,29 +5,121 @@
       "template": "print({0})",
       "expectedOutput": "Hello!\n",
       "blanks": [
-        { "answer": "\"Hello!\"", "options": ["\"Hello!\"", "Hello", "5"] }
+        {
+          "answer": "\"Hello!\"",
+          "options": [
+            "\"Hello!\"",
+            "Hello",
+            "5"
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "print(\"cat\")",   "output": "cat" },
-      { "code": "print(\"🐶\")",     "output": "🐶" },
-      { "code": "print(2 + 2)",     "output": "4" }
+      {
+        "code": "print(\"cat\")",
+        "output": "cat"
+      },
+      {
+        "code": "print(\"🐶\")",
+        "output": "🐶"
+      },
+      {
+        "code": "print(2 + 2)",
+        "output": "4"
+      }
     ],
     "colourBoxes": {
       "template": "print(\"{0}\")",
       "slots": [
-        { "icon": "💬", "options": ["Hi", "Ava", "Yay"] }
+        {
+          "icon": "💬",
+          "options": [
+            "Hi",
+            "Ava",
+            "Yay"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "print(\"🐱\")",
       "correctOutput": "🐱",
-      "options": ["🐱", "🐶", "🐻", "🦄"]
+      "options": [
+        "🐱",
+        "🐶",
+        "🐻",
+        "🦄"
+      ]
     },
     "challenge": {
       "prompt": "Write one line of code that makes the computer say your name.",
       "hint": "Use print and put your name inside the quotes."
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "{0}(\"Hi Mum!\")",
+        "expectedOutput": "Hi Mum!\n",
+        "blanks": [
+          {
+            "answer": "print",
+            "options": [
+              "print",
+              "say",
+              "write"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "print({0})",
+        "expectedOutput": "I love pizza\n",
+        "blanks": [
+          {
+            "answer": "\"I love pizza\"",
+            "options": [
+              "\"I love pizza\"",
+              "I love pizza",
+              "love pizza"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "print(\"yo\")",
+          "output": "yo"
+        },
+        {
+          "code": "print(\"A\")",
+          "output": "A"
+        },
+        {
+          "code": "print(\"ok!\")",
+          "output": "ok!"
+        },
+        {
+          "code": "print(\"123\")",
+          "output": "123"
+        }
+      ],
+      [
+        {
+          "code": "print(\"🐱\")",
+          "output": "🐱"
+        },
+        {
+          "code": "print(\"star\")\nprint(\"moon\")",
+          "output": "star\nmoon"
+        },
+        {
+          "code": "print(1+1)",
+          "output": "2"
+        }
+      ]
+    ]
   },
   {
     "week": 2,
@@ -35,30 +127,129 @@
       "template": "{0} = \"Ava\"\nprint({0})",
       "expectedOutput": "Ava\n",
       "blanks": [
-        { "answer": "name", "options": ["name", "5", "\"hello\""] }
+        {
+          "answer": "name",
+          "options": [
+            "name",
+            "5",
+            "\"hello\""
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "name = \"Ava\"\nprint(name)",      "output": "Ava" },
-      { "code": "age = 5\nprint(age)",             "output": "5" },
-      { "code": "hero = \"Dragon\"\nprint(hero)",  "output": "Dragon" }
+      {
+        "code": "name = \"Ava\"\nprint(name)",
+        "output": "Ava"
+      },
+      {
+        "code": "age = 5\nprint(age)",
+        "output": "5"
+      },
+      {
+        "code": "hero = \"Dragon\"\nprint(hero)",
+        "output": "Dragon"
+      }
     ],
     "colourBoxes": {
       "template": "name = \"{0}\"\nage = {1}\nprint(name, age)",
       "slots": [
-        { "icon": "📦", "options": ["Ava", "Sam", "Pixi"] },
-        { "icon": "🔢", "options": ["5", "7", "100"] }
+        {
+          "icon": "📦",
+          "options": [
+            "Ava",
+            "Sam",
+            "Pixi"
+          ]
+        },
+        {
+          "icon": "🔢",
+          "options": [
+            "5",
+            "7",
+            "100"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "hero = \"🐉\"\nprint(hero)",
       "correctOutput": "🐉",
-      "options": ["🐉", "🦄", "⭐", "🎁"]
+      "options": [
+        "🐉",
+        "🦄",
+        "⭐",
+        "🎁"
+      ]
     },
     "challenge": {
       "prompt": "Write one line that makes a box called pet that holds your favourite animal.",
       "hint": "pet = \"...\"  (put the animal inside the quotes!)"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "{0} = 7\nprint({0})",
+        "expectedOutput": "7\n",
+        "blanks": [
+          {
+            "answer": "score",
+            "options": [
+              "score",
+              "\"score\"",
+              "print"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "pet = {0}\nprint(pet)",
+        "expectedOutput": "cat\n",
+        "blanks": [
+          {
+            "answer": "\"cat\"",
+            "options": [
+              "\"cat\"",
+              "cat",
+              "🐱"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "x = 10\nprint(x)",
+          "output": "10"
+        },
+        {
+          "code": "name = \"Ava\"\nprint(name)",
+          "output": "Ava"
+        },
+        {
+          "code": "age = 5\nprint(age)",
+          "output": "5"
+        },
+        {
+          "code": "hi = \"yo\"\nprint(hi)",
+          "output": "yo"
+        }
+      ],
+      [
+        {
+          "code": "a = 2\nb = 3\nprint(a+b)",
+          "output": "5"
+        },
+        {
+          "code": "c = 10\nc = 20\nprint(c)",
+          "output": "20"
+        },
+        {
+          "code": "n = \"Pixi\"\nprint(n)",
+          "output": "Pixi"
+        }
+      ]
+    ]
   },
   {
     "week": 3,
@@ -66,30 +257,129 @@
       "template": "name = \"Ava\"\nprint(\"Hi \" {0} name)",
       "expectedOutput": "Hi Ava\n",
       "blanks": [
-        { "answer": "+", "options": ["+", "-", "*"] }
+        {
+          "answer": "+",
+          "options": [
+            "+",
+            "-",
+            "*"
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "print(\"Hi \" + \"Ava\")",      "output": "Hi Ava" },
-      { "code": "print(\"A\" + \"B\")",          "output": "AB" },
-      { "code": "print(\"ha\" * 3)",            "output": "hahaha" }
+      {
+        "code": "print(\"Hi \" + \"Ava\")",
+        "output": "Hi Ava"
+      },
+      {
+        "code": "print(\"A\" + \"B\")",
+        "output": "AB"
+      },
+      {
+        "code": "print(\"ha\" * 3)",
+        "output": "hahaha"
+      }
     ],
     "colourBoxes": {
       "template": "print(\"{0}\" + \" loves \" + \"{1}\")",
       "slots": [
-        { "icon": "💬", "options": ["Ava", "Sam", "Pixi"] },
-        { "icon": "💬", "options": ["cats", "anime", "pizza"] }
+        {
+          "icon": "💬",
+          "options": [
+            "Ava",
+            "Sam",
+            "Pixi"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "cats",
+            "anime",
+            "pizza"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "print(\"🎂 \" * 3)",
       "correctOutput": "🎂 🎂 🎂 ",
-      "options": ["🎂 🎂 🎂 ", "🎂", "🎂🎂🎂", "3🎂"]
+      "options": [
+        "🎂 🎂 🎂 ",
+        "🎂",
+        "🎂🎂🎂",
+        "3🎂"
+      ]
     },
     "challenge": {
       "prompt": "Write one line that prints your name with Hi stuck in front using +.",
       "hint": "print(\"Hi \" + \"...\")  (your name in the quotes!)"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "print(\"Hi\" {0} \" \" {0} \"Ava\")",
+        "expectedOutput": "Hi Ava\n",
+        "blanks": [
+          {
+            "answer": "+",
+            "options": [
+              "+",
+              ",",
+              "*"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "print(\"ha\" {0} 4)",
+        "expectedOutput": "hahahaha\n",
+        "blanks": [
+          {
+            "answer": "*",
+            "options": [
+              "*",
+              "+",
+              "-"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "print(\"Hello \" + \"Sam\")",
+          "output": "Hello Sam"
+        },
+        {
+          "code": "print(\"Ha\" * 3)",
+          "output": "HaHaHa"
+        },
+        {
+          "code": "print(\"Hi,\", \"friend\")",
+          "output": "Hi, friend"
+        },
+        {
+          "code": "print(\"2\" + \"2\")",
+          "output": "22"
+        }
+      ],
+      [
+        {
+          "code": "n = \"Mia\"\nprint(\"Hey \" + n)",
+          "output": "Hey Mia"
+        },
+        {
+          "code": "print(\"⭐\" * 5)",
+          "output": "⭐⭐⭐⭐⭐"
+        },
+        {
+          "code": "print(\"Age:\", 7)",
+          "output": "Age: 7"
+        }
+      ]
+    ]
   },
   {
     "week": 4,
@@ -97,30 +387,129 @@
       "template": "score = 10\nif score > 5:\n    print({0})",
       "expectedOutput": "You win!\n",
       "blanks": [
-        { "answer": "\"You win!\"", "options": ["\"You win!\"", "score", "True"] }
+        {
+          "answer": "\"You win!\"",
+          "options": [
+            "\"You win!\"",
+            "score",
+            "True"
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "score = 10\nif score > 5:\n    print(\"Win\")",                              "output": "Win" },
-      { "code": "age = 3\nif age > 5:\n    print(\"Big\")\nelse:\n    print(\"Small\")",      "output": "Small" },
-      { "code": "if True:\n    print(\"yes\")",                                                 "output": "yes" }
+      {
+        "code": "score = 10\nif score > 5:\n    print(\"Win\")",
+        "output": "Win"
+      },
+      {
+        "code": "age = 3\nif age > 5:\n    print(\"Big\")\nelse:\n    print(\"Small\")",
+        "output": "Small"
+      },
+      {
+        "code": "if True:\n    print(\"yes\")",
+        "output": "yes"
+      }
     ],
     "colourBoxes": {
       "template": "score = {0}\nif score > 5:\n    print(\"{1}\")\nelse:\n    print(\"try again\")",
       "slots": [
-        { "icon": "🔢", "options": ["10", "3", "100"] },
-        { "icon": "💬", "options": ["win", "yay", "super"] }
+        {
+          "icon": "🔢",
+          "options": [
+            "10",
+            "3",
+            "100"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "win",
+            "yay",
+            "super"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "if 2 > 1:\n    print(\"✨\")",
       "correctOutput": "✨",
-      "options": ["✨", "nothing", "True", "2>1"]
+      "options": [
+        "✨",
+        "nothing",
+        "True",
+        "2>1"
+      ]
     },
     "challenge": {
       "prompt": "Write an if that prints yay when age is bigger than 3.",
       "hint": "age = 5\nif age > 3:\n    print(\"yay\")"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "age = 10\n{0} age > 5:\n    print(\"big!\")",
+        "expectedOutput": "big!\n",
+        "blanks": [
+          {
+            "answer": "if",
+            "options": [
+              "if",
+              "while",
+              "print"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "coins = 2\nif coins > 5:\n    print(\"rich\")\n{0}:\n    print(\"save more\")",
+        "expectedOutput": "save more\n",
+        "blanks": [
+          {
+            "answer": "else",
+            "options": [
+              "else",
+              "elif",
+              "if"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "if 5 > 3:\n    print(\"yes\")",
+          "output": "yes"
+        },
+        {
+          "code": "if 1 > 9:\n    print(\"no\")\nelse:\n    print(\"ok\")",
+          "output": "ok"
+        },
+        {
+          "code": "x = 10\nif x == 10:\n    print(\"ten\")",
+          "output": "ten"
+        },
+        {
+          "code": "if \"A\" == \"A\":\n    print(\"same\")",
+          "output": "same"
+        }
+      ],
+      [
+        {
+          "code": "n = 7\nif n > 5:\n    print(\"big\")",
+          "output": "big"
+        },
+        {
+          "code": "n = 2\nif n > 5:\n    print(\"big\")\nelse:\n    print(\"small\")",
+          "output": "small"
+        },
+        {
+          "code": "if False:\n    print(\"nope\")\nelse:\n    print(\"yay\")",
+          "output": "yay"
+        }
+      ]
+    ]
   },
   {
     "week": 5,
@@ -128,30 +517,129 @@
       "template": "for star in range({0}):\n    print(\"⭐\")",
       "expectedOutput": "⭐\n⭐\n⭐\n",
       "blanks": [
-        { "answer": "3", "options": ["3", "\"3\"", "star"] }
+        {
+          "answer": "3",
+          "options": [
+            "3",
+            "\"3\"",
+            "star"
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "for i in range(3):\n    print(\"🌟\")",     "output": "🌟\n🌟\n🌟" },
-      { "code": "for n in range(2):\n    print(n)",           "output": "0\n1" },
-      { "code": "for i in range(4):\n    print(\"🦄\")",     "output": "🦄\n🦄\n🦄\n🦄" }
+      {
+        "code": "for i in range(3):\n    print(\"🌟\")",
+        "output": "🌟\n🌟\n🌟"
+      },
+      {
+        "code": "for n in range(2):\n    print(n)",
+        "output": "0\n1"
+      },
+      {
+        "code": "for i in range(4):\n    print(\"🦄\")",
+        "output": "🦄\n🦄\n🦄\n🦄"
+      }
     ],
     "colourBoxes": {
       "template": "for i in range({0}):\n    print(\"{1}\")",
       "slots": [
-        { "icon": "🔢", "options": ["3", "5", "10"] },
-        { "icon": "💬", "options": ["🦄", "⭐", "yay"] }
+        {
+          "icon": "🔢",
+          "options": [
+            "3",
+            "5",
+            "10"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "🦄",
+            "⭐",
+            "yay"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "for i in range(3):\n    print(\"🎈\")",
       "correctOutput": "🎈 🎈 🎈 (on 3 lines)",
-      "options": ["🎈 🎈 🎈 (on 3 lines)", "🎈 once", "range(3)", "3🎈"]
+      "options": [
+        "🎈 🎈 🎈 (on 3 lines)",
+        "🎈 once",
+        "range(3)",
+        "3🎈"
+      ]
     },
     "challenge": {
       "prompt": "Write a loop that prints the word hi 5 times.",
       "hint": "for i in range(5):\n    print(\"hi\")"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "for i {0} range(3):\n    print(i)",
+        "expectedOutput": "0\n1\n2\n",
+        "blanks": [
+          {
+            "answer": "in",
+            "options": [
+              "in",
+              "on",
+              "="
+            ]
+          }
+        ]
+      },
+      {
+        "template": "for i in range({0}):\n    print(\"⭐\")",
+        "expectedOutput": "⭐\n⭐\n⭐\n⭐\n",
+        "blanks": [
+          {
+            "answer": "4",
+            "options": [
+              "4",
+              "\"4\"",
+              "4.0"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "for i in range(3):\n    print(\"hi\")",
+          "output": "hi\nhi\nhi"
+        },
+        {
+          "code": "for i in range(2):\n    print(i)",
+          "output": "0\n1"
+        },
+        {
+          "code": "for i in range(1):\n    print(\"one\")",
+          "output": "one"
+        },
+        {
+          "code": "for i in range(4):\n    print(\"⭐\")",
+          "output": "⭐\n⭐\n⭐\n⭐"
+        }
+      ],
+      [
+        {
+          "code": "for n in range(5):\n    print(n+1)",
+          "output": "1\n2\n3\n4\n5"
+        },
+        {
+          "code": "for x in range(3):\n    print(\"ha\", end=\"\")",
+          "output": "hahaha"
+        },
+        {
+          "code": "for i in range(2):\n    print(\"👋\")",
+          "output": "👋\n👋"
+        }
+      ]
+    ]
   },
   {
     "week": 6,
@@ -159,63 +647,268 @@
       "template": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[{0}])",
       "expectedOutput": "cat\n",
       "blanks": [
-        { "answer": "0", "options": ["0", "1", "3"] }
+        {
+          "answer": "0",
+          "options": [
+            "0",
+            "1",
+            "3"
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])", "output": "cat" },
-      { "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[1])", "output": "dog" },
-      { "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[2])", "output": "unicorn" }
+      {
+        "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[0])",
+        "output": "cat"
+      },
+      {
+        "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[1])",
+        "output": "dog"
+      },
+      {
+        "code": "pets = [\"cat\", \"dog\", \"unicorn\"]\nprint(pets[2])",
+        "output": "unicorn"
+      }
     ],
     "colourBoxes": {
       "template": "pets = [\"{0}\", \"{1}\", \"{2}\"]\nprint(pets[0])",
       "slots": [
-        { "icon": "💬", "options": ["cat", "fox", "owl"] },
-        { "icon": "💬", "options": ["dog", "bear", "deer"] },
-        { "icon": "💬", "options": ["unicorn", "dragon", "phoenix"] }
+        {
+          "icon": "💬",
+          "options": [
+            "cat",
+            "fox",
+            "owl"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "dog",
+            "bear",
+            "deer"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "unicorn",
+            "dragon",
+            "phoenix"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "pets = [\"🐱\", \"🐶\", \"🦄\"]\nprint(pets[2])",
       "correctOutput": "🦄",
-      "options": ["🐱", "🐶", "🦄", "all 3"]
+      "options": [
+        "🐱",
+        "🐶",
+        "🦄",
+        "all 3"
+      ]
     },
     "challenge": {
       "prompt": "Make a list of 3 fruits and print the second one.",
       "hint": "fruits = [\"apple\", \"banana\", \"mango\"]\nprint(fruits[1])"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "foods = [{0}, \"pizza\", \"rice\"]\nprint(foods[0])",
+        "expectedOutput": "taco\n",
+        "blanks": [
+          {
+            "answer": "\"taco\"",
+            "options": [
+              "\"taco\"",
+              "taco",
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "pets = [\"cat\", \"dog\", \"fox\"]\nprint(pets[{0}])",
+        "expectedOutput": "dog\n",
+        "blanks": [
+          {
+            "answer": "1",
+            "options": [
+              "1",
+              "2",
+              "0"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "xs = [10, 20, 30]\nprint(xs[0])",
+          "output": "10"
+        },
+        {
+          "code": "xs = [\"a\",\"b\",\"c\"]\nprint(xs[2])",
+          "output": "c"
+        },
+        {
+          "code": "xs = [1,2,3]\nprint(xs[1])",
+          "output": "2"
+        },
+        {
+          "code": "ps = [\"🐱\",\"🐶\"]\nprint(ps[1])",
+          "output": "🐶"
+        }
+      ],
+      [
+        {
+          "code": "xs = [1,2,3]\nfor n in xs:\n    print(n)",
+          "output": "1\n2\n3"
+        },
+        {
+          "code": "xs = [\"hi\",\"yo\"]\nfor s in xs:\n    print(s)",
+          "output": "hi\nyo"
+        },
+        {
+          "code": "xs = [5]\nprint(xs[0])",
+          "output": "5"
+        }
+      ]
+    ]
   },
   {
     "week": 7,
     "fillBlanks": {
       "template": "name = input(\"Name? \")\nprint(\"Hello,\", {0})",
       "expectedOutput": "Hello, Ava\n",
-      "inputs": ["Ava"],
+      "inputs": [
+        "Ava"
+      ],
       "blanks": [
-        { "answer": "name", "options": ["name", "\"name\"", "input"] }
+        {
+          "answer": "name",
+          "options": [
+            "name",
+            "\"name\"",
+            "input"
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "You type Ava\n→ name = input(...)\nprint(\"Hi\", name)",       "output": "Hi Ava" },
-      { "code": "You type cat\n→ pet = input(...)\nprint(\"I love\", pet)",     "output": "I love cat" },
-      { "code": "You type blue\n→ c = input(...)\nprint(c, \"is pretty\")",     "output": "blue is pretty" }
+      {
+        "code": "You type Ava\n→ name = input(...)\nprint(\"Hi\", name)",
+        "output": "Hi Ava"
+      },
+      {
+        "code": "You type cat\n→ pet = input(...)\nprint(\"I love\", pet)",
+        "output": "I love cat"
+      },
+      {
+        "code": "You type blue\n→ c = input(...)\nprint(c, \"is pretty\")",
+        "output": "blue is pretty"
+      }
     ],
     "colourBoxes": {
       "template": "name = input(\"{0}\")\nprint(\"{1}\", name)",
       "slots": [
-        { "icon": "💬", "options": ["Name? ", "Who? ", "Hey? "] },
-        { "icon": "💬", "options": ["Hello,", "Hi,", "Yo,"] }
+        {
+          "icon": "💬",
+          "options": [
+            "Name? ",
+            "Who? ",
+            "Hey? "
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "Hello,",
+            "Hi,",
+            "Yo,"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "Pixi asks: 'Favourite colour?'\nYou type: pink\nprint(\"I love\", colour)",
       "correctOutput": "I love pink",
-      "options": ["I love pink", "pink", "colour", "nothing"]
+      "options": [
+        "I love pink",
+        "pink",
+        "colour",
+        "nothing"
+      ]
     },
     "challenge": {
       "prompt": "Ask what your student's favourite food is, then print I love ___.",
       "hint": "food = input(\"Favourite food? \")\nprint(\"I love\", food)"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "name = {0}(\"What is your name? \")\nprint(\"Hi\", name)",
+        "expectedOutput": "Hi Ava\n",
+        "blanks": [
+          {
+            "answer": "input",
+            "options": [
+              "input",
+              "ask",
+              "print"
+            ]
+          }
+        ],
+        "inputs": [
+          "Ava"
+        ]
+      },
+      {
+        "template": "age = input(\"age? \")\nprint(\"You are\", {0}, \"years old\")",
+        "expectedOutput": "You are 5 years old\n",
+        "blanks": [
+          {
+            "answer": "age",
+            "options": [
+              "age",
+              "\"age\"",
+              "input"
+            ]
+          }
+        ],
+        "inputs": [
+          "5"
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "n = input(\"name? \")\nprint(\"Hi\", n)",
+          "output": "Hi Sam"
+        },
+        {
+          "code": "c = input(\"color? \")\nprint(c + \"!\")",
+          "output": "blue!"
+        },
+        {
+          "code": "f = input(\"food? \")\nprint(\"yum\", f)",
+          "output": "yum pizza"
+        }
+      ],
+      [
+        {
+          "code": "a = input()\nprint(a*3)",
+          "output": "yoyoyo"
+        },
+        {
+          "code": "x = input()\nprint(\"hi \" + x)",
+          "output": "hi Mia"
+        }
+      ]
+    ]
   },
   {
     "week": 8,
@@ -223,268 +916,1196 @@
       "template": "def say_hi():\n    print(\"Hi there!\")\n\n{0}",
       "expectedOutput": "Hi there!\n",
       "blanks": [
-        { "answer": "say_hi()", "options": ["say_hi()", "say_hi", "print(say_hi)"] }
+        {
+          "answer": "say_hi()",
+          "options": [
+            "say_hi()",
+            "say_hi",
+            "print(say_hi)"
+          ]
+        }
       ]
     },
     "matchPairs": [
-      { "code": "def hi():\n    print(\"hi\")\nhi()",                                   "output": "hi" },
-      { "code": "def greet(n):\n    print(\"Hi \" + n)\ngreet(\"Ava\")",               "output": "Hi Ava" },
-      { "code": "def shout():\n    print(\"YAY!\")\nshout()\nshout()",                 "output": "YAY!\nYAY!" }
+      {
+        "code": "def hi():\n    print(\"hi\")\nhi()",
+        "output": "hi"
+      },
+      {
+        "code": "def greet(n):\n    print(\"Hi \" + n)\ngreet(\"Ava\")",
+        "output": "Hi Ava"
+      },
+      {
+        "code": "def shout():\n    print(\"YAY!\")\nshout()\nshout()",
+        "output": "YAY!\nYAY!"
+      }
     ],
     "colourBoxes": {
       "template": "def greet(who):\n    print(\"{0} \" + who)\n\ngreet(\"{1}\")",
       "slots": [
-        { "icon": "💬", "options": ["Hi", "Hello", "Yo"] },
-        { "icon": "💬", "options": ["Ava", "Pixi", "Sam"] }
+        {
+          "icon": "💬",
+          "options": [
+            "Hi",
+            "Hello",
+            "Yo"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "Ava",
+            "Pixi",
+            "Sam"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "def wave():\n    print(\"👋\")\nwave()\nwave()",
       "correctOutput": "👋 👋 (on 2 lines)",
-      "options": ["👋 👋 (on 2 lines)", "👋", "wave wave", "nothing"]
+      "options": [
+        "👋 👋 (on 2 lines)",
+        "👋",
+        "wave wave",
+        "nothing"
+      ]
     },
     "challenge": {
       "prompt": "Make a magic word called say_hello that prints hello, then call it 3 times.",
       "hint": "def say_hello():\n    print(\"hello\")\nsay_hello()\nsay_hello()\nsay_hello()"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "{0} shout():\n    print(\"YAY!\")\nshout()",
+        "expectedOutput": "YAY!\n",
+        "blanks": [
+          {
+            "answer": "def",
+            "options": [
+              "def",
+              "do",
+              "print"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "def greet(n):\n    print(\"Hi \" + n)\n{0}",
+        "expectedOutput": "Hi Mia\n",
+        "blanks": [
+          {
+            "answer": "greet(\"Mia\")",
+            "options": [
+              "greet(\"Mia\")",
+              "greet",
+              "print(greet)"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "def a():\n    print(1)\na()",
+          "output": "1"
+        },
+        {
+          "code": "def b():\n    print(\"hi\")\nb()\nb()",
+          "output": "hi\nhi"
+        },
+        {
+          "code": "def c(n):\n    print(n*2)\nc(3)",
+          "output": "6"
+        },
+        {
+          "code": "def d(w):\n    print(\"Hi \" + w)\nd(\"Ava\")",
+          "output": "Hi Ava"
+        }
+      ],
+      [
+        {
+          "code": "def star():\n    print(\"⭐\")\nstar()\nstar()\nstar()",
+          "output": "⭐\n⭐\n⭐"
+        },
+        {
+          "code": "def add(a,b):\n    print(a+b)\nadd(2,3)",
+          "output": "5"
+        }
+      ]
+    ]
   },
   {
     "week": 9,
     "fillBlanks": {
       "template": "print({0}(-7))",
       "expectedOutput": "7\n",
-      "blanks": [{ "answer": "abs", "options": ["abs", "round", "max"] }]
+      "blanks": [
+        {
+          "answer": "abs",
+          "options": [
+            "abs",
+            "round",
+            "max"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "print(abs(-5))",           "output": "5" },
-      { "code": "print(round(2.7))",        "output": "3" },
-      { "code": "print(max(3, 7, 1))",      "output": "7" },
-      { "code": "print(min(3, 7, 1))",      "output": "1" }
+      {
+        "code": "print(abs(-5))",
+        "output": "5"
+      },
+      {
+        "code": "print(round(2.7))",
+        "output": "3"
+      },
+      {
+        "code": "print(max(3, 7, 1))",
+        "output": "7"
+      },
+      {
+        "code": "print(min(3, 7, 1))",
+        "output": "1"
+      }
     ],
     "colourBoxes": {
       "template": "a = {0}\nb = {1}\nprint(max(a, b))",
       "slots": [
-        { "icon": "🔢", "options": ["10", "25", "100"] },
-        { "icon": "🔢", "options": ["5", "50", "99"] }
+        {
+          "icon": "🔢",
+          "options": [
+            "10",
+            "25",
+            "100"
+          ]
+        },
+        {
+          "icon": "🔢",
+          "options": [
+            "5",
+            "50",
+            "99"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "print(round(3.7))",
       "correctOutput": "4",
-      "options": ["4", "3", "3.7", "3.5"]
+      "options": [
+        "4",
+        "3",
+        "3.7",
+        "3.5"
+      ]
     },
     "challenge": {
       "prompt": "Print the BIGGEST of 5, 12, and 3 using max().",
       "hint": "print(max(5, 12, 3))"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "print({0}(3.14))",
+        "expectedOutput": "3\n",
+        "blanks": [
+          {
+            "answer": "round",
+            "options": [
+              "round",
+              "int",
+              "abs"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "print({0}(-10))",
+        "expectedOutput": "10\n",
+        "blanks": [
+          {
+            "answer": "abs",
+            "options": [
+              "abs",
+              "neg",
+              "min"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "print(round(4.4))",
+          "output": "4"
+        },
+        {
+          "code": "print(round(4.6))",
+          "output": "5"
+        },
+        {
+          "code": "print(abs(-9))",
+          "output": "9"
+        },
+        {
+          "code": "print(abs(9))",
+          "output": "9"
+        }
+      ],
+      [
+        {
+          "code": "print(max(1,2,3,4))",
+          "output": "4"
+        },
+        {
+          "code": "print(min(1,2,3,4))",
+          "output": "1"
+        },
+        {
+          "code": "print(max(10, 5))",
+          "output": "10"
+        },
+        {
+          "code": "print(min(-1, 0))",
+          "output": "-1"
+        }
+      ]
+    ]
   },
   {
     "week": 10,
     "fillBlanks": {
       "template": "pets = [\"cat\", \"dog\", \"fox\"]\nprint(len({0}))",
       "expectedOutput": "3\n",
-      "blanks": [{ "answer": "pets", "options": ["pets", "\"pets\"", "3"] }]
+      "blanks": [
+        {
+          "answer": "pets",
+          "options": [
+            "pets",
+            "\"pets\"",
+            "3"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "x = [1,2,3,4]\nprint(len(x))",   "output": "4" },
-      { "code": "x = [10,20,30]\nprint(x[-1])",  "output": "30" },
-      { "code": "x = [\"a\",\"b\"]\nprint(x[-2])","output": "a" },
-      { "code": "x = []\nprint(len(x))",         "output": "0" }
+      {
+        "code": "x = [1,2,3,4]\nprint(len(x))",
+        "output": "4"
+      },
+      {
+        "code": "x = [10,20,30]\nprint(x[-1])",
+        "output": "30"
+      },
+      {
+        "code": "x = [\"a\",\"b\"]\nprint(x[-2])",
+        "output": "a"
+      },
+      {
+        "code": "x = []\nprint(len(x))",
+        "output": "0"
+      }
     ],
     "colourBoxes": {
       "template": "foods = [\"{0}\", \"{1}\", \"{2}\"]\nprint(random.choice(foods))",
       "slots": [
-        { "icon": "💬", "options": ["pizza", "pasta", "sushi"] },
-        { "icon": "💬", "options": ["taco", "curry", "rice"] },
-        { "icon": "💬", "options": ["cake", "candy", "fruit"] }
+        {
+          "icon": "💬",
+          "options": [
+            "pizza",
+            "pasta",
+            "sushi"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "taco",
+            "curry",
+            "rice"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "cake",
+            "candy",
+            "fruit"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "animals = [\"🐱\", \"🐶\", \"🦄\"]\nprint(animals[-1])",
       "correctOutput": "🦄",
-      "options": ["🐱", "🐶", "🦄", "all 3"]
+      "options": [
+        "🐱",
+        "🐶",
+        "🦄",
+        "all 3"
+      ]
     },
     "challenge": {
       "prompt": "Make a list of 4 games. Print how MANY are in it using len().",
       "hint": "games = [\"___\", \"___\", \"___\", \"___\"]\nprint(len(games))"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "pets = [\"cat\",\"dog\",\"fox\"]\nprint({0}(pets))",
+        "expectedOutput": "3\n",
+        "blanks": [
+          {
+            "answer": "len",
+            "options": [
+              "len",
+              "count",
+              "num"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "xs = [10,20,30,40]\nprint(xs[{0}])",
+        "expectedOutput": "40\n",
+        "blanks": [
+          {
+            "answer": "-1",
+            "options": [
+              "-1",
+              "4",
+              "\"last\""
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "print(len([1,2]))",
+          "output": "2"
+        },
+        {
+          "code": "print(len([]))",
+          "output": "0"
+        },
+        {
+          "code": "print(len(\"hi\"))",
+          "output": "2"
+        },
+        {
+          "code": "print(len([\"a\",\"b\",\"c\"]))",
+          "output": "3"
+        }
+      ],
+      [
+        {
+          "code": "xs=[1,2,3]\nprint(xs[-1])",
+          "output": "3"
+        },
+        {
+          "code": "xs=[\"a\",\"b\",\"c\"]\nprint(xs[-2])",
+          "output": "b"
+        },
+        {
+          "code": "print(2 in [1,2,3])",
+          "output": "True"
+        },
+        {
+          "code": "print(7 in [1,2,3])",
+          "output": "False"
+        }
+      ]
+    ]
   },
   {
     "week": 11,
     "fillBlanks": {
       "template": "sides = [1, 2, 3, 4, 5, 6]\nprint({0}.choice(sides))",
       "expectedOutput": "4\n",
-      "blanks": [{ "answer": "random", "options": ["random", "pick", "max"] }]
+      "blanks": [
+        {
+          "answer": "random",
+          "options": [
+            "random",
+            "pick",
+            "max"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "random.choice([1,2,3])",             "output": "a number 1-3" },
-      { "code": "random.choice([\"yes\",\"no\"])",    "output": "yes OR no" },
-      { "code": "random.choice([\"🐱\"])",             "output": "🐱" }
+      {
+        "code": "random.choice([1,2,3])",
+        "output": "a number 1-3"
+      },
+      {
+        "code": "random.choice([\"yes\",\"no\"])",
+        "output": "yes OR no"
+      },
+      {
+        "code": "random.choice([\"🐱\"])",
+        "output": "🐱"
+      }
     ],
     "colourBoxes": {
       "template": "answers = [\"{0}\", \"{1}\", \"{2}\"]\nprint(\"🎱\", random.choice(answers))",
       "slots": [
-        { "icon": "💬", "options": ["Yes!", "Sure!", "OK!"] },
-        { "icon": "💬", "options": ["No!", "Nope!", "Never!"] },
-        { "icon": "💬", "options": ["Maybe", "Hmm", "Try again"] }
+        {
+          "icon": "💬",
+          "options": [
+            "Yes!",
+            "Sure!",
+            "OK!"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "No!",
+            "Nope!",
+            "Never!"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "Maybe",
+            "Hmm",
+            "Try again"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "print(random.choice([\"🎁\"]))",
       "correctOutput": "🎁",
-      "options": ["🎁", "random", "nothing", "a list"]
+      "options": [
+        "🎁",
+        "random",
+        "nothing",
+        "a list"
+      ]
     },
     "challenge": {
       "prompt": "Make a magic 8-ball: pick randomly from 3 answers.",
       "hint": "answers = [\"Yes\", \"No\", \"Maybe\"]\nprint(random.choice(answers))"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "print(random.{0}([1,2,3]))",
+        "expectedOutput": "2\n",
+        "blanks": [
+          {
+            "answer": "choice",
+            "options": [
+              "choice",
+              "pick",
+              "one"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "colours = [\"red\",\"blue\",\"pink\"]\nprint(random.choice({0}))",
+        "expectedOutput": "blue\n",
+        "blanks": [
+          {
+            "answer": "colours",
+            "options": [
+              "colours",
+              "\"colours\"",
+              "red"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "random.choice([1,2,3,4,5,6])",
+          "output": "a dice 1-6"
+        },
+        {
+          "code": "random.choice([\"yes\",\"no\"])",
+          "output": "yes OR no"
+        },
+        {
+          "code": "random.choice([\"🏆\"])",
+          "output": "🏆"
+        },
+        {
+          "code": "random.choice([\"hi\",\"hey\",\"yo\"])",
+          "output": "one greeting"
+        }
+      ],
+      [
+        {
+          "code": "random.choice([\"cat\",\"dog\",\"fox\"])",
+          "output": "one animal"
+        },
+        {
+          "code": "random.choice([True,False])",
+          "output": "True OR False"
+        },
+        {
+          "code": "random.choice([\"🍕\",\"🍔\",\"🍣\"])",
+          "output": "one food"
+        }
+      ]
+    ]
   },
   {
     "week": 12,
     "fillBlanks": {
       "template": "n = 1\n{0} n <= 3:\n    print(n)\n    n = n + 1",
       "expectedOutput": "1\n2\n3\n",
-      "blanks": [{ "answer": "while", "options": ["while", "if", "for"] }]
+      "blanks": [
+        {
+          "answer": "while",
+          "options": [
+            "while",
+            "if",
+            "for"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "x = 0\nwhile x < 3:\n    print(x)\n    x = x + 1",          "output": "0\n1\n2" },
-      { "code": "n = 5\nwhile n > 3:\n    print(n)\n    n = n - 1",         "output": "5\n4" },
-      { "code": "c = 0\nwhile c < 10:\n    c = c + 5\nprint(c)",            "output": "10" }
+      {
+        "code": "x = 0\nwhile x < 3:\n    print(x)\n    x = x + 1",
+        "output": "0\n1\n2"
+      },
+      {
+        "code": "n = 5\nwhile n > 3:\n    print(n)\n    n = n - 1",
+        "output": "5\n4"
+      },
+      {
+        "code": "c = 0\nwhile c < 10:\n    c = c + 5\nprint(c)",
+        "output": "10"
+      }
     ],
     "colourBoxes": {
       "template": "coins = 0\nwhile coins < {0}:\n    coins = coins + {1}\nprint(coins)",
       "slots": [
-        { "icon": "🔢", "options": ["10", "20", "50"] },
-        { "icon": "🔢", "options": ["1", "5", "10"] }
+        {
+          "icon": "🔢",
+          "options": [
+            "10",
+            "20",
+            "50"
+          ]
+        },
+        {
+          "icon": "🔢",
+          "options": [
+            "1",
+            "5",
+            "10"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "n = 3\nwhile n > 0:\n    print(n)\n    n = n - 1",
       "correctOutput": "3 2 1 (on 3 lines)",
-      "options": ["3 2 1 (on 3 lines)", "3", "1 2 3", "0 1 2"]
+      "options": [
+        "3 2 1 (on 3 lines)",
+        "3",
+        "1 2 3",
+        "0 1 2"
+      ]
     },
     "challenge": {
       "prompt": "Use while to count from 1 to 5.",
       "hint": "n = 1\nwhile n <= 5:\n    print(n)\n    n = n + 1"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "n = 5\nwhile n > 0:\n    print(n)\n    n = n {0} 1",
+        "expectedOutput": "5\n4\n3\n2\n1\n",
+        "blanks": [
+          {
+            "answer": "-",
+            "options": [
+              "-",
+              "+",
+              "*"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "x = 0\nwhile x {0} 3:\n    print(\"hi\")\n    x = x + 1",
+        "expectedOutput": "hi\nhi\nhi\n",
+        "blanks": [
+          {
+            "answer": "<",
+            "options": [
+              "<",
+              ">",
+              "=="
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "n=0\nwhile n<2:\n    print(\"hi\")\n    n=n+1",
+          "output": "hi\nhi"
+        },
+        {
+          "code": "n=3\nwhile n>0:\n    print(n)\n    n=n-1",
+          "output": "3\n2\n1"
+        },
+        {
+          "code": "c=0\nwhile c<4:\n    c=c+2\nprint(c)",
+          "output": "4"
+        }
+      ],
+      [
+        {
+          "code": "x=1\nwhile x<=3:\n    print(x*2)\n    x=x+1",
+          "output": "2\n4\n6"
+        },
+        {
+          "code": "n=10\nwhile n>5:\n    n=n-5\nprint(n)",
+          "output": "5"
+        }
+      ]
+    ]
   },
   {
     "week": 13,
     "fillBlanks": {
       "template": "scores = [3, 10, 7]\nfor s in scores:\n    {0} s > 5:\n        print(s)",
       "expectedOutput": "10\n7\n",
-      "blanks": [{ "answer": "if", "options": ["if", "while", "def"] }]
+      "blanks": [
+        {
+          "answer": "if",
+          "options": [
+            "if",
+            "while",
+            "def"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "for n in [1,2,3,4]:\n    if n > 2:\n        print(n)",             "output": "3\n4" },
-      { "code": "for p in [\"cat\",\"dog\",\"cat\"]:\n    if p == \"cat\":\n        print(p)", "output": "cat\ncat" },
-      { "code": "c = 0\nfor n in [1,2,3,4,5]:\n    if n > 2:\n        c = c + 1\nprint(c)", "output": "3" }
+      {
+        "code": "for n in [1,2,3,4]:\n    if n > 2:\n        print(n)",
+        "output": "3\n4"
+      },
+      {
+        "code": "for p in [\"cat\",\"dog\",\"cat\"]:\n    if p == \"cat\":\n        print(p)",
+        "output": "cat\ncat"
+      },
+      {
+        "code": "c = 0\nfor n in [1,2,3,4,5]:\n    if n > 2:\n        c = c + 1\nprint(c)",
+        "output": "3"
+      }
     ],
     "colourBoxes": {
       "template": "nums = [1, 5, 10, 20]\nfor n in nums:\n    if n > {0}:\n        print(\"{1}\")",
       "slots": [
-        { "icon": "🔢", "options": ["3", "7", "15"] },
-        { "icon": "💬", "options": ["big!", "yay", "wow"] }
+        {
+          "icon": "🔢",
+          "options": [
+            "3",
+            "7",
+            "15"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "big!",
+            "yay",
+            "wow"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "for n in [1,2,3,4]:\n    if n > 2:\n        print(\"⭐\")",
       "correctOutput": "⭐ ⭐ (on 2 lines)",
-      "options": ["⭐ ⭐ (on 2 lines)", "⭐", "4 stars", "nothing"]
+      "options": [
+        "⭐ ⭐ (on 2 lines)",
+        "⭐",
+        "4 stars",
+        "nothing"
+      ]
     },
     "challenge": {
       "prompt": "Loop through [2, 8, 1, 9] and print only the ones > 5.",
       "hint": "nums = [2, 8, 1, 9]\nfor n in nums:\n    if n > 5:\n        print(n)"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "xs = [1,2,3,4,5]\nfor n in xs:\n    if n {0} 3:\n        print(n)",
+        "expectedOutput": "4\n5\n",
+        "blanks": [
+          {
+            "answer": ">",
+            "options": [
+              ">",
+              "<",
+              "=="
+            ]
+          }
+        ]
+      },
+      {
+        "template": "pets = [\"cat\",\"dog\",\"cat\"]\nfor p in pets:\n    if p {0} \"cat\":\n        print(\"meow\")",
+        "expectedOutput": "meow\nmeow\n",
+        "blanks": [
+          {
+            "answer": "==",
+            "options": [
+              "==",
+              "=",
+              ">"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "for n in [1,2,3]:\n    if n>1:\n        print(n)",
+          "output": "2\n3"
+        },
+        {
+          "code": "c=0\nfor n in [1,2,3,4]:\n    if n>2:\n        c=c+1\nprint(c)",
+          "output": "2"
+        },
+        {
+          "code": "for p in [\"a\",\"b\"]:\n    if p==\"a\":\n        print(\"yes\")",
+          "output": "yes"
+        }
+      ],
+      [
+        {
+          "code": "for n in [5,10,15]:\n    if n==10:\n        print(\"ten\")",
+          "output": "ten"
+        },
+        {
+          "code": "for n in [1,2,3,4,5]:\n    if n%2==0:\n        print(n)",
+          "output": "2\n4"
+        }
+      ]
+    ]
   },
   {
     "week": 14,
     "fillBlanks": {
       "template": "roll = {0}.choice([1,2,3,4,5,6])\nif roll > 3:\n    print(\"win\")\nelse:\n    print(\"try again\")",
       "expectedOutput": "win\n",
-      "blanks": [{ "answer": "random", "options": ["random", "max", "len"] }]
+      "blanks": [
+        {
+          "answer": "random",
+          "options": [
+            "random",
+            "max",
+            "len"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "random.choice([1,2,3,4,5,6])",     "output": "a dice roll 1-6" },
-      { "code": "random.choice([\"win\",\"lose\"])", "output": "win OR lose" },
-      { "code": "random.choice([\"🏆\",\"⭐\"])",     "output": "🏆 OR ⭐" }
+      {
+        "code": "random.choice([1,2,3,4,5,6])",
+        "output": "a dice roll 1-6"
+      },
+      {
+        "code": "random.choice([\"win\",\"lose\"])",
+        "output": "win OR lose"
+      },
+      {
+        "code": "random.choice([\"🏆\",\"⭐\"])",
+        "output": "🏆 OR ⭐"
+      }
     ],
     "colourBoxes": {
       "template": "prizes = [\"{0}\", \"{1}\", \"{2}\"]\nprint(\"You won:\", random.choice(prizes))",
       "slots": [
-        { "icon": "💬", "options": ["candy", "sticker", "toy"] },
-        { "icon": "💬", "options": ["gold", "silver", "star"] },
-        { "icon": "💬", "options": ["gift", "coin", "gem"] }
+        {
+          "icon": "💬",
+          "options": [
+            "candy",
+            "sticker",
+            "toy"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "gold",
+            "silver",
+            "star"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "gift",
+            "coin",
+            "gem"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "if 5 > 3:\n    print(\"🏆\")\nelse:\n    print(\"😔\")",
       "correctOutput": "🏆",
-      "options": ["🏆", "😔", "both", "nothing"]
+      "options": [
+        "🏆",
+        "😔",
+        "both",
+        "nothing"
+      ]
     },
     "challenge": {
       "prompt": "Dice game: roll a dice. If > 3, print 'WIN!'. Else print 'TRY AGAIN!'.",
       "hint": "roll = random.choice([1,2,3,4,5,6])\nif roll > 3:\n    print(\"WIN!\")\nelse:\n    print(\"TRY AGAIN!\")"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "roll = random.choice([1,2,3,4,5,6])\nif roll {0} 4:\n    print(\"win\")\nelse:\n    print(\"lose\")",
+        "expectedOutput": "win\n",
+        "blanks": [
+          {
+            "answer": ">=",
+            "options": [
+              ">=",
+              "<",
+              "=="
+            ]
+          }
+        ]
+      },
+      {
+        "template": "prize = random.{0}([\"🏆\",\"⭐\",\"💎\"])\nprint(\"You got\", prize)",
+        "expectedOutput": "You got 🏆\n",
+        "blanks": [
+          {
+            "answer": "choice",
+            "options": [
+              "choice",
+              "pick",
+              "random"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "if 6>3:\n    print(\"W\")\nelse:\n    print(\"L\")",
+          "output": "W"
+        },
+        {
+          "code": "if 2>5:\n    print(\"W\")\nelse:\n    print(\"L\")",
+          "output": "L"
+        },
+        {
+          "code": "random.choice([1,2,3,4,5,6])",
+          "output": "a dice roll"
+        },
+        {
+          "code": "random.choice([\"🪙\",\"💎\",\"🏆\"])",
+          "output": "one treasure"
+        }
+      ],
+      [
+        {
+          "code": "r=random.choice([1,2,3,4,5,6])\nif r==6:\n    print(\"🏆\")",
+          "output": "🏆 sometimes"
+        },
+        {
+          "code": "if 10==10:\n    print(\"yay\")",
+          "output": "yay"
+        }
+      ]
+    ]
   },
   {
     "week": 15,
     "fillBlanks": {
       "template": "print(\"⭐\" {0} 5)",
       "expectedOutput": "⭐⭐⭐⭐⭐\n",
-      "blanks": [{ "answer": "*", "options": ["*", "+", "-"] }]
+      "blanks": [
+        {
+          "answer": "*",
+          "options": [
+            "*",
+            "+",
+            "-"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "print(\"⭐\" * 3)",                                "output": "⭐⭐⭐" },
-      { "code": "for r in range(3):\n    print(\"⭐⭐\")",          "output": "⭐⭐\n⭐⭐\n⭐⭐" },
-      { "code": "for r in range(1, 4):\n    print(\"❤️\" * r)",    "output": "❤️\n❤️❤️\n❤️❤️❤️" }
+      {
+        "code": "print(\"⭐\" * 3)",
+        "output": "⭐⭐⭐"
+      },
+      {
+        "code": "for r in range(3):\n    print(\"⭐⭐\")",
+        "output": "⭐⭐\n⭐⭐\n⭐⭐"
+      },
+      {
+        "code": "for r in range(1, 4):\n    print(\"❤️\" * r)",
+        "output": "❤️\n❤️❤️\n❤️❤️❤️"
+      }
     ],
     "colourBoxes": {
       "template": "for r in range({0}):\n    print(\"{1}\" * {2})",
       "slots": [
-        { "icon": "🔢", "options": ["3", "4", "5"] },
-        { "icon": "💬", "options": ["⭐", "❤️", "🦄"] },
-        { "icon": "🔢", "options": ["3", "5", "10"] }
+        {
+          "icon": "🔢",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "⭐",
+            "❤️",
+            "🦄"
+          ]
+        },
+        {
+          "icon": "🔢",
+          "options": [
+            "3",
+            "5",
+            "10"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "print(\"🌈\" * 5)",
       "correctOutput": "🌈🌈🌈🌈🌈",
-      "options": ["🌈🌈🌈🌈🌈", "🌈", "5", "rainbow"]
+      "options": [
+        "🌈🌈🌈🌈🌈",
+        "🌈",
+        "5",
+        "rainbow"
+      ]
     },
     "challenge": {
       "prompt": "Draw a 4-row triangle of hearts (1, 2, 3, 4 hearts per row).",
       "hint": "for r in range(1, 5):\n    print(\"❤️\" * r)"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "print(\"❤️\" {0} 3)",
+        "expectedOutput": "❤️❤️❤️\n",
+        "blanks": [
+          {
+            "answer": "*",
+            "options": [
+              "*",
+              "+",
+              "-"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "for r in range(3):\n    print(\"⭐\" {0} 5)",
+        "expectedOutput": "⭐⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n⭐⭐⭐⭐⭐\n",
+        "blanks": [
+          {
+            "answer": "*",
+            "options": [
+              "*",
+              "+",
+              ","
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "print(\"A\" * 4)",
+          "output": "AAAA"
+        },
+        {
+          "code": "print(\"⭐\" * 6)",
+          "output": "⭐⭐⭐⭐⭐⭐"
+        },
+        {
+          "code": "print(\"ha\" * 2)",
+          "output": "haha"
+        },
+        {
+          "code": "print(\"🌈\" * 3)",
+          "output": "🌈🌈🌈"
+        }
+      ],
+      [
+        {
+          "code": "for r in range(2):\n    print(\"★★★\")",
+          "output": "★★★\n★★★"
+        },
+        {
+          "code": "for r in range(1,4):\n    print(\"♥\" * r)",
+          "output": "♥\n♥♥\n♥♥♥"
+        }
+      ]
+    ]
   },
   {
     "week": 16,
     "fillBlanks": {
       "template": "mood = \"happy\"\n{0} mood == \"happy\":\n    print(\"🎉 YAY!\")",
       "expectedOutput": "🎉 YAY!\n",
-      "blanks": [{ "answer": "if", "options": ["if", "for", "def"] }]
+      "blanks": [
+        {
+          "answer": "if",
+          "options": [
+            "if",
+            "for",
+            "def"
+          ]
+        }
+      ]
     },
     "matchPairs": [
-      { "code": "random.choice([\"🤗\",\"💖\",\"🌟\"])",    "output": "a random emoji" },
-      { "code": "if 25 > 20:\n    print(\"😎\")",          "output": "😎" },
-      { "code": "mood = \"sad\"\nif mood == \"sad\":\n    print(\"🤗\")", "output": "🤗" }
+      {
+        "code": "random.choice([\"🤗\",\"💖\",\"🌟\"])",
+        "output": "a random emoji"
+      },
+      {
+        "code": "if 25 > 20:\n    print(\"😎\")",
+        "output": "😎"
+      },
+      {
+        "code": "mood = \"sad\"\nif mood == \"sad\":\n    print(\"🤗\")",
+        "output": "🤗"
+      }
     ],
     "colourBoxes": {
       "template": "temp = {0}\nif temp > 25:\n    print(\"{1}\")\nelse:\n    print(\"{2}\")",
       "slots": [
-        { "icon": "🔢", "options": ["30", "20", "15"] },
-        { "icon": "💬", "options": ["🥵 hot", "☀️ sunny", "🏖️ beach"] },
-        { "icon": "💬", "options": ["🧥 cool", "❄️ cold", "☕ cozy"] }
+        {
+          "icon": "🔢",
+          "options": [
+            "30",
+            "20",
+            "15"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "🥵 hot",
+            "☀️ sunny",
+            "🏖️ beach"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "🧥 cool",
+            "❄️ cold",
+            "☕ cozy"
+          ]
+        }
       ]
     },
     "drawIt": {
       "code": "compliments = [\"smart\", \"kind\", \"cool\"]\nprint(\"You are\", random.choice(compliments))",
       "correctOutput": "You are smart (OR kind OR cool)",
-      "options": ["You are smart (OR kind OR cool)", "smart", "random", "all 3"]
+      "options": [
+        "You are smart (OR kind OR cool)",
+        "smart",
+        "random",
+        "all 3"
+      ]
     },
     "challenge": {
       "prompt": "Make a mood bot: if mood is 'happy' print '🎉', if 'sad' print '🤗', else print '🤔'.",
       "hint": "mood = \"happy\"\nif mood == \"happy\":\n    print(\"🎉\")\nelif mood == \"sad\":\n    print(\"🤗\")\nelse:\n    print(\"🤔\")"
-    }
+    },
+    "fillBlanksMore": [
+      {
+        "template": "mood = \"sad\"\nif mood == \"happy\":\n    print(\"🎉\")\n{0} mood == \"sad\":\n    print(\"🤗\")",
+        "expectedOutput": "🤗\n",
+        "blanks": [
+          {
+            "answer": "elif",
+            "options": [
+              "elif",
+              "if",
+              "else"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "bots = [\"🤖\",\"👾\",\"🦾\"]\nprint(random.{0}(bots))",
+        "expectedOutput": "🤖\n",
+        "blanks": [
+          {
+            "answer": "choice",
+            "options": [
+              "choice",
+              "pick",
+              "one"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "temp=30\nif temp>25:\n    print(\"hot\")",
+          "output": "hot"
+        },
+        {
+          "code": "rain=\"yes\"\nif rain==\"yes\":\n    print(\"umbrella\")",
+          "output": "umbrella"
+        },
+        {
+          "code": "random.choice([\"smart\",\"kind\",\"cool\"])",
+          "output": "one compliment"
+        },
+        {
+          "code": "random.choice([\"🤖\",\"🧠\",\"👾\"])",
+          "output": "one AI buddy"
+        }
+      ],
+      [
+        {
+          "code": "mood=\"happy\"\nif mood==\"happy\":\n    print(\"🎉\")",
+          "output": "🎉"
+        },
+        {
+          "code": "score=90\nif score>=80:\n    print(\"A+\")",
+          "output": "A+"
+        },
+        {
+          "code": "ans=random.choice([\"yes\",\"no\",\"maybe\"])",
+          "output": "one answer"
+        }
+      ]
+    ]
   }
 ]

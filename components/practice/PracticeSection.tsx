@@ -21,8 +21,10 @@ interface Props {
 
 interface PracticeEntry {
   week: number;
-  fillBlanks: FillBlanksData;
-  matchPairs: Pair[];
+  fillBlanks: FillBlanksData;             // legacy single (kept for PDF compat)
+  fillBlanksMore?: FillBlanksData[];      // extra fill-in-blanks rounds
+  matchPairs: Pair[];                      // legacy single round
+  matchRounds?: Pair[][];                  // extra match rounds
   colourBoxes: ColourBoxesData;
   drawIt: DrawItData;
   challenge: ChallengeData;
@@ -96,9 +98,43 @@ export default function PracticeSection({ week, unlocked = true }: Props) {
         </button>
       </div>
 
-      <div className="mt-5 space-y-4">
-        <FillBlanks data={entry.fillBlanks} />
-        <MatchPairs pairs={entry.matchPairs} />
+      <div className="mt-5 space-y-6">
+        {/* ─── Fill in the blanks ─── */}
+        <section>
+          <h3 className="mb-2 font-display text-lg font-bold text-purple-dark">
+            ✏️ Fill in the blanks
+          </h3>
+          <div className="space-y-3">
+            <FillBlanks data={entry.fillBlanks} />
+            {(entry.fillBlanksMore ?? []).map((f, i) => (
+              <div key={i}>
+                <div className="mb-1 font-display text-sm font-bold text-pink-dark">
+                  Round {i + 2}
+                </div>
+                <FillBlanks data={f} />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ─── Match pairs ─── */}
+        <section>
+          <h3 className="mb-2 font-display text-lg font-bold text-purple-dark">
+            🧵 Match the pairs
+          </h3>
+          <div className="space-y-4">
+            <MatchPairs pairs={entry.matchPairs} />
+            {(entry.matchRounds ?? []).map((pairs, i) => (
+              <div key={i}>
+                <div className="mb-1 font-display text-sm font-bold text-pink-dark">
+                  Round {i + 2}
+                </div>
+                <MatchPairs pairs={pairs} />
+              </div>
+            ))}
+          </div>
+        </section>
+
         <ColourBoxes data={entry.colourBoxes} />
         <DrawIt data={entry.drawIt} />
         <Challenge data={entry.challenge} />
