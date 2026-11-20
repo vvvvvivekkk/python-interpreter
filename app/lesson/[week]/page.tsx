@@ -121,7 +121,8 @@ export default function LessonPage() {
           ))}
         </div>
       )}
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+      {/* Big playground + terminal — stacked on iPad/laptop, side-by-side only on very wide screens */}
+      <div className="grid grid-cols-1 gap-4 xl:grid-cols-[1.4fr_1fr]">
         <CodeEditor value={code} onChange={setCode} onRun={run} showLineNumbers={week >= 3} />
         <div className="space-y-4">
           <VariableBoxes vars={vars} />

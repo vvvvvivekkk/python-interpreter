@@ -25,7 +25,7 @@ interface Props {
 
 export default function CodeEditor({
   value, onChange, onRun,
-  showLineNumbers = false, fontSize = 22,
+  showLineNumbers = false, fontSize = 26,
   hint, onHint, onClear,
 }: Props) {
   const ref = useRef<HTMLTextAreaElement>(null);
@@ -73,7 +73,7 @@ export default function CodeEditor({
           autoComplete="off"
           autoCorrect="off"
           className="w-full flex-1 resize-y bg-transparent font-code font-medium text-[#FFEEC2] outline-none placeholder:text-[#8B7FB8]/50"
-          style={{ fontSize, lineHeight: 1.6, caretColor: '#FFD93D', minHeight: 180 }}
+          style={{ fontSize, lineHeight: 1.6, caretColor: '#FFD93D', minHeight: 420 }}
           aria-label="Python code editor"
         />
       </div>

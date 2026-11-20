@@ -58,7 +58,7 @@ export default function Terminal({ output, error, onClear }: Props) {
       </div>
       <div
         ref={boxRef}
-        className="min-h-[160px] whitespace-pre-wrap break-words font-code text-lg leading-7 text-navy"
+        className="min-h-[360px] whitespace-pre-wrap break-words font-code text-xl leading-8 text-navy"
         aria-live="polite"
       >
         {!typed && !error && (
