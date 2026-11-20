@@ -8,6 +8,7 @@ import MatchPairs, { Pair } from './MatchPairs';
 import ColourBoxes, { ColourBoxesData } from './ColourBoxes';
 import DrawIt, { DrawItData } from './DrawIt';
 import Challenge, { ChallengeData } from './Challenge';
+import ChooseAnswer, { ChoiceQuestion } from './ChooseAnswer';
 import Pixi from '@/components/Pixi';
 import { Sfx } from '@/lib/sounds';
 import { useAppStore } from '@/lib/store';
@@ -28,6 +29,7 @@ interface PracticeEntry {
   colourBoxes: ColourBoxesData;
   drawIt: DrawItData;
   challenge: ChallengeData;
+  quiz?: ChoiceQuestion[];                 // optional multiple-choice quiz
 }
 
 export default function PracticeSection({ week, unlocked = true }: Props) {
@@ -137,6 +139,24 @@ export default function PracticeSection({ week, unlocked = true }: Props) {
 
         <ColourBoxes data={entry.colourBoxes} />
         <DrawIt data={entry.drawIt} />
+
+        {/* ─── Quiz ─── */}
+        {entry.quiz && entry.quiz.length > 0 ? (
+          <section>
+            <h3 className="mb-2 font-display text-lg font-bold text-purple-dark">
+              🧠 Quick quiz
+            </h3>
+            <p className="mb-2 text-sm font-semibold text-navy/70">
+              {entry.quiz.length} questions · pick the right answer!
+            </p>
+            <div className="space-y-3">
+              {entry.quiz.map((q, i) => (
+                <ChooseAnswer key={i} q={q} />
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <Challenge data={entry.challenge} />
       </div>
     </section>

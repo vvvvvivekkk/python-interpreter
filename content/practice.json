@@ -119,6 +119,38 @@
           "output": "2"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "What does print(\"Hi\") show?",
+        "options": [
+          "Hi",
+          "\"Hi\"",
+          "print",
+          "Hi()"
+        ],
+        "correct": 0,
+        "explain": "Quotes are just a wrapper — only the words inside come out."
+      },
+      {
+        "question": "Which one has a MISTAKE?",
+        "options": [
+          "print(\"yo\")",
+          "print(yo)",
+          "print(\"a\")"
+        ],
+        "correct": 1,
+        "hint": "Where did the quotes go?"
+      },
+      {
+        "question": "Pick the way to print TWO things on TWO lines.",
+        "options": [
+          "print(\"A\")\nprint(\"B\")",
+          "print(\"A B\")",
+          "print(\"A\",\"B\")"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -249,6 +281,37 @@
           "output": "Pixi"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "Which one makes a WORD box?",
+        "options": [
+          "name = \"Ava\"",
+          "name = Ava",
+          "name = 5"
+        ],
+        "correct": 0,
+        "explain": "Words always need quotes!"
+      },
+      {
+        "question": "Which makes a NUMBER box?",
+        "options": [
+          "age = 7",
+          "age = \"7\"",
+          "age = seven"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "x = 2 then x = 10. What is x now?",
+        "options": [
+          "10",
+          "2",
+          "12"
+        ],
+        "correct": 0,
+        "hint": "The box forgets the old thing."
+      }
     ]
   },
   {
@@ -379,6 +442,41 @@
           "output": "Age: 7"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "print(\"Hi \" + \"Sam\") shows…",
+        "options": [
+          "Hi Sam",
+          "HiSam",
+          "Hi + Sam",
+          "Hi\"Sam\""
+        ],
+        "correct": 0,
+        "explain": "The space is inside the first quotes."
+      },
+      {
+        "question": "print(\"ha\" * 3) shows…",
+        "options": [
+          "hahaha",
+          "ha*3",
+          "ha ha ha",
+          "ha3"
+        ],
+        "correct": 0,
+        "explain": "* repeats words!"
+      },
+      {
+        "question": "print(\"Hi\", \"Ava\") shows…",
+        "options": [
+          "Hi Ava",
+          "HiAva",
+          "Hi, Ava",
+          "Hi\"Ava\""
+        ],
+        "correct": 0,
+        "hint": "Commas add one space between."
+      }
     ]
   },
   {
@@ -509,6 +607,38 @@
           "output": "yay"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "if 5 > 3: print(\"yes\") — what shows?",
+        "options": [
+          "yes",
+          "nothing",
+          "no",
+          "error"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "else runs when…",
+        "options": [
+          "the if was False",
+          "the if was True",
+          "always"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "How many spaces before a line inside if?",
+        "options": [
+          "4",
+          "0",
+          "1",
+          "10"
+        ],
+        "correct": 0,
+        "explain": "Python likes 4 spaces to say \"this belongs inside\"."
+      }
     ]
   },
   {
@@ -639,6 +769,39 @@
           "output": "👋\n👋"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "for i in range(3) runs the loop…",
+        "options": [
+          "3 times",
+          "4 times",
+          "forever",
+          "0 times"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "range(3) gives…",
+        "options": [
+          "0,1,2",
+          "1,2,3",
+          "3,2,1",
+          "3"
+        ],
+        "correct": 0,
+        "hint": "It starts at zero!"
+      },
+      {
+        "question": "print(\"⭐\") in a range(5) loop shows…",
+        "options": [
+          "⭐ on 5 lines",
+          "⭐⭐⭐⭐⭐",
+          "5",
+          "⭐"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -777,6 +940,39 @@
           "output": "5"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "pets = [\"cat\",\"dog\",\"fox\"]. pets[0] is…",
+        "options": [
+          "cat",
+          "dog",
+          "fox",
+          "0"
+        ],
+        "correct": 0,
+        "explain": "Lists start at ZERO."
+      },
+      {
+        "question": "pets[2] is…",
+        "options": [
+          "fox",
+          "dog",
+          "cat",
+          "nothing"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "A list goes inside which brackets?",
+        "options": [
+          "[ ]",
+          "( )",
+          "{ }",
+          "< >"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -908,6 +1104,39 @@
           "output": "hi Mia"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "input(\"Name? \") does what?",
+        "options": [
+          "asks the user and waits",
+          "prints Name?",
+          "makes a list",
+          "crashes"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "name = input() — then name holds…",
+        "options": [
+          "what the user typed",
+          "input",
+          "nothing",
+          "True"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "input always gives back a…",
+        "options": [
+          "string (word)",
+          "number",
+          "list",
+          "True/False"
+        ],
+        "correct": 0,
+        "explain": "Even \"5\" from input is a WORD, not a number."
+      }
     ]
   },
   {
@@ -1034,6 +1263,39 @@
           "output": "5"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "def hi(): starts a…",
+        "options": [
+          "function (magic word)",
+          "loop",
+          "list",
+          "if"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "To USE a function you must…",
+        "options": [
+          "call it with ( )",
+          "say its name",
+          "print it",
+          "loop it"
+        ],
+        "correct": 0,
+        "explain": "The ( ) is the \"GO!\" button."
+      },
+      {
+        "question": "def greet(n): print(\"Hi \" + n). greet(\"Ava\") shows…",
+        "options": [
+          "Hi Ava",
+          "Hi n",
+          "greet",
+          "Ava"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -1172,6 +1434,39 @@
           "output": "-1"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "round(2.7) is…",
+        "options": [
+          "3",
+          "2",
+          "2.7",
+          "0"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "abs(-9) is…",
+        "options": [
+          "9",
+          "-9",
+          "0",
+          "18"
+        ],
+        "correct": 0,
+        "explain": "abs always gives a positive hug."
+      },
+      {
+        "question": "max(3, 7, 1) is…",
+        "options": [
+          "7",
+          "3",
+          "1",
+          "11"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -1318,6 +1613,39 @@
           "output": "False"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "len([1,2,3,4]) is…",
+        "options": [
+          "4",
+          "3",
+          "5",
+          "1"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "xs = [10,20,30]. xs[-1] is…",
+        "options": [
+          "30",
+          "10",
+          "20",
+          "-1"
+        ],
+        "correct": 0,
+        "explain": "-1 means LAST."
+      },
+      {
+        "question": "\"cat\" in [\"cat\",\"dog\"] is…",
+        "options": [
+          "True",
+          "False",
+          "cat",
+          "0"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -1456,6 +1784,38 @@
           "output": "one food"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "random.choice([1,2,3]) returns…",
+        "options": [
+          "one of 1, 2, or 3",
+          "all three",
+          "6",
+          "0"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "random.choice needs a…",
+        "options": [
+          "list",
+          "number",
+          "word",
+          "if"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Every time you run random.choice it…",
+        "options": [
+          "might pick a different one",
+          "picks the same one",
+          "crashes",
+          "prints nothing"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -1578,6 +1938,39 @@
           "output": "5"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "while n < 3: keeps going until…",
+        "options": [
+          "n is NOT less than 3",
+          "n is 3",
+          "forever",
+          "you say stop"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Why do we do n = n + 1 inside while?",
+        "options": [
+          "so it eventually stops",
+          "to count stars",
+          "to break it",
+          "random reason"
+        ],
+        "correct": 0,
+        "explain": "Without it the loop never ends!"
+      },
+      {
+        "question": "while True: with no break is a…",
+        "options": [
+          "forever loop",
+          "1 loop",
+          "0 loops",
+          "if"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -1700,6 +2093,39 @@
           "output": "2\n4"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "for + if together lets us…",
+        "options": [
+          "pick SOME items",
+          "pick all items",
+          "skip the loop",
+          "make a list"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "How many spaces does code INSIDE both for and if need?",
+        "options": [
+          "8",
+          "4",
+          "0",
+          "16"
+        ],
+        "correct": 0,
+        "hint": "4 for for, 4 more for if!"
+      },
+      {
+        "question": "for n in [1,2,3]: if n>1: print(n) shows…",
+        "options": [
+          "2\\n3",
+          "1\\n2\\n3",
+          "3",
+          "1"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -1834,6 +2260,38 @@
           "output": "yay"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "random.choice([1,2,3,4,5,6]) acts like…",
+        "options": [
+          "a dice",
+          "a coin",
+          "a list",
+          "a loop"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Why do games use random?",
+        "options": [
+          "so it's different every time",
+          "to crash",
+          "for colours",
+          "for speed"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "if + random together makes a game that…",
+        "options": [
+          "has surprises AND decisions",
+          "always wins",
+          "never ends",
+          "prints forever"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -1968,6 +2426,38 @@
           "output": "♥\n♥♥\n♥♥♥"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "print(\"⭐\" * 5) shows…",
+        "options": [
+          "⭐⭐⭐⭐⭐",
+          "⭐5",
+          "5",
+          "⭐"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "for r in range(1,4): print(\"♥\"*r) shows how many lines?",
+        "options": [
+          "3",
+          "1",
+          "4",
+          "7"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "Each loop step the triangle gets…",
+        "options": [
+          "bigger",
+          "smaller",
+          "same",
+          "empty"
+        ],
+        "correct": 0
+      }
     ]
   },
   {
@@ -2106,6 +2596,680 @@
           "output": "one answer"
         }
       ]
+    ],
+    "quiz": [
+      {
+        "question": "Real AI makes decisions using mostly…",
+        "options": [
+          "rules + guesses from examples",
+          "magic",
+          "luck",
+          "nothing"
+        ],
+        "correct": 0,
+        "explain": "That is exactly what YOU just built!"
+      },
+      {
+        "question": "Our mood bot uses which Python tool?",
+        "options": [
+          "if / elif / else",
+          "for loop",
+          "input only",
+          "print only"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "random.choice helps an AI feel…",
+        "options": [
+          "less boring",
+          "smarter",
+          "faster",
+          "bigger"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "week": 17,
+    "fillBlanks": {
+      "template": "pixi = { \"name\": \"Pixi\", \"mood\": \"happy\" }\nprint(pixi[{0}])",
+      "expectedOutput": "Pixi\n",
+      "blanks": [
+        {
+          "answer": "\"name\"",
+          "options": [
+            "\"name\"",
+            "name",
+            "0"
+          ]
+        }
+      ]
+    },
+    "fillBlanksMore": [
+      {
+        "template": "me = { \"age\": {0} }\nprint(me[\"age\"])",
+        "expectedOutput": "5\n",
+        "blanks": [
+          {
+            "answer": "5",
+            "options": [
+              "5",
+              "\"5\"",
+              "five"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "pet = {0}\nprint(pet[\"name\"])",
+        "expectedOutput": "Milo\n",
+        "blanks": [
+          {
+            "answer": "{ \"name\": \"Milo\" }",
+            "options": [
+              "{ \"name\": \"Milo\" }",
+              "[ \"name\", \"Milo\" ]",
+              "\"Milo\""
+            ]
+          }
+        ]
+      }
+    ],
+    "matchPairs": [
+      {
+        "code": "p={\"n\":1}\nprint(p[\"n\"])",
+        "output": "1"
+      },
+      {
+        "code": "p={\"a\":\"hi\"}\nprint(p[\"a\"])",
+        "output": "hi"
+      },
+      {
+        "code": "p={\"x\":5,\"y\":10}\nprint(p[\"y\"])",
+        "output": "10"
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "me={\"mood\":\"ok\"}\nme[\"mood\"]=\"yay\"\nprint(me[\"mood\"])",
+          "output": "yay"
+        },
+        {
+          "code": "me={\"name\":\"Ava\"}\nprint(me[\"name\"])",
+          "output": "Ava"
+        },
+        {
+          "code": "me={\"age\":4}\nme[\"age\"]=5\nprint(me[\"age\"])",
+          "output": "5"
+        }
+      ],
+      [
+        {
+          "code": "c={\"color\":\"red\"}\nprint(c[\"color\"])",
+          "output": "red"
+        },
+        {
+          "code": "c={\"n\":\"cat\",\"s\":\"meow\"}\nprint(c[\"s\"])",
+          "output": "meow"
+        }
+      ]
+    ],
+    "colourBoxes": {
+      "template": "me = { \"name\": \"{0}\", \"mood\": \"{1}\", \"fav\": \"{2}\" }\nprint(me[\"mood\"])",
+      "slots": [
+        {
+          "icon": "💬",
+          "options": [
+            "Ava",
+            "Pixi",
+            "Sam"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "happy",
+            "cool",
+            "silly"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "pizza",
+            "cake",
+            "mango"
+          ]
+        }
+      ]
+    },
+    "drawIt": {
+      "code": "pixi = { \"name\": \"Pixi\", \"age\": 1 }\nprint(pixi[\"name\"])",
+      "correctOutput": "Pixi",
+      "options": [
+        "Pixi",
+        "1",
+        "name",
+        "all of it"
+      ]
+    },
+    "challenge": {
+      "prompt": "Make a chest for your pet with \"name\" and \"sound\". Print the sound.",
+      "hint": "pet = { \"name\": \"Milo\", \"sound\": \"woof\" }\nprint(pet[\"sound\"])"
+    },
+    "quiz": [
+      {
+        "question": "pixi = {\"name\":\"Pixi\"} — what are those curly brackets called?",
+        "options": [
+          "a dictionary",
+          "a list",
+          "a tuple",
+          "a loop"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "pixi[\"name\"] opens the…",
+        "options": [
+          "label \"name\"",
+          "first thing",
+          "last thing",
+          "number"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "In {\"age\": 5}, \"age\" is the __ and 5 is the __.",
+        "options": [
+          "key, value",
+          "value, key",
+          "name, list",
+          "list, name"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "week": 18,
+    "fillBlanks": {
+      "template": "animals = [\"cat\",\"dog\",\"cat\"]\ncount = 0\nfor a in animals:\n    if a == \"cat\":\n        count = count {0} 1\nprint(count)",
+      "expectedOutput": "2\n",
+      "blanks": [
+        {
+          "answer": "+",
+          "options": [
+            "+",
+            "-",
+            "*"
+          ]
+        }
+      ]
+    },
+    "fillBlanksMore": [
+      {
+        "template": "moods = [\"happy\",\"sad\",\"happy\"]\ncount = 0\nfor m in moods:\n    if m == \"happy\":\n        count = count + 1\nprint({0})",
+        "expectedOutput": "2\n",
+        "blanks": [
+          {
+            "answer": "count",
+            "options": [
+              "count",
+              "\"count\"",
+              "moods"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "def is_cat(w):\n    if w == \"cat\":\n        {0} True\n    else:\n        return False\nprint(is_cat(\"cat\"))",
+        "expectedOutput": "True\n",
+        "blanks": [
+          {
+            "answer": "return",
+            "options": [
+              "return",
+              "print",
+              "give"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchPairs": [
+      {
+        "code": "for x in [1,2,3]:\n    print(x)",
+        "output": "1\n2\n3"
+      },
+      {
+        "code": "c=0\nfor n in [1,2,1]:\n    if n==1:\n        c=c+1\nprint(c)",
+        "output": "2"
+      },
+      {
+        "code": "def hi():\n    return 5\nprint(hi())",
+        "output": "5"
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "c=0\nfor x in [\"a\",\"b\",\"a\"]:\n    if x==\"a\":\n        c=c+1\nprint(c)",
+          "output": "2"
+        },
+        {
+          "code": "c=0\nfor n in [2,2,2,2]:\n    c=c+1\nprint(c)",
+          "output": "4"
+        },
+        {
+          "code": "def dbl(n):\n    return n*2\nprint(dbl(4))",
+          "output": "8"
+        }
+      ],
+      [
+        {
+          "code": "def ok(w):\n    if w==\"yes\":\n        return True\n    return False\nprint(ok(\"yes\"))",
+          "output": "True"
+        },
+        {
+          "code": "def ok(w):\n    if w==\"yes\":\n        return True\n    return False\nprint(ok(\"no\"))",
+          "output": "False"
+        }
+      ]
+    ],
+    "colourBoxes": {
+      "template": "xs = [\"{0}\", \"{1}\", \"{2}\"]\ncount = 0\nfor x in xs:\n    if x == \"cat\":\n        count = count + 1\nprint(count)",
+      "slots": [
+        {
+          "icon": "💬",
+          "options": [
+            "cat",
+            "dog",
+            "fox"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "cat",
+            "dog",
+            "cat"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "cat",
+            "bird",
+            "fish"
+          ]
+        }
+      ]
+    },
+    "drawIt": {
+      "code": "xs = [\"cat\",\"dog\",\"cat\",\"cat\"]\nprint(xs.count(\"cat\") if False else sum(1 for x in xs if x==\"cat\"))",
+      "correctOutput": "3",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ]
+    },
+    "challenge": {
+      "prompt": "Count how many 🎉 are in [ \"🎉\",\"😀\",\"🎉\",\"🥳\",\"🎉\" ].",
+      "hint": "xs = [\"🎉\",\"😀\",\"🎉\",\"🥳\",\"🎉\"]\nc = 0\nfor x in xs:\n    if x == \"🎉\":\n        c = c + 1\nprint(c)"
+    },
+    "quiz": [
+      {
+        "question": "To count things in a list you use…",
+        "options": [
+          "a counter + a loop",
+          "print only",
+          "if only",
+          "random"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "return inside a function…",
+        "options": [
+          "sends an answer back out",
+          "prints the answer",
+          "stops Python",
+          "loops"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "An AI that says \"cat / not cat\" is called a…",
+        "options": [
+          "classifier",
+          "loop",
+          "variable",
+          "string"
+        ],
+        "correct": 0,
+        "explain": "That is the fancy word engineers use!"
+      }
+    ]
+  },
+  {
+    "week": 19,
+    "fillBlanks": {
+      "template": "print(\"happy\" {0} \"I am happy\")",
+      "expectedOutput": "True\n",
+      "blanks": [
+        {
+          "answer": "in",
+          "options": [
+            "in",
+            "on",
+            "="
+          ]
+        }
+      ]
+    },
+    "fillBlanksMore": [
+      {
+        "template": "msg = \"I love pizza\"\nif \"pizza\" in msg:\n    print({0})",
+        "expectedOutput": "🍕\n",
+        "blanks": [
+          {
+            "answer": "\"🍕\"",
+            "options": [
+              "\"🍕\"",
+              "🍕",
+              "pizza"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "msg = \"I feel sad\"\nif \"happy\" in msg:\n    print(\"😊\")\n{0} \"sad\" in msg:\n    print(\"🤗\")",
+        "expectedOutput": "🤗\n",
+        "blanks": [
+          {
+            "answer": "elif",
+            "options": [
+              "elif",
+              "else",
+              "if"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchPairs": [
+      {
+        "code": "print(\"a\" in \"cat\")",
+        "output": "True"
+      },
+      {
+        "code": "print(\"z\" in \"cat\")",
+        "output": "False"
+      },
+      {
+        "code": "if \"sun\" in \"sunny\":\n    print(\"☀️\")",
+        "output": "☀️"
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "msg=\"hi there\"\nif \"hi\" in msg:\n    print(\"👋\")",
+          "output": "👋"
+        },
+        {
+          "code": "msg=\"bye bye\"\nif \"hi\" in msg:\n    print(\"👋\")\nelse:\n    print(\"👋🏼bye\")",
+          "output": "👋🏼bye"
+        },
+        {
+          "code": "print(\"happy\" in \"very happy now\")",
+          "output": "True"
+        }
+      ],
+      [
+        {
+          "code": "m=\"good\"\nif \"good\" in m or \"ok\" in m:\n    print(\"😊\")",
+          "output": "😊"
+        },
+        {
+          "code": "m=\"angry\"\nif \"happy\" in m:\n    print(\"😊\")\nelif \"angry\" in m:\n    print(\"😤\")",
+          "output": "😤"
+        }
+      ]
+    ],
+    "colourBoxes": {
+      "template": "msg = \"I love {0}\"\nif \"{1}\" in msg:\n    print(\"✨ Match!\")",
+      "slots": [
+        {
+          "icon": "💬",
+          "options": [
+            "pizza",
+            "robots",
+            "anime"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "pizza",
+            "robots",
+            "anime"
+          ]
+        }
+      ]
+    },
+    "drawIt": {
+      "code": "msg = \"I am sad today\"\nif \"happy\" in msg:\n    print(\"😊\")\nelif \"sad\" in msg:\n    print(\"🤗\")\nelse:\n    print(\"🤔\")",
+      "correctOutput": "🤗",
+      "options": [
+        "🤗",
+        "😊",
+        "🤔",
+        "all three"
+      ]
+    },
+    "challenge": {
+      "prompt": "Ask the user for a food. If \"pizza\" in answer print 🍕, else print 🍽️.",
+      "hint": "f = input(\"Food? \")\nif \"pizza\" in f:\n    print(\"🍕\")\nelse:\n    print(\"🍽️\")"
+    },
+    "quiz": [
+      {
+        "question": "\"happy\" in \"I am happy\" is…",
+        "options": [
+          "True",
+          "False",
+          "maybe",
+          "error"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "elif means…",
+        "options": [
+          "else if",
+          "end if",
+          "every if",
+          "early if"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "A keyword classifier looks for __ inside a sentence.",
+        "options": [
+          "special words",
+          "numbers",
+          "emojis only",
+          "colours"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "week": 20,
+    "fillBlanks": {
+      "template": "name = {0}(\"Name? \")\nprint(\"Hi \" + name)",
+      "expectedOutput": "Hi Ava\n",
+      "blanks": [
+        {
+          "answer": "input",
+          "options": [
+            "input",
+            "ask",
+            "print"
+          ]
+        }
+      ],
+      "inputs": [
+        "Ava"
+      ]
+    },
+    "fillBlanksMore": [
+      {
+        "template": "jokes = [\"A\",\"B\",\"C\"]\nprint(random.{0}(jokes))",
+        "expectedOutput": "B\n",
+        "blanks": [
+          {
+            "answer": "choice",
+            "options": [
+              "choice",
+              "pick",
+              "joke"
+            ]
+          }
+        ]
+      },
+      {
+        "template": "fortunes = [\"⭐\",\"🎉\",\"🌈\"]\nprint(\"Today:\", random.choice({0}))",
+        "expectedOutput": "Today: ⭐\n",
+        "blanks": [
+          {
+            "answer": "fortunes",
+            "options": [
+              "fortunes",
+              "\"fortunes\"",
+              "⭐"
+            ]
+          }
+        ]
+      }
+    ],
+    "matchPairs": [
+      {
+        "code": "name=\"Ava\"\nprint(\"Hi \" + name)",
+        "output": "Hi Ava"
+      },
+      {
+        "code": "random.choice([\"joke1\",\"joke2\"])",
+        "output": "one joke"
+      },
+      {
+        "code": "if \"happy\" in \"I am happy\":\n    print(\"😊\")",
+        "output": "😊"
+      }
+    ],
+    "matchRounds": [
+      [
+        {
+          "code": "fortunes=[\"⭐\",\"🎉\"]\nprint(random.choice(fortunes))",
+          "output": "⭐ OR 🎉"
+        },
+        {
+          "code": "print(\"Bye, \" + \"Ava\")",
+          "output": "Bye, Ava"
+        },
+        {
+          "code": "mood=\"good\"\nif \"good\" in mood:\n    print(\"😊\")",
+          "output": "😊"
+        }
+      ],
+      [
+        {
+          "code": "me={\"name\":\"AI\"}\nprint(\"I am \" + me[\"name\"])",
+          "output": "I am AI"
+        },
+        {
+          "code": "for g in [\"hi\",\"hello\"]:\n    print(g)",
+          "output": "hi\nhello"
+        },
+        {
+          "code": "def say(n):\n    print(\"Yo \" + n)\nsay(\"Sam\")",
+          "output": "Yo Sam"
+        }
+      ]
+    ],
+    "colourBoxes": {
+      "template": "name = \"{0}\"\nprint(\"Hi \" + name + \", {1}!\")",
+      "slots": [
+        {
+          "icon": "💬",
+          "options": [
+            "Ava",
+            "Sam",
+            "Pixi"
+          ]
+        },
+        {
+          "icon": "💬",
+          "options": [
+            "welcome",
+            "you rock",
+            "high five"
+          ]
+        }
+      ]
+    },
+    "drawIt": {
+      "code": "name = \"Mia\"\nprint(\"Hi \" + name + \"! 🤖\")",
+      "correctOutput": "Hi Mia! 🤖",
+      "options": [
+        "Hi Mia! 🤖",
+        "Hi name",
+        "Mia",
+        "🤖"
+      ]
+    },
+    "challenge": {
+      "prompt": "Build a tiny AI: ask name, print \"Hi NAME!\", then print a random joke from a list of 2 jokes.",
+      "hint": "name = input(\"Name? \")\nprint(\"Hi \" + name + \"!\")\njokes = [\"Micro-chips!\", \"Beep boop!\"]\nprint(random.choice(jokes))"
+    },
+    "quiz": [
+      {
+        "question": "An AI friend usually needs…",
+        "options": [
+          "input + if + random",
+          "only print",
+          "only loops",
+          "only lists"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "random.choice([\"⭐\",\"🎉\"]) is good for…",
+        "options": [
+          "surprise fortunes",
+          "maths",
+          "counting",
+          "sorting"
+        ],
+        "correct": 0
+      },
+      {
+        "question": "What skill did you NOT use in the final project?",
+        "options": [
+          "none — we used everything!",
+          "variables",
+          "if/else",
+          "loops"
+        ],
+        "correct": 0,
+        "explain": "You used ALL of it. You are a Pythonista now! 🎓"
+      }
     ]
   }
 ]
